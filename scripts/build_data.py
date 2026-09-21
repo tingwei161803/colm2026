@@ -56,6 +56,39 @@ def hhmm(printed: str | None) -> str | None:
     return f"{h:02d}:{mi}"
 
 
+# ---------------------------------------------------------------- LaTeX → readable text
+_WRAP = re.compile(r"\\(?:textbf|textit|emph|texttt|textsc|underline|url|text|mathrm|mathbf|mathcal|mathit|textnormal|hl)\{([^{}]*)\}")
+_SYM = {
+    r"\times": "×", r"\sim": "~", r"\approx": "≈", r"\leq": "≤", r"\le": "≤", r"\geq": "≥", r"\ge": "≥",
+    r"\rightarrow": "→", r"\to": "→", r"\leftarrow": "←", r"\pm": "±", r"\infty": "∞", r"\cdot": "·",
+    r"\ldots": "…", r"\dots": "…", r"\alpha": "α", r"\beta": "β", r"\gamma": "γ", r"\delta": "δ", r"\epsilon": "ε",
+    r"\varepsilon": "ε", r"\eta": "η", r"\lambda": "λ", r"\mu": "μ", r"\pi": "π", r"\rho": "ρ", r"\sigma": "σ",
+    r"\tau": "τ", r"\theta": "θ", r"\phi": "φ", r"\omega": "ω", r"\Delta": "Δ", r"\Theta": "Θ", r"\Sigma": "Σ",
+    r"\Omega": "Ω", r"\Lambda": "Λ", r"\ell": "ℓ", r"\%": "%", r"\&": "&", r"\_": "_", r"\#": "#", r"\{": "{", r"\}": "}",
+}
+_SYM_RE = re.compile("|".join(re.escape(k) + r"(?![A-Za-z])" if k[1:].isalpha() else re.escape(k) for k in sorted(_SYM, key=len, reverse=True)))
+_MATH = re.compile(r"\$([^$\\]{1,60})\$")          # simple $…$ with no commands left inside
+_BOLD = re.compile(r"\*\*([^*\n]{1,120})\*\*")
+_ITAL = re.compile(r"(?<![\w*])\*([^*\s][^*\n]{0,80}[^*\s])\*(?![\w*])")
+
+
+def clean_tex(s: str | None) -> str | None:
+    """Make LaTeX/markdown-flavoured abstracts readable as plain text. Unknown commands stay as-is."""
+    if not s:
+        return s
+    for _ in range(3):                                   # nested wrappers
+        s2 = _WRAP.sub(r"\1", s)
+        if s2 == s:
+            break
+        s = s2
+    s = _SYM_RE.sub(lambda m: _SYM[m.group(0)], s)
+    s = re.sub(r"\^\{(\w{1,3})\}", r"^\1", s)
+    s = _MATH.sub(r"\1", s)
+    s = _BOLD.sub(r"\1", s)
+    s = _ITAL.sub(r"\1", s)
+    return re.sub(r"[ \t]{2,}", " ", s).strip()
+
+
 def bi(en, zh) -> dict | None:
     if en is None:
         return None
@@ -87,8 +120,8 @@ def build_papers(src: Path, out: Path, zh: dict) -> dict:
         z = zh_papers.get(p["id"]) or {}
         papers.append({
             "id": p["id"],
-            "title": p["title"],
-            "titleZh": z.get("title"),
+            "title": clean_tex(p["title"]),
+            "titleZh": clean_tex(z.get("title")),
             "authors": p["authors"],
             "affiliations": p.get("affiliations"),
             "topic": topic_of.get(p["id"]),
@@ -104,9 +137,9 @@ def build_papers(src: Path, out: Path, zh: dict) -> dict:
             "links": {k: v for k, v in (p.get("links") or {}).items() if v},
         })
         if p.get("abstract"):
-            abs_en[p["id"]] = p["abstract"]
+            abs_en[p["id"]] = clean_tex(p["abstract"])
         if z.get("abstract"):
-            abs_zh[p["id"]] = z["abstract"]
+            abs_zh[p["id"]] = clean_tex(z["abstract"])
         if p.get("colmId") is not None:
             by_colm_id[p["colmId"]] = p["id"]
     data = {
