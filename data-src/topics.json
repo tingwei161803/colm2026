@@ -1,0 +1,121 @@
+[
+ {
+  "id": "t-training",
+  "en": "All about training",
+  "zh": "訓練",
+  "summary": "Fine-tuning, instruction-tuning, RL, prompt tuning, in-context learning.",
+  "summaryZh": "微調、指令微調、強化學習、提示微調、脈絡內學習。"
+ },
+ {
+  "id": "t-data",
+  "en": "All about data",
+  "zh": "資料",
+  "summary": "Data for pre-training, post-training, and other training stages.",
+  "summaryZh": "預訓練、後訓練與各訓練階段所需的各類資料。"
+ },
+ {
+  "id": "t-eval",
+  "en": "All about evaluation",
+  "zh": "評測",
+  "summary": "Benchmarks, simulation environments, scalable oversight, protocols & metrics, bias/equity/misuse.",
+  "summaryZh": "基準、模擬環境、可擴展監督、評測協定與指標、偏誤/公平/濫用評測。"
+ },
+ {
+  "id": "t-safety",
+  "en": "All about safety",
+  "zh": "安全",
+  "summary": "Security, privacy, misinformation, adversarial attacks & defenses.",
+  "summaryZh": "資安、隱私、錯誤資訊、對抗攻擊與防禦。"
+ },
+ {
+  "id": "t-science",
+  "en": "Science of LMs",
+  "zh": "語言模型科學",
+  "summary": "Scaling laws, limitations, emergent capabilities, interpretability, training dynamics.",
+  "summaryZh": "scaling laws、根本限制、湧現能力、可解釋性、訓練動態。"
+ },
+ {
+  "id": "t-efficient",
+  "en": "Compute-efficient LMs",
+  "zh": "高效運算",
+  "summary": "Distillation, compression, quantization, sample- and memory-efficient methods.",
+  "summaryZh": "蒸餾、壓縮、量化、樣本與記憶體高效方法。"
+ },
+ {
+  "id": "t-engineering",
+  "en": "Engineering for large LMs",
+  "zh": "大型 LM 工程",
+  "summary": "Distributed training & inference, training dynamics, optimization stability.",
+  "summaryZh": "分散式訓練與推論、訓練動態、最佳化穩定性。"
+ },
+ {
+  "id": "t-learning",
+  "en": "Learning algorithms for LMs",
+  "zh": "學習演算法",
+  "summary": "SFT/RL, unlearning, meta-learning, model mixing, continual learning.",
+  "summaryZh": "SFT/RL、遺忘學習、元學習、模型混合、持續學習。"
+ },
+ {
+  "id": "t-inference",
+  "en": "Inference algorithms for LMs",
+  "zh": "推論演算法",
+  "summary": "Decoding, reasoning, search, planning.",
+  "summaryZh": "解碼、推理、搜尋、規劃。"
+ },
+ {
+  "id": "t-mind",
+  "en": "Mind, brain, philosophy, law & LMs",
+  "zh": "心智、大腦、哲學、法律",
+  "summary": "Cognitive science, neuroscience, linguistics, legal perspectives.",
+  "summaryZh": "認知科學、神經科學、語言學、法律觀點。"
+ },
+ {
+  "id": "t-tools",
+  "en": "LMs with tools and code",
+  "zh": "工具與程式",
+  "summary": "Tool/API integration, LM-driven software engineering.",
+  "summaryZh": "工具與 API 整合、LM 驅動的軟體工程。"
+ },
+ {
+  "id": "t-everyone",
+  "en": "LMs for everyone",
+  "zh": "普惠 LM",
+  "summary": "Multilinguality, dialects, low-resource & vernacular languages, value pluralism, fairness.",
+  "summaryZh": "多語言、方言、低資源與本土語言、價值多元、公平性。"
+ },
+ {
+  "id": "t-world",
+  "en": "LMs and the world",
+  "zh": "LM 與世界",
+  "summary": "Factuality, retrieval-augmented LMs, knowledge models, commonsense, world models.",
+  "summaryZh": "事實性、檢索增強、知識模型、常識推理、世界模型。"
+ },
+ {
+  "id": "t-multimodal",
+  "en": "Multimodal LMs",
+  "zh": "多模態 LM",
+  "summary": "Perception, audio, time series, and other modalities.",
+  "summaryZh": "感知、音訊、時間序列等模態的推理與生成。"
+ },
+ {
+  "id": "t-embodiment",
+  "en": "LMs and embodiment",
+  "zh": "LM 與具身",
+  "summary": "Perception, action, and robotics.",
+  "summaryZh": "感知、行動與機器人。"
+ },
+ {
+  "id": "t-interaction",
+  "en": "LMs and interactions",
+  "zh": "LM 與互動",
+  "summary": "Conversation, interactive learning, multi-agent learning.",
+  "summaryZh": "對話、互動式學習、多代理人學習。"
+ },
+ {
+  "id": "t-domains",
+  "en": "Diverse domains & novel applications",
+  "zh": "多元領域與新應用",
+  "summary": "Medicine, education, science, and beyond.",
+  "summaryZh": "醫學、教育、科學等。"
+ }
+]
