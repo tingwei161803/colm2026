@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://colm-info.peteraim.com/sitemap.xml
+Sitemap: https://colm2026.peteraim.com/sitemap.xml
