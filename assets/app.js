@@ -30,7 +30,7 @@
   var I18N = {
     en: { footer: "Static, no build step.",
           close: "Close", menu: "On this page" },
-    zh: { footer: "純靜態,無建置流程。",
+    zh: { footer: "純靜態，無建置流程。",
           close: "關閉", menu: "本頁導覽" }
   };
 
@@ -88,6 +88,17 @@
      section-head are added by paintSections(). Add new types here.
      ===================================================================== */
   var RENDERERS = {
+
+    /* quick — big links to the sub-pages (schedule / papers / workshops) */
+    quick: function (sec) {
+      var base = (window.SHELL && window.SHELL.langRoot) || "";
+      var items = (sec.items || []).map(function (it) {
+        return '<a href="' + base + it.href + '">' +
+          '<span class="material-symbols-rounded" aria-hidden="true">' + it.icon + '</span>' +
+          '<b>' + escapeHtml(t(it.title)) + '</b><span>' + escapeHtml(t(it.text)) + '</span></a>';
+      }).join("");
+      return sectionHead(sec) + '<div class="quick">' + items + '</div>';
+    },
 
     /* ---- hero: lead-in + animated stat counters ---- */
     hero: function (sec) {
@@ -259,6 +270,7 @@
   function paintNav() {
     navInner.innerHTML = "";
     SECTIONS.forEach(function (sec) {
+      if (sec.nav === false) return;
       var a = document.createElement("a");
       a.className = "navpill";
       a.href = "#" + sec.id;
@@ -281,10 +293,6 @@
     var titleStr = t(META.title);
     var subStr = t(META.subtitle);
     document.title = subStr ? titleStr + " · " + subStr : titleStr;
-    var brand = $("brandName");
-    if (brand) brand.textContent = titleStr;
-    var foot = $("footerText");
-    if (foot) foot.textContent = ui("footer");
     var nav = $("sectionNav");
     if (nav) nav.setAttribute("aria-label", ui("menu"));
     var dc = $("dialogClose");
@@ -459,10 +467,7 @@
      WIRING
      ===================================================================== */
   function wire() {
-    $("themeToggle").addEventListener("click", function () {
-      state.theme = state.theme === "dark" ? "light" : "dark";
-      applyTheme();
-    });
+    /* theme toggle, footer text and brand are owned by assets/shell.js (shared chrome) */
 
     /* No language handler: #langToggle is a plain link to the other language's
        URL, so switching is a navigation, not a repaint. */
@@ -488,7 +493,6 @@
      INIT
      ===================================================================== */
   function init() {
-    applyTheme();
     render();
     wire();
     syncFromHash();

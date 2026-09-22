@@ -1,0 +1,2579 @@
+{
+  "conference": "COLM 2026 · The Third Annual Conference on Language Modeling",
+  "timezone": "America/Los_Angeles",
+  "fetchedAt": "2026-09-22",
+  "sources": {
+    "officialSchedule": "https://colm.cc/Conferences/2026/Schedule",
+    "virtualCalendar": "https://colm.cc/virtual/2026/calendar",
+    "papersJson": "https://colm.cc/static/virtual/data/colm-2026-orals-posters.json",
+    "sessionsListing": "https://colm.cc/virtual/2026/events/session",
+    "workshopsListing": "https://colm.cc/virtual/2026/events/workshop",
+    "keyDates": "https://colm.cc/Conferences/2026/Dates",
+    "home": "https://colm.cc/"
+  },
+  "venue": {
+    "name": "Hilton San Francisco Union Square",
+    "shortName": "Hilton Union Square",
+    "city": "San Francisco",
+    "address": "333 O'Farrell Street, San Francisco, CA 94102, USA",
+    "url": "https://www.hilton.com/en/hotels/sfofhhh-hilton-san-francisco-union-square/",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Hilton+Union+Square+San+Francisco",
+    "hotelBookingUrl": "https://book.passkey.com/e/51150503",
+    "rooms": [
+      "Franciscan A",
+      "Franciscan B",
+      "Franciscan C",
+      "Franciscan D",
+      "Grand Ballroom",
+      "Imperial Ballroom",
+      "Plaza Ballroom",
+      "Yosemite Foyer"
+    ]
+  },
+  "notes": [
+    "Main conference (Oct 6-8) is single-track: keynotes, oral sessions and closing remarks are in the Grand Ballroom.",
+    "Poster sizes announced on colm.cc: main conference 36\" x 72\"; workshops 34\" x 34\".",
+    "Registration to the general public was listed as sold out (waitlist) on colm.cc as of the fetch date.",
+    "Keynote and panelist affiliations are not published on colm.cc; they were added from the speakers' public profiles (see schedule-NOTES.md).",
+    "Session types: keynote, oral, poster, panel, remarks, workshop, break, social, other (registration desk / sponsor expo talk)."
+  ],
+  "days": [
+    {
+      "date": "2026-10-05",
+      "weekday": "Monday",
+      "label": "Pre-conference · Early registration",
+      "sessions": [
+        {
+          "id": "registration-desk-early-check-in",
+          "start": "14:00",
+          "end": "19:00",
+          "type": "other",
+          "siteType": "Registration",
+          "title": "Registration Desk & Early Check-In",
+          "room": "Plaza Ballroom",
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": null,
+          "notes": "Registration desk hours."
+        }
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "weekday": "Tuesday",
+      "label": "Main conference · Day 1",
+      "sessions": [
+        {
+          "id": "registration-desk-tue-0730",
+          "start": "07:30",
+          "end": "18:00",
+          "type": "other",
+          "siteType": "Registration",
+          "title": "Registration Desk",
+          "room": "Plaza Ballroom",
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": null,
+          "notes": "Registration desk hours."
+        },
+        {
+          "id": "coffee-tea-service-tue-0830",
+          "start": "08:30",
+          "end": "17:30",
+          "type": "break",
+          "siteType": "Break",
+          "title": "Coffee & Tea Service",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": null,
+          "notes": null
+        },
+        {
+          "id": "opening-remarks",
+          "start": "08:45",
+          "end": "09:00",
+          "type": "remarks",
+          "siteType": "Opening Remarks",
+          "title": "Opening Remarks",
+          "room": "Grand Ballroom",
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": "https://colm.cc/virtual/2026/remarks/4835",
+          "notes": null
+        },
+        {
+          "id": "keynote-chelsea-finn",
+          "start": "09:00",
+          "end": "10:00",
+          "type": "keynote",
+          "siteType": "Keynote",
+          "title": "Keynote: Chelsea Finn",
+          "room": "Grand Ballroom",
+          "speaker": {
+            "name": "Chelsea Finn",
+            "affiliation": "Stanford University",
+            "talkTitle": null,
+            "abstract": null,
+            "url": "https://ai.stanford.edu/~cbfinn/"
+          },
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": "https://colm.cc/virtual/2026/invited-talk/4836",
+          "notes": "Talk title and abstract not published on colm.cc as of the fetch date."
+        },
+        {
+          "id": "oral-session-1",
+          "start": "10:00",
+          "end": "11:00",
+          "type": "oral",
+          "siteType": "Oral Session",
+          "title": "Oral Session 1",
+          "room": "Grand Ballroom",
+          "speaker": null,
+          "papers": [
+            {
+              "title": "Source-Modality Monitoring in Vision-Language Models",
+              "authors": [
+                "Etha Tianze Hua",
+                "Tian Yun",
+                "Ellie Pavlick"
+              ],
+              "authorAffiliations": [
+                "Brown University",
+                "Meta MSL",
+                "Brown University"
+              ],
+              "start": "10:00",
+              "end": "10:15",
+              "colmUrl": "https://colm.cc/virtual/2026/oral/4904",
+              "openreviewUrl": "https://openreview.net/forum?id=PvJsyieQWz",
+              "paperId": 2178,
+              "posterSession": "Poster Session 1",
+              "posterRoom": "Imperial Ballroom",
+              "posterPosition": "#2"
+            },
+            {
+              "title": "CollabSkill: Evaluating Human-Agent Collaboration On Real-World Tasks",
+              "authors": [
+                "Yijia Shao",
+                "Zora Wang",
+                "Neel Ahuja",
+                "Yicheng Wang",
+                "Bowen Liu",
+                "Diyi Yang"
+              ],
+              "authorAffiliations": [
+                "Computer Science Department, Stanford University",
+                "Carnegie Mellon University",
+                "Stanford University",
+                "University of Rochester",
+                "Stanford AI Lab",
+                "Stanford University"
+              ],
+              "start": "10:15",
+              "end": "10:30",
+              "colmUrl": "https://colm.cc/virtual/2026/oral/4905",
+              "openreviewUrl": "https://openreview.net/forum?id=MLjVfxNJS2",
+              "paperId": 2219,
+              "posterSession": "Poster Session 1",
+              "posterRoom": "Imperial Ballroom",
+              "posterPosition": "#34"
+            },
+            {
+              "title": "Reasoning about Intent for Ambiguous Requests",
+              "authors": [
+                "Irina Saparina",
+                "Mirella Lapata"
+              ],
+              "authorAffiliations": [
+                "University of Edinburgh",
+                "Edinburgh University, University of Edinburgh"
+              ],
+              "start": "10:30",
+              "end": "10:45",
+              "colmUrl": "https://colm.cc/virtual/2026/oral/4906",
+              "openreviewUrl": "https://openreview.net/forum?id=I96OVERPJJ",
+              "paperId": 2289,
+              "posterSession": "Poster Session 1",
+              "posterRoom": "Imperial Ballroom",
+              "posterPosition": "#57"
+            },
+            {
+              "title": "More Than Words: Compositional Tokenization for Efficient Language Models",
+              "authors": [
+                "Yuval Reif",
+                "Guy Kaplan",
+                "Roy Schwartz"
+              ],
+              "authorAffiliations": [
+                "Hebrew University of Jerusalem",
+                "Hebrew University of Jerusalem",
+                "Hebrew University of Jerusalem"
+              ],
+              "start": "10:45",
+              "end": "11:00",
+              "colmUrl": "https://colm.cc/virtual/2026/oral/4907",
+              "openreviewUrl": "https://openreview.net/forum?id=Yw16kddexd",
+              "paperId": 2055,
+              "posterSession": "Poster Session 1",
+              "posterRoom": "Grand Ballroom",
+              "posterPosition": "#120"
+            }
+          ],
+          "paperCount": 4,
+          "rooms": null,
+          "colmUrl": "https://colm.cc/virtual/2026/session/4837",
+          "notes": "Four 15-minute talks. Each oral paper is also presented as a poster (see posterSession/posterPosition)."
+        },
+        {
+          "id": "poster-session-1",
+          "start": "11:00",
+          "end": "13:00",
+          "type": "poster",
+          "siteType": "Poster Session",
+          "title": "Poster Session 1",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": 142,
+          "rooms": [
+            "Imperial Ballroom",
+            "Franciscan A",
+            "Franciscan B",
+            "Franciscan C",
+            "Grand Ballroom"
+          ],
+          "colmUrl": "https://colm.cc/virtual/2026/session/4839",
+          "notes": "Poster numbers map to rooms per roomAssignments. Paper list lives in the papers dataset (filter by session).",
+          "roomAssignments": [
+            {
+              "room": "Imperial Ballroom",
+              "posters": "#1-73"
+            },
+            {
+              "room": "Franciscan A",
+              "posters": "#74-80"
+            },
+            {
+              "room": "Franciscan B",
+              "posters": "#81-90"
+            },
+            {
+              "room": "Franciscan C",
+              "posters": "#91-100"
+            },
+            {
+              "room": "Grand Ballroom",
+              "posters": "#101-145"
+            }
+          ],
+          "roomCounts": {
+            "Franciscan A": 7,
+            "Franciscan B": 10,
+            "Franciscan C": 10,
+            "Grand Ballroom": 42,
+            "Imperial Ballroom": 73
+          },
+          "posterLabel": "Poster 1 (Tuesday Morning)"
+        },
+        {
+          "id": "snacks-tue-1100",
+          "start": "11:00",
+          "end": "12:00",
+          "type": "break",
+          "siteType": "Break",
+          "title": "Snacks",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": null,
+          "notes": null
+        },
+        {
+          "id": "sponsor-expo-talk-tue-1300",
+          "start": "13:00",
+          "end": "14:30",
+          "type": "other",
+          "siteType": "Sponsor Expo Talk",
+          "title": "Sponsor Expo Talk",
+          "room": "Grand Ballroom",
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": null,
+          "notes": "Sponsor expo talk during the lunch break. Speakers/sponsors not listed on colm.cc."
+        },
+        {
+          "id": "lunch-social-tue-1300",
+          "start": "13:00",
+          "end": "14:30",
+          "type": "social",
+          "siteType": "Social",
+          "title": "Lunch Social",
+          "room": "Franciscan D",
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": null,
+          "notes": null
+        },
+        {
+          "id": "lunch-break-on-your-own-tue-1300",
+          "start": "13:00",
+          "end": "14:30",
+          "type": "break",
+          "siteType": "Lunch",
+          "title": "Lunch Break (on your own)",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": null,
+          "notes": "Lunch is not provided by the conference."
+        },
+        {
+          "id": "keynote-jennifer-pan",
+          "start": "14:30",
+          "end": "15:30",
+          "type": "keynote",
+          "siteType": "Keynote",
+          "title": "Keynote: Jennifer Pan",
+          "room": "Grand Ballroom",
+          "speaker": {
+            "name": "Jennifer Pan",
+            "affiliation": "Stanford University",
+            "talkTitle": null,
+            "abstract": null,
+            "url": "https://jenpan.com/"
+          },
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": "https://colm.cc/virtual/2026/invited-talk/4843",
+          "notes": "Talk title and abstract not published on colm.cc as of the fetch date."
+        },
+        {
+          "id": "oral-session-2",
+          "start": "15:30",
+          "end": "16:30",
+          "type": "oral",
+          "siteType": "Oral Session",
+          "title": "Oral Session 2",
+          "room": "Grand Ballroom",
+          "speaker": null,
+          "papers": [
+            {
+              "title": "A Unified View of Attention and Residual Sinks: Outlier-Driven Rescaling is Essential for Large Language Model Training",
+              "authors": [
+                "Zihan Qiu",
+                "Zeyu Huang",
+                "Kaiyue Wen",
+                "Peng Jin",
+                "Bo Zheng",
+                "Yuxin Zhou",
+                "Haofeng Huang",
+                "Zekun Wang",
+                "Xiao Li",
+                "Huaqing Zhang",
+                "Yang Xu",
+                "Haoran Lian",
+                "Siqi Zhang",
+                "Rui Men",
+                "jianwei zhang",
+                "Ivan Titov",
+                "Dayiheng Liu",
+                "Jingren Zhou",
+                "Junyang Lin"
+              ],
+              "authorAffiliations": [
+                "Qwen Team,      Alibaba Group",
+                "University of Edinburgh",
+                "Stanford University",
+                "Peking University",
+                "Alibaba Group",
+                "Qwen Team",
+                "Tsinghua University, Tsinghua University",
+                "Alibaba Group",
+                "Alibaba Group",
+                "Tsinghua University, Tsinghua University",
+                "Harbin Institute of Technology",
+                "Alibaba Group",
+                "Alibaba Group",
+                "Alibaba Group",
+                "Alibaba Group",
+                "U Edinburgh &amp; U Amsterdam",
+                "Alibaba Group",
+                "Alibaba Group",
+                "Alibaba Group"
+              ],
+              "start": "15:30",
+              "end": "15:45",
+              "colmUrl": "https://colm.cc/virtual/2026/oral/4908",
+              "openreviewUrl": "https://openreview.net/forum?id=rwk3hL5lS2",
+              "paperId": 1816,
+              "posterSession": "Poster Session 2",
+              "posterRoom": "Grand Ballroom",
+              "posterPosition": "#140"
+            },
+            {
+              "title": "When Do LLMs Admit Their Mistakes? Understanding The Role Of Model Belief In Retraction",
+              "authors": [
+                "Yuqing Yang",
+                "Robin Jia"
+              ],
+              "authorAffiliations": [
+                "University of Southern California",
+                "USC"
+              ],
+              "start": "15:45",
+              "end": "16:00",
+              "colmUrl": "https://colm.cc/virtual/2026/oral/4909",
+              "openreviewUrl": "https://openreview.net/forum?id=QPHGIKoJKC",
+              "paperId": 2166,
+              "posterSession": "Poster Session 2",
+              "posterRoom": "Imperial Ballroom",
+              "posterPosition": "#8"
+            },
+            {
+              "title": "Phonological Perception of Sign Language Models",
+              "authors": [
+                "Kayo Yin",
+                "Jessica Carter",
+                "Alex X Lu",
+                "Annemarie Kocab"
+              ],
+              "authorAffiliations": [
+                "University of California, Berkeley",
+                "Johns Hopkins University",
+                "Microsoft Research",
+                "Johns Hopkins University"
+              ],
+              "start": "16:00",
+              "end": "16:15",
+              "colmUrl": "https://colm.cc/virtual/2026/oral/4910",
+              "openreviewUrl": "https://openreview.net/forum?id=8MoSlQbdS8",
+              "paperId": 2426,
+              "posterSession": "Poster Session 2",
+              "posterRoom": "Grand Ballroom",
+              "posterPosition": "#144"
+            },
+            {
+              "title": "Attribution Bias in Large Language Models",
+              "authors": [
+                "Eliza H Berman",
+                "Bella Chang",
+                "Daniel B Neill",
+                "Emily Black"
+              ],
+              "authorAffiliations": [
+                "New York University",
+                "New York University",
+                "New York University",
+                "New York University"
+              ],
+              "start": "16:15",
+              "end": "16:30",
+              "colmUrl": "https://colm.cc/virtual/2026/oral/4911",
+              "openreviewUrl": "https://openreview.net/forum?id=KQ0U28wDdE",
+              "paperId": 2251,
+              "posterSession": "Poster Session 2",
+              "posterRoom": "Grand Ballroom",
+              "posterPosition": "#145"
+            }
+          ],
+          "paperCount": 4,
+          "rooms": null,
+          "colmUrl": "https://colm.cc/virtual/2026/session/4844",
+          "notes": "Four 15-minute talks. Each oral paper is also presented as a poster (see posterSession/posterPosition)."
+        },
+        {
+          "id": "poster-session-2",
+          "start": "16:30",
+          "end": "18:30",
+          "type": "poster",
+          "siteType": "Poster Session",
+          "title": "Poster Session 2",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": 144,
+          "rooms": [
+            "Imperial Ballroom",
+            "Franciscan A",
+            "Franciscan B",
+            "Franciscan C",
+            "Grand Ballroom"
+          ],
+          "colmUrl": "https://colm.cc/virtual/2026/session/4846",
+          "notes": "Poster numbers map to rooms per roomAssignments. Paper list lives in the papers dataset (filter by session).",
+          "roomAssignments": [
+            {
+              "room": "Imperial Ballroom",
+              "posters": "#1-73"
+            },
+            {
+              "room": "Franciscan A",
+              "posters": "#74-80"
+            },
+            {
+              "room": "Franciscan B",
+              "posters": "#81-90"
+            },
+            {
+              "room": "Franciscan C",
+              "posters": "#91-100"
+            },
+            {
+              "room": "Grand Ballroom",
+              "posters": "#101-145"
+            }
+          ],
+          "roomCounts": {
+            "Franciscan A": 7,
+            "Franciscan B": 10,
+            "Franciscan C": 10,
+            "Grand Ballroom": 45,
+            "Imperial Ballroom": 72
+          },
+          "posterLabel": "Poster 2 (Tuesday Afternoon)"
+        },
+        {
+          "id": "snacks-tue-1630",
+          "start": "16:30",
+          "end": "17:30",
+          "type": "break",
+          "siteType": "Break",
+          "title": "Snacks",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": null,
+          "notes": null
+        },
+        {
+          "id": "evening-socials-tue-1830",
+          "start": "18:30",
+          "end": "20:00",
+          "type": "social",
+          "siteType": "Social",
+          "title": "Evening Socials",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": null,
+          "notes": null
+        }
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "weekday": "Wednesday",
+      "label": "Main conference · Day 2",
+      "sessions": [
+        {
+          "id": "registration-desk-wed-0800",
+          "start": "08:00",
+          "end": "17:00",
+          "type": "other",
+          "siteType": "Registration",
+          "title": "Registration Desk",
+          "room": "Plaza Ballroom",
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": null,
+          "notes": "Registration desk hours."
+        },
+        {
+          "id": "coffee-tea-service-wed-0830",
+          "start": "08:30",
+          "end": "17:30",
+          "type": "break",
+          "siteType": "Break",
+          "title": "Coffee & Tea Service",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": null,
+          "notes": null
+        },
+        {
+          "id": "keynote-john-langford",
+          "start": "09:00",
+          "end": "10:00",
+          "type": "keynote",
+          "siteType": "Keynote",
+          "title": "Keynote: John Langford",
+          "room": "Grand Ballroom",
+          "speaker": {
+            "name": "John Langford",
+            "affiliation": "Microsoft Research",
+            "talkTitle": null,
+            "abstract": null,
+            "url": "https://hunch.net/~jl/"
+          },
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": "https://colm.cc/virtual/2026/invited-talk/4849",
+          "notes": "Talk title and abstract not published on colm.cc as of the fetch date."
+        },
+        {
+          "id": "oral-session-3",
+          "start": "10:00",
+          "end": "11:00",
+          "type": "oral",
+          "siteType": "Oral Session",
+          "title": "Oral Session 3",
+          "room": "Grand Ballroom",
+          "speaker": null,
+          "papers": [
+            {
+              "title": "Rethinking Generalization in Reasoning SFT: A Conditional Analysis on Optimization, Data, and Model Capability",
+              "authors": [
+                "Qihan Ren",
+                "Wang Peng",
+                "Ruikun Cai",
+                "Shuai Shao",
+                "Dadi Guo",
+                "Yuejin Xie",
+                "Yafu Li",
+                "Quanshi Zhang",
+                "Xia Hu",
+                "Jing Shao",
+                "Dongrui Liu"
+              ],
+              "authorAffiliations": [
+                "Shanghai Jiao Tong University",
+                "University of Science and Technology of China",
+                "University of Science and Technology of China",
+                "Shanghai Jiaotong University",
+                "The Hong Kong University of Science and Technology",
+                "Tsinghua University",
+                "The Chinese University of Hong Kong",
+                "Shanghai Jiao Tong University",
+                "Shanghai Artificial Intelligence Laboratory",
+                "Shanghai AI Laboratory",
+                "Shanghai Artificial Intelligence Laboratory"
+              ],
+              "start": "10:00",
+              "end": "10:15",
+              "colmUrl": "https://colm.cc/virtual/2026/oral/4912",
+              "openreviewUrl": "https://openreview.net/forum?id=EvSOFcwnEb",
+              "paperId": 2335,
+              "posterSession": "Poster Session 3",
+              "posterRoom": "Grand Ballroom",
+              "posterPosition": "#113"
+            },
+            {
+              "title": "What Do Language Models Learn and When? The Implicit Curriculum Hypothesis",
+              "authors": [
+                "Emmy Liu",
+                "Kaiser Sun",
+                "Millicent Li",
+                "Isabelle Lee",
+                "Lindia Tjuatja",
+                "Jen-tse Huang",
+                "Graham Neubig"
+              ],
+              "authorAffiliations": [
+                "School of Computer Science, Carnegie Mellon University",
+                "Department of Computer Science, Whiting School of Engineering",
+                "Northeastern University",
+                "University of Southern California",
+                "CMU, Carnegie Mellon University",
+                "Johns Hopkins University",
+                "Carnegie Mellon University"
+              ],
+              "start": "10:15",
+              "end": "10:30",
+              "colmUrl": "https://colm.cc/virtual/2026/oral/4913",
+              "openreviewUrl": "https://openreview.net/forum?id=wjTjjHstuY",
+              "paperId": 1737,
+              "posterSession": "Poster Session 3",
+              "posterRoom": "Imperial Ballroom",
+              "posterPosition": "#24"
+            },
+            {
+              "title": "BugScope: Learn to Detect Bugs Like Human",
+              "authors": [
+                "Jinyao Guo",
+                "Chengpeng Wang",
+                "Dominic DeLuca",
+                "Jinjie Liu",
+                "Zhuo Zhang",
+                "Xiangyu Zhang"
+              ],
+              "authorAffiliations": [
+                "Purdue University",
+                "National University of Singapore",
+                "Purdue University",
+                "University of Southern California",
+                "Columbia University",
+                "Purdue University"
+              ],
+              "start": "10:30",
+              "end": "10:45",
+              "colmUrl": "https://colm.cc/virtual/2026/oral/4914",
+              "openreviewUrl": "https://openreview.net/forum?id=pzZYA9MsQQ",
+              "paperId": 1848,
+              "posterSession": "Poster Session 3",
+              "posterRoom": "Imperial Ballroom",
+              "posterPosition": "#56"
+            },
+            {
+              "title": "Do Humans and LLMs Diverge in Belief Revision? Evidence from a Bayesian Analysis",
+              "authors": [
+                "Stylianos Loukas Vasileiou",
+                "Antonio Rago",
+                "Maria Vanina Martinez",
+                "William Yeoh"
+              ],
+              "authorAffiliations": [
+                "NMSU",
+                "King&#x27;s College London, University of London",
+                "Artificial Intelligence Research Institute, Spanish National Research Council",
+                "Washington University in St. Louis"
+              ],
+              "start": "10:45",
+              "end": "11:00",
+              "colmUrl": "https://colm.cc/virtual/2026/oral/4915",
+              "openreviewUrl": "https://openreview.net/forum?id=5X1vLLmgev",
+              "paperId": 2472,
+              "posterSession": "Poster Session 3",
+              "posterRoom": "Grand Ballroom",
+              "posterPosition": "#144"
+            }
+          ],
+          "paperCount": 4,
+          "rooms": null,
+          "colmUrl": "https://colm.cc/virtual/2026/session/4850",
+          "notes": "Four 15-minute talks. Each oral paper is also presented as a poster (see posterSession/posterPosition)."
+        },
+        {
+          "id": "poster-session-3",
+          "start": "11:00",
+          "end": "13:00",
+          "type": "poster",
+          "siteType": "Poster Session",
+          "title": "Poster Session 3",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": 141,
+          "rooms": [
+            "Imperial Ballroom",
+            "Franciscan A",
+            "Franciscan B",
+            "Franciscan C",
+            "Grand Ballroom"
+          ],
+          "colmUrl": "https://colm.cc/virtual/2026/session/4852",
+          "notes": "Poster numbers map to rooms per roomAssignments. Paper list lives in the papers dataset (filter by session).",
+          "roomAssignments": [
+            {
+              "room": "Imperial Ballroom",
+              "posters": "#1-73"
+            },
+            {
+              "room": "Franciscan A",
+              "posters": "#74-80"
+            },
+            {
+              "room": "Franciscan B",
+              "posters": "#81-90"
+            },
+            {
+              "room": "Franciscan C",
+              "posters": "#91-100"
+            },
+            {
+              "room": "Grand Ballroom",
+              "posters": "#101-145"
+            }
+          ],
+          "roomCounts": {
+            "Franciscan A": 7,
+            "Franciscan B": 9,
+            "Franciscan C": 10,
+            "Grand Ballroom": 43,
+            "Imperial Ballroom": 72
+          },
+          "posterLabel": "Poster 3 (Wednesday Morning)"
+        },
+        {
+          "id": "snacks-wed-1100",
+          "start": "11:00",
+          "end": "12:00",
+          "type": "break",
+          "siteType": "Break",
+          "title": "Snacks",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": null,
+          "notes": null
+        },
+        {
+          "id": "sponsor-expo-talk-wed-1300",
+          "start": "13:00",
+          "end": "14:30",
+          "type": "other",
+          "siteType": "Sponsor Expo Talk",
+          "title": "Sponsor Expo Talk",
+          "room": "Grand Ballroom",
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": null,
+          "notes": "Sponsor expo talk during the lunch break. Speakers/sponsors not listed on colm.cc."
+        },
+        {
+          "id": "lunch-social-wed-1300",
+          "start": "13:00",
+          "end": "14:30",
+          "type": "social",
+          "siteType": "Social",
+          "title": "Lunch Social",
+          "room": "Franciscan D",
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": null,
+          "notes": null
+        },
+        {
+          "id": "lunch-break-on-your-own-wed-1300",
+          "start": "13:00",
+          "end": "14:30",
+          "type": "break",
+          "siteType": "Lunch",
+          "title": "Lunch Break (on your own)",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": null,
+          "notes": "Lunch is not provided by the conference."
+        },
+        {
+          "id": "panel-james-evans-jeremy-avigad-rose-yu-alison-gopnik",
+          "start": "14:30",
+          "end": "15:30",
+          "type": "panel",
+          "siteType": "Panel",
+          "title": "Panel: James Evans, Jeremy Avigad, Rose Yu, Alison Gopnik",
+          "room": "Grand Ballroom",
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": "https://colm.cc/virtual/2026/panel/4856",
+          "notes": "Panel topic and moderator not published on colm.cc as of the fetch date.",
+          "panelists": [
+            {
+              "name": "James Evans",
+              "affiliation": "University of Chicago",
+              "url": "https://sociology.uchicago.edu/directory/james-evans"
+            },
+            {
+              "name": "Jeremy Avigad",
+              "affiliation": "Carnegie Mellon University",
+              "url": "https://www.andrew.cmu.edu/user/avigad/"
+            },
+            {
+              "name": "Rose Yu",
+              "affiliation": "UC San Diego",
+              "url": "https://roseyu.com/"
+            },
+            {
+              "name": "Alison Gopnik",
+              "affiliation": "UC Berkeley",
+              "url": "http://alisongopnik.com/"
+            }
+          ]
+        },
+        {
+          "id": "oral-session-4",
+          "start": "15:30",
+          "end": "16:30",
+          "type": "oral",
+          "siteType": "Oral Session",
+          "title": "Oral Session 4",
+          "room": "Grand Ballroom",
+          "speaker": null,
+          "papers": [
+            {
+              "title": "How Can We Synthesize High-Quality Pretraining Data? A Systematic Study of Prompt Design, Generator Model, and Source Data",
+              "authors": [
+                "Joel Niklaus",
+                "Atsuki Yamaguchi",
+                "Michal Štefánik",
+                "Guilherme Penedo",
+                "Hynek Kydlíček",
+                "Elie Bakouch",
+                "Lewis Tunstall",
+                "Edward E Beeching",
+                "Thibaud Frere",
+                "Colin Raffel",
+                "Leandro von Werra",
+                "Thomas Wolf"
+              ],
+              "authorAffiliations": [
+                "Hugging Face",
+                "University of Sheffield",
+                "National Institute of Informatics",
+                "Hugging Face",
+                "Huggingface",
+                "Prime Intellect",
+                "Hugging Face",
+                "Hugging Face",
+                "Hugging Face",
+                "University of Toronto, Vector Institute and Hugging Face",
+                "Hugging Face",
+                "Hugging Face"
+              ],
+              "start": "15:30",
+              "end": "15:45",
+              "colmUrl": "https://colm.cc/virtual/2026/oral/4916",
+              "openreviewUrl": "https://openreview.net/forum?id=fnqFKR2Y4T",
+              "paperId": 1969,
+              "posterSession": "Poster Session 4",
+              "posterRoom": "Grand Ballroom",
+              "posterPosition": "#126"
+            },
+            {
+              "title": "Beyond Distribution Sharpening: The Importance of Task Rewards",
+              "authors": [
+                "Sarthak Mittal",
+                "Leo Gagnon",
+                "Guillaume Lajoie"
+              ],
+              "authorAffiliations": [
+                "Mila, Mistral AI",
+                "Department of Computer Science and Operations Research, Université de Montréal",
+                "Mila - Quebec Artificial Intelligence Institute"
+              ],
+              "start": "15:45",
+              "end": "16:00",
+              "colmUrl": "https://colm.cc/virtual/2026/oral/4917",
+              "openreviewUrl": "https://openreview.net/forum?id=jJCwtAOqqK",
+              "paperId": 1931,
+              "posterSession": "Poster Session 4",
+              "posterRoom": "Grand Ballroom",
+              "posterPosition": "#103"
+            },
+            {
+              "title": "Beyond the Rosetta Stone: Unification Forces in Generalization Dynamics",
+              "authors": [
+                "Carter Blum",
+                "Katja Filippova",
+                "Ann Yuan",
+                "Asma Ghandeharioun",
+                "Julian Zimmert",
+                "Fred Zhang",
+                "Jessica Hoffmann",
+                "Tal Linzen",
+                "Martin Wattenberg",
+                "Lucas Dixon",
+                "Mor Geva"
+              ],
+              "authorAffiliations": [
+                "Google DeepMind",
+                "Google DeepMind",
+                "Google",
+                "Google DeepMind",
+                "Google",
+                "Google DeepMind",
+                "Google",
+                "NYU and Google",
+                "Harvard University",
+                "Google DeepMind",
+                "Tel Aviv University, Google"
+              ],
+              "start": "16:00",
+              "end": "16:15",
+              "colmUrl": "https://colm.cc/virtual/2026/oral/4918",
+              "openreviewUrl": "https://openreview.net/forum?id=5Jk5hkHW8Z",
+              "paperId": 2474,
+              "posterSession": "Poster Session 4",
+              "posterRoom": "Imperial Ballroom",
+              "posterPosition": "#4"
+            },
+            {
+              "title": "Distributed Attacks in Persistent-State AI Control",
+              "authors": [
+                "Josh Hills",
+                "Ida Caspary",
+                "Asa Cooper Stickland"
+              ],
+              "authorAffiliations": [
+                "Constellation Institute",
+                "Imperial College London",
+                "UK AI Security Institute"
+              ],
+              "start": "16:15",
+              "end": "16:30",
+              "colmUrl": "https://colm.cc/virtual/2026/oral/4919",
+              "openreviewUrl": "https://openreview.net/forum?id=EtohDITkCE",
+              "paperId": 2336,
+              "posterSession": "Poster Session 4",
+              "posterRoom": "Imperial Ballroom",
+              "posterPosition": "#60"
+            }
+          ],
+          "paperCount": 4,
+          "rooms": null,
+          "colmUrl": "https://colm.cc/virtual/2026/session/4857",
+          "notes": "Four 15-minute talks. Each oral paper is also presented as a poster (see posterSession/posterPosition)."
+        },
+        {
+          "id": "poster-session-4",
+          "start": "16:30",
+          "end": "18:30",
+          "type": "poster",
+          "siteType": "Poster Session",
+          "title": "Poster Session 4",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": 142,
+          "rooms": [
+            "Imperial Ballroom",
+            "Franciscan A",
+            "Franciscan B",
+            "Franciscan C",
+            "Grand Ballroom"
+          ],
+          "colmUrl": "https://colm.cc/virtual/2026/session/4859",
+          "notes": "Poster numbers map to rooms per roomAssignments. Paper list lives in the papers dataset (filter by session).",
+          "roomAssignments": [
+            {
+              "room": "Imperial Ballroom",
+              "posters": "#1-73"
+            },
+            {
+              "room": "Franciscan A",
+              "posters": "#74-80"
+            },
+            {
+              "room": "Franciscan B",
+              "posters": "#81-90"
+            },
+            {
+              "room": "Franciscan C",
+              "posters": "#91-100"
+            },
+            {
+              "room": "Grand Ballroom",
+              "posters": "#101-145"
+            }
+          ],
+          "roomCounts": {
+            "Franciscan A": 7,
+            "Franciscan B": 10,
+            "Franciscan C": 10,
+            "Grand Ballroom": 43,
+            "Imperial Ballroom": 72
+          },
+          "posterLabel": "Poster 4 (Wednesday Afternoon)"
+        },
+        {
+          "id": "snacks-wed-1630",
+          "start": "16:30",
+          "end": "17:30",
+          "type": "break",
+          "siteType": "Break",
+          "title": "Snacks",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": null,
+          "notes": null
+        },
+        {
+          "id": "evening-socials-wed-1830",
+          "start": "18:30",
+          "end": "20:00",
+          "type": "social",
+          "siteType": "Social",
+          "title": "Evening Socials",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": null,
+          "notes": null
+        }
+      ]
+    },
+    {
+      "date": "2026-10-08",
+      "weekday": "Thursday",
+      "label": "Main conference · Day 3",
+      "sessions": [
+        {
+          "id": "registration-desk-thu-0800",
+          "start": "08:00",
+          "end": "17:00",
+          "type": "other",
+          "siteType": "Registration",
+          "title": "Registration Desk",
+          "room": "Plaza Ballroom",
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": null,
+          "notes": "Registration desk hours."
+        },
+        {
+          "id": "coffee-tea-service-thu-0830",
+          "start": "08:30",
+          "end": "17:30",
+          "type": "break",
+          "siteType": "Break",
+          "title": "Coffee & Tea Service",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": null,
+          "notes": null
+        },
+        {
+          "id": "keynote-henry-farrell",
+          "start": "09:00",
+          "end": "10:00",
+          "type": "keynote",
+          "siteType": "Keynote",
+          "title": "Keynote: Henry Farrell",
+          "room": "Grand Ballroom",
+          "speaker": {
+            "name": "Henry Farrell",
+            "affiliation": "Johns Hopkins University (SNF Agora Institute / SAIS)",
+            "talkTitle": null,
+            "abstract": null,
+            "url": "https://sais.jhu.edu/directory/henry-farrell"
+          },
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": "https://colm.cc/virtual/2026/invited-talk/4862",
+          "notes": "Talk title and abstract not published on colm.cc as of the fetch date."
+        },
+        {
+          "id": "oral-session-5",
+          "start": "10:00",
+          "end": "11:00",
+          "type": "oral",
+          "siteType": "Oral Session",
+          "title": "Oral Session 5",
+          "room": "Grand Ballroom",
+          "speaker": null,
+          "papers": [
+            {
+              "title": "Extracting memorized pieces of (copyrighted) books from open-weight language models",
+              "authors": [
+                "A. Feder Cooper",
+                "Mark Lemley",
+                "Allison Casasola",
+                "Ahmed M Ahmed",
+                "Aaron Gokaslan",
+                "Amy B Cyphert",
+                "Christopher De Sa",
+                "Daniel Ho",
+                "Percy Liang"
+              ],
+              "authorAffiliations": [
+                "Yale University",
+                "Stanford University",
+                "Stanford University",
+                "Stanford University",
+                "Independent",
+                "West Virginia University",
+                "Cornell University",
+                "Stanford University",
+                "Stanford University"
+              ],
+              "start": "10:00",
+              "end": "10:15",
+              "colmUrl": "https://colm.cc/virtual/2026/oral/4920",
+              "openreviewUrl": "https://openreview.net/forum?id=VE3f9mjaCd",
+              "paperId": 2100,
+              "posterSession": "Poster Session 5",
+              "posterRoom": "Grand Ballroom",
+              "posterPosition": "#126"
+            },
+            {
+              "title": "Alignment Whack-a-Mole : Finetuning Activates Verbatim Recall of Copyrighted Books in Large Language Models",
+              "authors": [
+                "Xinyue Liu",
+                "Niloofar Mireshghallah",
+                "Jane C Ginsburg",
+                "Tuhin Chakrabarty"
+              ],
+              "authorAffiliations": [
+                "Stony Brook University",
+                "Carnegie Mellon University",
+                "Columbia University",
+                "Stony Brook University and Salesforce AI Research"
+              ],
+              "start": "10:15",
+              "end": "10:30",
+              "colmUrl": "https://colm.cc/virtual/2026/oral/4921",
+              "openreviewUrl": "https://openreview.net/forum?id=Ep0wjyDSlS",
+              "paperId": 2337,
+              "posterSession": "Poster Session 5",
+              "posterRoom": "Grand Ballroom",
+              "posterPosition": "#144"
+            },
+            {
+              "title": "Message Passing Enables Efficient Reasoning",
+              "authors": [
+                "Xuecheng Liu",
+                "Daman Arora",
+                "Gokul Swamy",
+                "Andrea Zanette"
+              ],
+              "authorAffiliations": [
+                "Carnegie Mellon University",
+                "Carnegie Mellon University",
+                "Carnegie Mellon University",
+                "Carnegie Mellon University"
+              ],
+              "start": "10:30",
+              "end": "10:45",
+              "colmUrl": "https://colm.cc/virtual/2026/oral/4922",
+              "openreviewUrl": "https://openreview.net/forum?id=X5TrciQRnV",
+              "paperId": 2079,
+              "posterSession": "Poster Session 5",
+              "posterRoom": "Grand Ballroom",
+              "posterPosition": "#101"
+            },
+            {
+              "title": "A Mirage of Coherence: How Metaphor Impacts Language Models' Discourse Coherence Assessment",
+              "authors": [
+                "Wanting Ning",
+                "Brian Choi",
+                "Eun Jin Paek",
+                "Hyeju Jang"
+              ],
+              "authorAffiliations": [
+                "Indiana University",
+                "Carnegie Mellon University",
+                "University of Tennessee Health Sciences",
+                "Indiana University Indianapolis"
+              ],
+              "start": "10:45",
+              "end": "11:00",
+              "colmUrl": "https://colm.cc/virtual/2026/oral/4923",
+              "openreviewUrl": "https://openreview.net/forum?id=4D1uRiMoEY",
+              "paperId": 2490,
+              "posterSession": "Poster Session 5",
+              "posterRoom": "Imperial Ballroom",
+              "posterPosition": "#22"
+            }
+          ],
+          "paperCount": 4,
+          "rooms": null,
+          "colmUrl": "https://colm.cc/virtual/2026/session/4863",
+          "notes": "Four 15-minute talks. Each oral paper is also presented as a poster (see posterSession/posterPosition)."
+        },
+        {
+          "id": "poster-session-5",
+          "start": "11:00",
+          "end": "13:00",
+          "type": "poster",
+          "siteType": "Poster Session",
+          "title": "Poster Session 5",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": 144,
+          "rooms": [
+            "Imperial Ballroom",
+            "Franciscan A",
+            "Franciscan B",
+            "Franciscan C",
+            "Grand Ballroom"
+          ],
+          "colmUrl": "https://colm.cc/virtual/2026/session/4865",
+          "notes": "Poster numbers map to rooms per roomAssignments. Paper list lives in the papers dataset (filter by session).",
+          "roomAssignments": [
+            {
+              "room": "Imperial Ballroom",
+              "posters": "#1-73"
+            },
+            {
+              "room": "Franciscan A",
+              "posters": "#74-80"
+            },
+            {
+              "room": "Franciscan B",
+              "posters": "#81-90"
+            },
+            {
+              "room": "Franciscan C",
+              "posters": "#91-100"
+            },
+            {
+              "room": "Grand Ballroom",
+              "posters": "#101-145"
+            }
+          ],
+          "roomCounts": {
+            "Franciscan A": 7,
+            "Franciscan B": 10,
+            "Franciscan C": 10,
+            "Grand Ballroom": 44,
+            "Imperial Ballroom": 73
+          },
+          "posterLabel": "Poster 5 (Thursday Morning)"
+        },
+        {
+          "id": "snacks-thu-1100",
+          "start": "11:00",
+          "end": "12:00",
+          "type": "break",
+          "siteType": "Break",
+          "title": "Snacks",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": null,
+          "notes": null
+        },
+        {
+          "id": "sponsor-expo-talk-thu-1300",
+          "start": "13:00",
+          "end": "14:30",
+          "type": "other",
+          "siteType": "Sponsor Expo Talk",
+          "title": "Sponsor Expo Talk",
+          "room": "Grand Ballroom",
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": null,
+          "notes": "Sponsor expo talk during the lunch break. Speakers/sponsors not listed on colm.cc."
+        },
+        {
+          "id": "lunch-social-thu-1300",
+          "start": "13:00",
+          "end": "14:30",
+          "type": "social",
+          "siteType": "Social",
+          "title": "Lunch Social",
+          "room": "Franciscan D",
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": null,
+          "notes": null
+        },
+        {
+          "id": "lunch-break-on-your-own-thu-1300",
+          "start": "13:00",
+          "end": "14:30",
+          "type": "break",
+          "siteType": "Lunch",
+          "title": "Lunch Break (on your own)",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": null,
+          "notes": "Lunch is not provided by the conference."
+        },
+        {
+          "id": "keynote-jason-eisner",
+          "start": "14:30",
+          "end": "15:30",
+          "type": "keynote",
+          "siteType": "Keynote",
+          "title": "Keynote: Jason Eisner",
+          "room": "Grand Ballroom",
+          "speaker": {
+            "name": "Jason Eisner",
+            "affiliation": "Johns Hopkins University / Microsoft Semantic Machines",
+            "talkTitle": null,
+            "abstract": null,
+            "url": "https://www.cs.jhu.edu/~jason/"
+          },
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": "https://colm.cc/virtual/2026/invited-talk/4869",
+          "notes": "Talk title and abstract not published on colm.cc as of the fetch date."
+        },
+        {
+          "id": "oral-session-6",
+          "start": "15:30",
+          "end": "16:30",
+          "type": "oral",
+          "siteType": "Oral Session",
+          "title": "Oral Session 6",
+          "room": "Grand Ballroom",
+          "speaker": null,
+          "papers": [
+            {
+              "title": "Diversity or Precision? A Deep Dive into Next Token Prediction",
+              "authors": [
+                "Haoyuan Wu",
+                "Hai Wang",
+                "jiajia wu",
+                "Jinxiang Ou",
+                "keyaowang",
+                "Weile Chen",
+                "Zihao Zheng",
+                "Bei Yu"
+              ],
+              "authorAffiliations": [
+                "Department of Computer Science and Engineering, The Chinese University of Hong Kong",
+                "4Paradigm Inc.",
+                "Tencent",
+                "Tencent",
+                "HY",
+                "Tencent LLM Department",
+                "Tencent AI Lab",
+                "Department of Computer Science and Engineering, The Chinese University of Hong Kong"
+              ],
+              "start": "15:30",
+              "end": "15:45",
+              "colmUrl": "https://colm.cc/virtual/2026/oral/4924",
+              "openreviewUrl": "https://openreview.net/forum?id=1hdTDDIDQI",
+              "paperId": 2529,
+              "posterSession": "Poster Session 6",
+              "posterRoom": "Grand Ballroom",
+              "posterPosition": "#113"
+            },
+            {
+              "title": "MEMENTO: Teaching LLMs to Manage Their  Context",
+              "authors": [
+                "Vasilis Kontonis",
+                "Yuchen Zeng",
+                "Shivam Garg",
+                "Lingjiao Chen",
+                "Hao Tang",
+                "Ziyan Wang",
+                "Ahmed H Awadallah",
+                "Eric Horvitz",
+                "John Langford",
+                "Dimitris Papailiopoulos"
+              ],
+              "authorAffiliations": [
+                "Microsoft Research",
+                "Microsoft",
+                "Microsoft Research",
+                "Stanford University",
+                "Microsoft Corporation",
+                "King&#x27;s College London",
+                "Microsoft Research",
+                "Microsoft",
+                "Microsoft",
+                "Research, Microsoft"
+              ],
+              "start": "15:45",
+              "end": "16:00",
+              "colmUrl": "https://colm.cc/virtual/2026/oral/4925",
+              "openreviewUrl": "https://openreview.net/forum?id=YaYiQDVsi0",
+              "paperId": 2060,
+              "posterSession": "Poster Session 6",
+              "posterRoom": "Grand Ballroom",
+              "posterPosition": "#143"
+            },
+            {
+              "title": "What AI Benchmarks Actually Measure: Adapting Convergent and Discriminant Validity to Interrogate Fifty-Six AI Benchmarks",
+              "authors": [
+                "Meera Desai",
+                "Sang Truong",
+                "Hanna Wallach",
+                "Alex Chouldechova",
+                "A. Feder Cooper",
+                "Jean Garcia-Gathright",
+                "Daniel Ho",
+                "Abigail Z Jacobs",
+                "Sanmi Koyejo",
+                "Nicholas Pangakis",
+                "Angelina Wang"
+              ],
+              "authorAffiliations": [
+                "University of Michigan - Ann Arbor",
+                "Stanford University",
+                "Microsoft",
+                "Abridge AI",
+                "Yale University",
+                "Research, Microsoft",
+                "Stanford University",
+                "University of Michigan",
+                "Stanford // FAIR",
+                "Microsoft",
+                "Cornell University"
+              ],
+              "start": "16:00",
+              "end": "16:15",
+              "colmUrl": "https://colm.cc/virtual/2026/oral/4926",
+              "openreviewUrl": "https://openreview.net/forum?id=889XnQKyhM",
+              "paperId": 2431,
+              "posterSession": "Poster Session 6",
+              "posterRoom": "Grand Ballroom",
+              "posterPosition": "#144"
+            },
+            {
+              "title": "Introspective Diffusion Language Models",
+              "authors": [
+                "Yifan Yu",
+                "Yuqing Jian",
+                "Junxiong Wang",
+                "Zhongzhu Zhou",
+                "Donglin Zhuang",
+                "Xinyu Fang",
+                "Xiaoxia Wu",
+                "Qingyang Wu",
+                "Shuaiwen L Song",
+                "Tri Dao",
+                "Ben Athiwaratkun",
+                "James Zou",
+                "Fan Lai",
+                "Chenfeng Xu"
+              ],
+              "authorAffiliations": [
+                "University of Illinois at Urbana-Champaign",
+                "Together AI",
+                "Cornell University",
+                "University of Sydney &amp; Together.AI",
+                "Together AI",
+                "Johns Hopkins University",
+                "Together.AI",
+                "Together AI",
+                "University of Sydney",
+                "Princeton University",
+                "Together AI",
+                "Stanford University",
+                "University of Illinois Urbana-Champaign",
+                "University of California Berkeley"
+              ],
+              "start": "16:15",
+              "end": "16:30",
+              "colmUrl": "https://colm.cc/virtual/2026/oral/4927",
+              "openreviewUrl": "https://openreview.net/forum?id=dlfy3gypHg",
+              "paperId": 1999,
+              "posterSession": "Poster Session 6",
+              "posterRoom": "Grand Ballroom",
+              "posterPosition": "#145"
+            }
+          ],
+          "paperCount": 4,
+          "rooms": null,
+          "colmUrl": "https://colm.cc/virtual/2026/session/4870",
+          "notes": "Four 15-minute talks. Each oral paper is also presented as a poster (see posterSession/posterPosition)."
+        },
+        {
+          "id": "closing-remarks",
+          "start": "16:30",
+          "end": "16:40",
+          "type": "remarks",
+          "siteType": "Closing Remarks",
+          "title": "Closing Remarks",
+          "room": "Grand Ballroom",
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": "https://colm.cc/virtual/2026/remarks/4872",
+          "notes": null
+        },
+        {
+          "id": "snacks-thu-1630",
+          "start": "16:30",
+          "end": "17:30",
+          "type": "break",
+          "siteType": "Break",
+          "title": "Snacks",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": null,
+          "notes": null
+        },
+        {
+          "id": "poster-session-6",
+          "start": "16:40",
+          "end": "18:30",
+          "type": "poster",
+          "siteType": "Poster Session",
+          "title": "Poster Session 6",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": 143,
+          "rooms": [
+            "Imperial Ballroom",
+            "Franciscan A",
+            "Franciscan B",
+            "Franciscan C",
+            "Grand Ballroom"
+          ],
+          "colmUrl": "https://colm.cc/virtual/2026/session/4873",
+          "notes": "Poster numbers map to rooms per roomAssignments. Paper list lives in the papers dataset (filter by session).",
+          "roomAssignments": [
+            {
+              "room": "Imperial Ballroom",
+              "posters": "#1-73"
+            },
+            {
+              "room": "Franciscan A",
+              "posters": "#74-80"
+            },
+            {
+              "room": "Franciscan B",
+              "posters": "#81-90"
+            },
+            {
+              "room": "Franciscan C",
+              "posters": "#91-100"
+            },
+            {
+              "room": "Grand Ballroom",
+              "posters": "#101-145"
+            }
+          ],
+          "roomCounts": {
+            "Franciscan A": 7,
+            "Franciscan B": 10,
+            "Franciscan C": 10,
+            "Grand Ballroom": 44,
+            "Imperial Ballroom": 72
+          },
+          "posterLabel": "Poster 6 (Thursday Afternoon)"
+        },
+        {
+          "id": "evening-socials-thu-1830",
+          "start": "18:30",
+          "end": "20:00",
+          "type": "social",
+          "siteType": "Social",
+          "title": "Evening Socials",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": null,
+          "notes": null
+        }
+      ]
+    },
+    {
+      "date": "2026-10-09",
+      "weekday": "Friday",
+      "label": "Workshops",
+      "sessions": [
+        {
+          "id": "registration-desk-fri-0800",
+          "start": "08:00",
+          "end": "13:00",
+          "type": "other",
+          "siteType": "Registration",
+          "title": "Registration Desk",
+          "room": "Yosemite Foyer",
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": null,
+          "notes": "Registration desk hours."
+        },
+        {
+          "id": "coffee-tea-service-fri-0830",
+          "start": "08:30",
+          "end": "17:30",
+          "type": "break",
+          "siteType": "Break",
+          "title": "Coffee & Tea Service",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": null,
+          "notes": null
+        },
+        {
+          "id": "2nd-workshop-on-human-centered-privacy-and-security-for-language-models",
+          "start": "08:30",
+          "end": "18:00",
+          "type": "workshop",
+          "siteType": "Workshop",
+          "title": "2nd Workshop on Human-Centered Privacy and Security for Language Models",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": "https://colm.cc/virtual/2026/workshop/2562",
+          "notes": "Room not published on colm.cc as of the fetch date.",
+          "organizers": [
+            "Tianshi Li",
+            "Toby Jia-Jun Li",
+            "Yaxing Yao",
+            "Sauvik Das",
+            "Niloofar Mireshghallah"
+          ],
+          "projectUrl": "https://haips.com",
+          "abstract": "Language models are rapidly becoming embedded in the interaction fabric of our society — as assistants, tutors, collaborators, and autonomous agents across domains from healthcare to software engineering to creative work. Their versatility makes them uniquely powerful but also uniquely hard to secure: privacy and security risks arise not just from model internals but from the rich, open-ended ways people interact with and through these systems."
+        },
+        {
+          "id": "actionable-interpretability",
+          "start": "08:30",
+          "end": "18:00",
+          "type": "workshop",
+          "siteType": "Workshop",
+          "title": "Actionable Interpretability",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": "https://colm.cc/virtual/2026/workshop/2553",
+          "notes": "Room not published on colm.cc as of the fetch date.",
+          "organizers": [
+            "Tal haklay",
+            "Sarah Wiegreffe",
+            "Hadas Orgad",
+            "Mor Geva",
+            "Ian Tenney",
+            "Asaf Avrahamy",
+            "Anja Reusch",
+            "Marius Mosbach"
+          ],
+          "projectUrl": "https://actionable-interpretability.github.io/",
+          "abstract": "The workshop on Actionable Interpretability@COLM2026 aims to foster discussions on leveraging interpretability insights to drive tangible advancements in AI across diverse domains. We welcome contributions that move beyond theoretical analysis, demonstrating concrete improvements in model alignment, robustness, and real-world applications. Additionally, we seek to explore the challenges inherent in translating interpretability research into actionable impact."
+        },
+        {
+          "id": "advml-frontiers-x-cotma-from-model-security-to-compositional-threats-in-multi-agent-ai-systems",
+          "start": "08:30",
+          "end": "18:00",
+          "type": "workshop",
+          "siteType": "Workshop",
+          "title": "AdvML-Frontiers × CoTMA: From Model Security to Compositional Threats in Multi-Agent AI Systems",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": "https://colm.cc/virtual/2026/workshop/2557",
+          "notes": "Room not published on colm.cc as of the fetch date.",
+          "organizers": [
+            "Sijia Liu",
+            "Bingqi Shang",
+            "Abhinav Mohanty",
+            "Pin-Yu Chen",
+            "Christos Christodoulopoulos",
+            "Yeonsung Jung",
+            "Homa Hosseinmardi",
+            "Swabha Swayamdipta",
+            "Ninareh Mehrabi",
+            "Anil Ramakrishna",
+            "Kathrin Grosse",
+            "Dongxiao Zhu",
+            "Eric Wong",
+            "Yao Qin",
+            "Baharan Mirzasoleiman",
+            "Sanmi Koyejo",
+            "Tong Wang"
+          ],
+          "projectUrl": "https://advml-frontier.github.io/",
+          "abstract": "The AdvML-Frontiers × CoTMA workshop is a cross-community effort that unifies two complementary workshop brands: AdvML-Frontiers and CoTMA (Compositional Threats in Multi-Agent AI Systems). As foundation models evolve from standalone predictors into reusable assets and interconnected multi-agent systems, the adversarial surface of AI has expanded far beyond traditional input-output robustness. Building on the AdvML-Frontiers theme, the workshop focuses on securing frontier models both as valuable assets and as complex systems. This includes emerging security challenges surrounding provenance, watermarking, fingerprinting, unauthorized distillation, supply-chain attacks, model integrity, reasoning-time intervention, and system-level robustness. Complementing this perspective, CoTMA focuses on compositional and interaction-layer threats in multi-agent AI systems, where vulnerabilities emerge through communication, delegation, shared memory, tool use, and coordination among agents. By bridging these two themes, AdvML-Frontiers × CoTMA aims to advance a broader vision of AI security and safety for interconnected, evolving, and deployable AI ecosystems, while fostering collaboration across adversarial ML, foundation models, systems security, and agentic AI communities."
+        },
+        {
+          "id": "ai-measurement-science-toward-rigorous-ai-evaluation",
+          "start": "08:30",
+          "end": "18:00",
+          "type": "workshop",
+          "siteType": "Workshop",
+          "title": "AI Measurement Science: Toward Rigorous AI Evaluation",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": "https://colm.cc/virtual/2026/workshop/2561",
+          "notes": "Room not published on colm.cc as of the fetch date.",
+          "organizers": [
+            "Sang Truong",
+            "Sanmi Koyejo",
+            "Olawale Salaudeen",
+            "Berivan Isik",
+            "Luke Guerdan"
+          ],
+          "projectUrl": "https://aimslab.stanford.edu/workshop",
+          "abstract": "A one-day workshop on the science of evaluating frontier AI systems: measurement under interaction, strategic optimization, and non-stationarity."
+        },
+        {
+          "id": "colm-2026-workshop-on-efficient-reasoning",
+          "start": "08:30",
+          "end": "18:00",
+          "type": "workshop",
+          "siteType": "Workshop",
+          "title": "COLM 2026 Workshop on Efficient Reasoning",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": "https://colm.cc/virtual/2026/workshop/2549",
+          "notes": "Room not published on colm.cc as of the fetch date.",
+          "organizers": [
+            "Zefan Cai",
+            "Cheng Luo",
+            "Yijiang Li",
+            "Zhenhua Dong",
+            "Haozheng Luo"
+          ],
+          "projectUrl": "https://wdlctc.github.io/efficient-reasoning-2026/",
+          "abstract": "Posters are allowed to be posted at any time within Poster Session 1 and Poster Session 2\nReasoning is rapidly moving beyond text-only benchmarks into multimodal, spatial, and embodied settings, where models must interpret long contexts, reason over visual scenes, plan actions, use tools, and interact with dynamic environments. This shift is especially visible in code agents, scientific assistants, embodied systems, and multimodal decision-making pipelines, where strong reasoning quality must now coexist with tight constraints on latency, memory, throughput, and serving cost. At the same time, many of the strongest gains in reasoning still come from more test-time compute, longer trajectories, or deeper search, which makes deployment substantially harder. The central question is therefore no longer only how to make models reason better, but how to make them reason efficiently, robustly, and at scale in the wild.\nBuilding on the success of the 1st Workshop on Efficient Reasoning at NeurIPS 2025 (1,000+ attendees, 275 submissions), this second edition at COLM 2026 will bring together researchers and practitioners working across data, algorithms, systems, and real-world applications to tackle the challenges of making reasoning practical under real-world constraints."
+        },
+        {
+          "id": "colm-workshop-on-context-beyond-the-window-persistent-knowledge-in-language-models",
+          "start": "08:30",
+          "end": "18:00",
+          "type": "workshop",
+          "siteType": "Workshop",
+          "title": "COLM Workshop on Context Beyond the Window: Persistent Knowledge in Language Models",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": "https://colm.cc/virtual/2026/workshop/2560",
+          "notes": "Room not published on colm.cc as of the fetch date.",
+          "organizers": [
+            "Dane Malenfant",
+            "Siddarth Venkatraman",
+            "Benjamin Thérien"
+          ],
+          "projectUrl": "https://context-beyond-window.github.io/",
+          "abstract": "COLM 2026 Workshop on long-context modeling, memory, retrieval, and knowledge internalization in language models. October 9, 2026, San Francisco."
+        },
+        {
+          "id": "generative-ai-for-the-world-the-first-workshop-on-globalizing-tasks-evaluations-and-systems",
+          "start": "08:30",
+          "end": "18:00",
+          "type": "workshop",
+          "siteType": "Workshop",
+          "title": "Generative AI for the World: The First Workshop on Globalizing Tasks, Evaluations, and Systems",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": "https://colm.cc/virtual/2026/workshop/2555",
+          "notes": "Room not published on colm.cc as of the fetch date.",
+          "organizers": [
+            "Juhyun Oh",
+            "Haneul Yoo",
+            "Simran Khanuja",
+            "Sil Hamilton",
+            "Naitian Zhou",
+            "Michael Saxon"
+          ],
+          "projectUrl": "https://sites.google.com/view/genai4world/",
+          "abstract": "Generative AI holds an unprecedented promise: for the first time, a single technology may enable communication and mutual understanding across the world’s languages, cultures, and communities. Yet the global deployment of these systems reveals how far we remain from achieving this vision. AI systems built on assumptions reflecting a narrow slice of the world’s languages, literatures, and cultures are being used by everyone, everywhere—and problems are surfacing across text, images, audio, and video (Khanuja et al., 2024). New failure modes are being revealed by novel global usage patterns. Models struggle with tasks and interaction patterns (e.g., code-switching) never anticipated by predominantly monolingual development pipelines (Oh et al., 2026; Tamkin et al., 2024). These usability issues remain invisible to standard evaluation metrics (Oh et al., 2025).\n\nCountless variations of register, context, and cultural expectations across languages and communities exert pressure on systems operating under Western-centric design assumptions. The boundaries of these systems are always discovered not by their developers, but by users—and with the rising popularity of AI, that is the whole population of the world. That users are finding prompting in Chinese reduces token costs, or that switching languages altogether yields better results than carefully engineered prompts, should not be surprising. Bringing together these perspectives, including deployment failures observed by companies, users’ creative workarounds, and researchers’ analyses of deeper structural limitations, is critical to understanding and improving these systems.\n\nThis workshop brings together industry practitioners, researchers, and global users at a critical moment to ask: what would it take for AI to truly serve everyone? Tasks, evaluations, and systems themselves must be rethought at a global scale. We advocate for globalization, not localization—not merely adapting systems to fit diverse contexts, but allowing global diversity to shape how they are built from the ground up. Across modalities—including language, vision, and audio—we seek to identify shared patterns and transferable insights across real-world use. What global weaknesses and failure modes remain undiscovered? Which tasks require different evaluation methods across cultures, and where do standard metrics fall short? This workshop creates a space to surface, study, and extend emerging innovations and vulnerabilities across languages, modalities, and communities."
+        },
+        {
+          "id": "learning-from-situated-and-embodied-interaction",
+          "start": "08:30",
+          "end": "18:00",
+          "type": "workshop",
+          "siteType": "Workshop",
+          "title": "Learning from Situated and Embodied Interaction",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": "https://colm.cc/virtual/2026/workshop/2563",
+          "notes": "Room not published on colm.cc as of the fetch date.",
+          "organizers": [
+            "Zineng Tang",
+            "Anya Ji",
+            "Joyce Chai",
+            "Alane Suhr",
+            "Téa Wright",
+            "Josue Torres-Fonseca",
+            "Leena Mathur"
+          ],
+          "projectUrl": "https://learning-situated-interaction.github.io/",
+          "abstract": null
+        },
+        {
+          "id": "llm-vlm-deployment-opportunities-and-risks-in-healthcare",
+          "start": "08:30",
+          "end": "18:00",
+          "type": "workshop",
+          "siteType": "Workshop",
+          "title": "LLM/VLM Deployment Opportunities and Risks in Healthcare",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": "https://colm.cc/virtual/2026/workshop/2558",
+          "notes": "Room not published on colm.cc as of the fetch date.",
+          "organizers": [
+            "Yuexing Hao",
+            "Shan Chen",
+            "Yuxin Xiao",
+            "Haoran Zhang",
+            "Stella Li",
+            "Thomas Hartvigsen",
+            "Angelina Wang",
+            "Yulia Tsvetkov"
+          ],
+          "projectUrl": "https://daih2026.github.io/",
+          "abstract": "Benchmark performance is a poor proxy for real-world readiness. DAIH brings together machine learning researchers, physicians, health-system leaders, and policy researchers to tackle safety, equity, privacy, regulation, workflow fit, and post-deployment monitoring."
+        },
+        {
+          "id": "lm4sci-2-0-the-second-workshop-on-language-models-for-scientific-discovery",
+          "start": "08:30",
+          "end": "18:00",
+          "type": "workshop",
+          "siteType": "Workshop",
+          "title": "LM4Sci 2.0: The Second Workshop on Language Models for Scientific Discovery",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": "https://colm.cc/virtual/2026/workshop/2566",
+          "notes": "Room not published on colm.cc as of the fetch date.",
+          "organizers": [
+            "Chenglei Si",
+            "Shannon Zejiang Shen",
+            "Hanane Nour Moussa",
+            "Yanzhe Zhang",
+            "Akari Asai",
+            "Mark Yatskar",
+            "Huan Sun",
+            "Diyi Yang"
+          ],
+          "projectUrl": "https://lm4sci.github.io/",
+          "abstract": "Significant advancements in Large Language Models (LLMs) have spurred interest in using these frontier AI models to assist researchers in various scientific tasks, such as:\n\nAccelerating the research ideation process through AI-assisted brainstorming and concept exploration.\n\nSearching, synthesizing literature reviews and enabling literature-based question-answering.\n\nUsing AI for data-driven discovery and complex scientific data analysis.\n\nEnd-to-end research pipeline including experiment execution, ML engineering, and paper generation."
+        },
+        {
+          "id": "methods-and-opportunities-at-small-scale-moss",
+          "start": "08:30",
+          "end": "18:00",
+          "type": "workshop",
+          "siteType": "Workshop",
+          "title": "Methods and Opportunities at Small Scale (MOSS)",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": "https://colm.cc/virtual/2026/workshop/2564",
+          "notes": "Room not published on colm.cc as of the fetch date.",
+          "organizers": [
+            "Bingbin Liu",
+            "Andrej Risteski",
+            "Bhavya Vasudeva",
+            "Sewon Min",
+            "Yejin Choi",
+            "Elisabetta Cornacchia"
+          ],
+          "projectUrl": "https://sites.google.com/view/moss-colm-2026/",
+          "abstract": "As the current LLM research community pushes towards massive scale, this workshop takes a complementary approach by focusing on the under-explored small-scale regime, where scale encompasses compute, data, and model size. We ask: to what extent is scale necessary, and how far can we push toward smaller settings while maintaining competitive performance and enabling scientifically meaningful discoveries?\n\nBeyond transferring insights from small- to large-scale settings, we emphasize the intrinsic value of understanding small-scale regimes. Practically, studying small-scale limits can yield more efficient algorithms and system designs. Small-scale settings also enable controlled, systematic experimentation with rapid iterations, thereby facilitating scientific progress.\n\nThis workshop aims to highlight the methods, opportunities, and insights enabled by small-scale experimentation, and to foster discussion on how such approaches can broaden participation and accelerate progress in LLM research."
+        },
+        {
+          "id": "non-autoregressive-language-models-for-fast-and-flexible-text-generation",
+          "start": "08:30",
+          "end": "18:00",
+          "type": "workshop",
+          "siteType": "Workshop",
+          "title": "Non-Autoregressive Language Models for Fast and Flexible Text Generation",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": "https://colm.cc/virtual/2026/workshop/2552",
+          "notes": "Room not published on colm.cc as of the fetch date.",
+          "organizers": [
+            "Fred",
+            "Marianne Arriola",
+            "Jaeyeon Kim",
+            "Siyan Zhao",
+            "Alexander Tong",
+            "Arnaud Doucet",
+            "Brendan O’Donoghue",
+            "Yuxuan Song"
+          ],
+          "projectUrl": "https://pengzhangzhi.github.io/NonAR-LM/",
+          "abstract": "A COLM 2026 workshop on non-autoregressive language modeling — diffusion, flow matching, and any-order autoregression. San Francisco, October 9, 2026."
+        },
+        {
+          "id": "second-tokenization-workshop",
+          "start": "08:30",
+          "end": "18:00",
+          "type": "workshop",
+          "siteType": "Workshop",
+          "title": "Second Tokenization Workshop",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": "https://colm.cc/virtual/2026/workshop/2556",
+          "notes": "Room not published on colm.cc as of the fetch date.",
+          "organizers": [
+            "Tomasz Limisiewicz",
+            "Valentin Hofmann",
+            "Sachin Kumar",
+            "Jindřich Libovický",
+            "Jindřich Helcl",
+            "Orevaoghene Ahia",
+            "Elizabeth Salesky",
+            "Yuval Pinter",
+            "Yuki M Asano"
+          ],
+          "projectUrl": "https://tokenization-workshop.github.io/",
+          "abstract": "Tokenization–the process of converting raw data into discrete units for model input and output–has emerged as a critical component across machine learning domains. Originally central to natural language processing (NLP), tokenization is now equally essential in multimodal learning, computer vision, speech processing, and other areas. Recent research has shown that tokenization strategies significantly impact model utility, efficiency, and generalization, sparking a surge of interest in this foundational topic."
+        },
+        {
+          "id": "social-sim26-fidelity-in-applications",
+          "start": "08:30",
+          "end": "18:00",
+          "type": "workshop",
+          "siteType": "Workshop",
+          "title": "Social Sim'26: Fidelity in Applications",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": "https://colm.cc/virtual/2026/workshop/2559",
+          "notes": "Room not published on colm.cc as of the fetch date.",
+          "organizers": [
+            "Zachary Yang",
+            "Maximilian Puelma Touzel",
+            "Xuhui Zhou",
+            "Yunze Xiao",
+            "Lynnette Hui Xian Ng",
+            "Jean-Francois Godbout",
+            "Reihaneh Rabbany",
+            "Maarten Sap"
+          ],
+          "projectUrl": "https://sites.google.com/view/social-sims-with-llms",
+          "abstract": "In an era where digital interactions increasingly shape our social fabric, LLM-based social simulation offers a powerful lens to understand complex societal dynamics. As the scope and ambition of these simulations expand, however, important methodological and conceptual challenges become increasingly salient. Beyond compelling demonstrations, questions remain around evaluation, robustness, interpretability, and empirical grounding. Now in its second iteration, our workshop invites researchers, practitioners, and thought leaders to explore rigorous and responsible approaches to LLM-based social simulation."
+        },
+        {
+          "id": "the-2nd-workshop-on-lifelong-agent-learning-aligning-evolving",
+          "start": "08:30",
+          "end": "18:00",
+          "type": "workshop",
+          "siteType": "Workshop",
+          "title": "The 2nd Workshop on Lifelong Agent: Learning, Aligning, Evolving",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": "https://colm.cc/virtual/2026/workshop/2551",
+          "notes": "Room not published on colm.cc as of the fetch date.",
+          "organizers": [
+            "Cheng Qian",
+            "Emre Can Acikgoz",
+            "Zhenfei Yin"
+          ],
+          "projectUrl": "https://lifelongagent.github.io/",
+          "abstract": "Artificial intelligence is entering a new phase: from one-shot assistants to persistent agents that remember, act, and adapt across extended interactions. Recent work increasingly studies agents as stateful systems with memory, planning, tool use, and environment interaction, rather than static models evaluated only on short-horizon benchmarks. This shift makes the central challenge more concrete: how can agents continuously improve while remaining reliable, efficient, and aligned over time?\n\nThe notion of a lifelong agent offers a natural lens for this challenge. A lifelong agent should not only acquire new knowledge and skills, but also manage memory, personalize safely, interact with evolving tool ecosystems, and withstand long-term deployment without drift or brittle failures. This workshop brings these emerging directions under a unified agenda centered on agents that learn, align, and evolve throughout their lifespan.\n\nAs the second edition of the Lifelong Agents workshop, this event builds on the strong community interest from the first edition while moving the conversation toward next-stage questions: how learning changes alignment, how new tools alter reliability, how personalization affects oversight, and how persistent deployment demands new forms of evaluation and governance. By bringing together language agents, reinforcement learning, multimodal and embodied systems, human-AI interaction, evaluation, and AI safety, we aim to shape a coherent roadmap for agents that can be built responsibly and studied rigorously under real-world conditions."
+        },
+        {
+          "id": "workshop-on-agent-behavior",
+          "start": "08:30",
+          "end": "18:00",
+          "type": "workshop",
+          "siteType": "Workshop",
+          "title": "Workshop on Agent Behavior",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": "https://colm.cc/virtual/2026/workshop/2550",
+          "notes": "Room not published on colm.cc as of the fetch date.",
+          "organizers": [
+            "Manuel Cherep",
+            "Nikhil Singh",
+            "Hao Zhu",
+            "Yanzhe Zhang",
+            "Xinyang Han",
+            "Isotta Magistrali",
+            "Saab Mansour",
+            "Pattie Maes",
+            "Benjamin S Manning",
+            "Weronika Łajewska"
+          ],
+          "projectUrl": "https://www.aiagentbehavior.com",
+          "abstract": "The dominant paradigm in AI agent research is heavily\ncapability-centric\n. Agents are primarily evaluated on what they achieve, and progress is measured by rigidly closing the gap between observed and desired performance. Though this has undoubtedly driven remarkable advances, it represents an incomplete account of agency that completely sidesteps a critical question:\nhow\ndo agents achieve what they achieve?\nA system that achieves a goal through opaque, brittle, or socially harmful processes raises deep concerns that traditional test metrics simply do not capture.\nWe propose a workshop centered on this complementary question, which we refer to as the study of agent behavior. This encompasses the full range of both observable and latent processes governing an agent's actions, including its decision-making strategies, its interaction patterns, its internal representations, and its responses to interventions."
+        },
+        {
+          "id": "workshop-on-responsibly-enabling-data-for-foundation-models",
+          "start": "08:30",
+          "end": "18:00",
+          "type": "workshop",
+          "siteType": "Workshop",
+          "title": "Workshop on Responsibly Enabling Data for Foundation Models",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": "https://colm.cc/virtual/2026/workshop/2565",
+          "notes": "Room not published on colm.cc as of the fetch date.",
+          "organizers": [
+            "Anil Ramakrishna",
+            "Zheng Xu"
+          ],
+          "projectUrl": "https://re-data-colm2026.github.io/",
+          "abstract": "As foundation models scale, available training data sources have rapidly depleted. However, several forms of valuable data artifacts such as medical records, legal, and financial documents are restricted from use in model training due to their sensitive nature. In addition, the strong reasoning capabilities in current generative models have opened the possibility for highly personalizable AI applications but these remain bottlenecked by limited access to high quality user data. Hence, it is of immense value to responsibly unlock these data sources (for example: using data transformation or constrained training paradigms) or to generate synthetic alternatives. In this workshop, we aim to bring together domain experts in data, privacy, model training, and legal policy, to advance the frontier of responsibly leveraging such sensitive data with foundation models.\nTopics of interest include (but are not limited to):"
+        },
+        {
+          "id": "workshop-on-scientific-understanding-of-foundation-models",
+          "start": "08:30",
+          "end": "18:00",
+          "type": "workshop",
+          "siteType": "Workshop",
+          "title": "Workshop on Scientific Understanding of Foundation Models",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": "https://colm.cc/virtual/2026/workshop/2554",
+          "notes": "Room not published on colm.cc as of the fetch date.",
+          "organizers": [
+            "Hanlin Zhang",
+            "Kaiyue Wen",
+            "Natalie Abreu",
+            "Sewon Min",
+            "Yizhong Wang",
+            "Sham Kakade",
+            "Hanlin Zhang",
+            "Yizhou Liu",
+            "Alex Damian"
+          ],
+          "projectUrl": "https://science-ai-2026.github.io",
+          "abstract": "Moving from empirical scaling phenomena toward predictive science for foundation models.\n\nDespite the extraordinary capabilities of modern foundation models, our scientific understanding of these systems remains remarkably shallow. We can observe that scaling works — but we cannot yet predict when capabilities will grow, why certain representations form, or how reasoning behavior arises from training dynamics.\n\nThis workshop aims to catalyze a shift from capability demonstration to formal, testable theory. We seek to uncover laws, invariants, and causal structures — and to develop rigorous evaluation methodologies that can make foundation models more controllable, reliable, and interpretable.\n\nBy bringing together researchers from theory, empirical ML, interpretability, optimization, evaluation, and scientific methodology, we aim to lay groundwork for a genuine science of foundation models — one built on predictive understanding, not post-hoc narrative."
+        },
+        {
+          "id": "snacks-fri-1100",
+          "start": "11:00",
+          "end": "12:00",
+          "type": "break",
+          "siteType": "Break",
+          "title": "Snacks",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": null,
+          "notes": null
+        },
+        {
+          "id": "lunch-break-on-your-own-fri-1300",
+          "start": "13:00",
+          "end": "14:30",
+          "type": "break",
+          "siteType": "Lunch",
+          "title": "Lunch Break (on your own)",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": null,
+          "notes": "Lunch is not provided by the conference."
+        },
+        {
+          "id": "snacks-fri-1530",
+          "start": "15:30",
+          "end": "16:30",
+          "type": "break",
+          "siteType": "Break",
+          "title": "Snacks",
+          "room": null,
+          "speaker": null,
+          "papers": null,
+          "paperCount": null,
+          "rooms": null,
+          "colmUrl": null,
+          "notes": null
+        }
+      ]
+    }
+  ],
+  "keyDates": [
+    {
+      "group": "Meeting Dates",
+      "label": "Main Conference",
+      "date": "2026-10-06",
+      "endDate": "2026-10-08",
+      "time": null,
+      "timezone": "America/Los_Angeles",
+      "note": null,
+      "passed": null,
+      "raw": "October 6 - 8"
+    },
+    {
+      "group": "Meeting Dates",
+      "label": "Workshops",
+      "date": "2026-10-09",
+      "endDate": null,
+      "time": null,
+      "timezone": "America/Los_Angeles",
+      "note": null,
+      "passed": null,
+      "raw": "October 9"
+    },
+    {
+      "group": "Important Dates and Deadlines",
+      "label": "Abstract Submission Deadline",
+      "date": "2026-03-26",
+      "endDate": null,
+      "time": null,
+      "timezone": "AoE",
+      "note": null,
+      "passed": true,
+      "raw": "Mar 26 '26 (Anywhere on Earth)"
+    },
+    {
+      "group": "Important Dates and Deadlines",
+      "label": "Full Paper Submission Deadline",
+      "date": "2026-03-31",
+      "endDate": null,
+      "time": null,
+      "timezone": "AoE",
+      "note": null,
+      "passed": true,
+      "raw": "Mar 31 '26 (Anywhere on Earth)"
+    },
+    {
+      "group": "Important Dates and Deadlines",
+      "label": "Workshop Proposal Deadline",
+      "date": "2026-04-14",
+      "endDate": null,
+      "time": null,
+      "timezone": "AoE",
+      "note": null,
+      "passed": true,
+      "raw": "Apr 14 '26 (Anywhere on Earth)"
+    },
+    {
+      "group": "Important Dates and Deadlines",
+      "label": "Workshop Proposal Decision Notifications",
+      "date": "2026-05-12",
+      "endDate": null,
+      "time": null,
+      "timezone": "America/Los_Angeles",
+      "note": null,
+      "passed": true,
+      "raw": "May 12 '26"
+    },
+    {
+      "group": "Important Dates and Deadlines",
+      "label": "Rebuttal Period Begins",
+      "date": "2026-05-22",
+      "endDate": null,
+      "time": null,
+      "timezone": "America/Los_Angeles",
+      "note": null,
+      "passed": true,
+      "raw": "May 22 '26"
+    },
+    {
+      "group": "Important Dates and Deadlines",
+      "label": "Rebuttal Period Ends",
+      "date": "2026-06-08",
+      "endDate": null,
+      "time": null,
+      "timezone": "America/Los_Angeles",
+      "note": null,
+      "passed": true,
+      "raw": "Jun 08 '26"
+    },
+    {
+      "group": "Important Dates and Deadlines",
+      "label": "Suggested Submission Deadline for Workshop Contributions",
+      "date": "2026-06-23",
+      "endDate": null,
+      "time": null,
+      "timezone": "AoE",
+      "note": null,
+      "passed": true,
+      "raw": "Jun 23 '26 (Anywhere on Earth)"
+    },
+    {
+      "group": "Important Dates and Deadlines",
+      "label": "Paper Decision Notifications",
+      "date": "2026-07-08",
+      "endDate": null,
+      "time": null,
+      "timezone": "America/Los_Angeles",
+      "note": null,
+      "passed": true,
+      "raw": "Jul 08 '26"
+    },
+    {
+      "group": "Important Dates and Deadlines",
+      "label": "Careers Site Opens",
+      "date": "2026-07-14",
+      "endDate": null,
+      "time": "05:00",
+      "timezone": "PDT",
+      "note": null,
+      "passed": true,
+      "raw": "Jul 14 '26 05:00 AM PDT"
+    },
+    {
+      "group": "Important Dates and Deadlines",
+      "label": "Sponsor Portal Opens",
+      "date": "2026-07-24",
+      "endDate": null,
+      "time": "05:00",
+      "timezone": "PDT",
+      "note": null,
+      "passed": true,
+      "raw": "Jul 24 '26 05:00 AM PDT"
+    },
+    {
+      "group": "Important Dates and Deadlines",
+      "label": "Mandatory Accept/Reject Notification for Workshop Contributions",
+      "date": "2026-07-24",
+      "endDate": null,
+      "time": null,
+      "timezone": "AoE",
+      "note": null,
+      "passed": true,
+      "raw": "Jul 24 '26 (Anywhere on Earth)"
+    },
+    {
+      "group": "Important Dates and Deadlines",
+      "label": "Sponsor Application Closes",
+      "date": "2026-07-31",
+      "endDate": null,
+      "time": "17:00",
+      "timezone": "PDT",
+      "note": null,
+      "passed": true,
+      "raw": "Jul 31 '26 05:00 PM PDT"
+    },
+    {
+      "group": "Important Dates and Deadlines",
+      "label": "Registration Opens",
+      "date": "2026-08-10",
+      "endDate": null,
+      "time": "13:00",
+      "timezone": "PDT",
+      "note": null,
+      "passed": true,
+      "raw": "Aug 10 '26 01:00 PM PDT"
+    },
+    {
+      "group": "Important Dates and Deadlines",
+      "label": "Sponsor Payment Deadline",
+      "date": "2026-09-08",
+      "endDate": null,
+      "time": "17:00",
+      "timezone": "PDT",
+      "note": null,
+      "passed": true,
+      "raw": "Sep 08 '26 05:00 PM PDT"
+    },
+    {
+      "group": "Important Dates and Deadlines",
+      "label": "Sponsor Insurance Deadline",
+      "date": "2026-09-08",
+      "endDate": null,
+      "time": "17:00",
+      "timezone": "PDT",
+      "note": null,
+      "passed": true,
+      "raw": "Sep 08 '26 05:00 PM PDT"
+    },
+    {
+      "group": "Important Dates and Deadlines",
+      "label": "Main Conference Begins",
+      "date": "2026-10-06",
+      "endDate": null,
+      "time": null,
+      "timezone": "America/Los_Angeles",
+      "note": null,
+      "passed": false,
+      "raw": "Oct 06 '26"
+    },
+    {
+      "group": "Important Dates and Deadlines",
+      "label": "Main Conference Ends",
+      "date": "2026-10-08",
+      "endDate": null,
+      "time": null,
+      "timezone": "America/Los_Angeles",
+      "note": null,
+      "passed": false,
+      "raw": "Oct 08 '26"
+    },
+    {
+      "group": "Important Dates and Deadlines",
+      "label": "Workshops Day",
+      "date": "2026-10-09",
+      "endDate": null,
+      "time": null,
+      "timezone": "America/Los_Angeles",
+      "note": null,
+      "passed": false,
+      "raw": "Oct 09 '26"
+    },
+    {
+      "group": "Important Dates and Deadlines",
+      "label": "Careers Site Accepting Applications",
+      "date": "2026-10-12",
+      "endDate": null,
+      "time": "17:00",
+      "timezone": "PDT",
+      "note": null,
+      "passed": false,
+      "raw": "Oct 12 '26 05:00 PM PDT"
+    },
+    {
+      "group": "Important Dates and Deadlines",
+      "label": "Careers Site Closes",
+      "date": "2026-11-30",
+      "endDate": null,
+      "time": "17:00",
+      "timezone": "PST",
+      "note": null,
+      "passed": false,
+      "raw": "Nov 30 '26 05:00 PM PST"
+    },
+    {
+      "group": "Important Dates and Deadlines",
+      "label": "Sponsor Portal Closes",
+      "date": "2026-11-30",
+      "endDate": null,
+      "time": "17:00",
+      "timezone": "PST",
+      "note": null,
+      "passed": false,
+      "raw": "Nov 30 '26 05:00 PM PST"
+    },
+    {
+      "group": "Exhibitors",
+      "label": "Expo Calls Open",
+      "date": "2026-08-03",
+      "endDate": null,
+      "time": "00:18",
+      "timezone": "UTC",
+      "note": "Listed under 'Dates and Deadlines'",
+      "passed": false,
+      "raw": "Aug 03 '26 12:18 AM UTC"
+    },
+    {
+      "group": "Exhibitors",
+      "label": "Expo Calls Deadline",
+      "date": "2026-08-27",
+      "endDate": null,
+      "time": "22:00",
+      "timezone": "UTC",
+      "note": "Listed under 'Dates and Deadlines'",
+      "passed": false,
+      "raw": "Aug 27 '26 10:00 PM UTC"
+    },
+    {
+      "group": "Volunteers",
+      "label": "Volunteer Application Opens",
+      "date": "2026-07-21",
+      "endDate": null,
+      "time": "21:47",
+      "timezone": "UTC",
+      "note": "Listed under 'Dates and Deadlines'",
+      "passed": false,
+      "raw": "Jul 21 '26 09:47 PM UTC"
+    },
+    {
+      "group": "Volunteers",
+      "label": "Volunteer Application Deadline",
+      "date": "2026-08-01",
+      "endDate": null,
+      "time": "10:00",
+      "timezone": "UTC",
+      "note": "Listed under 'Dates and Deadlines'",
+      "passed": false,
+      "raw": "Aug 01 '26 10:00 AM UTC"
+    },
+    {
+      "group": "Volunteers",
+      "label": "Volunteer Notifications",
+      "date": "2026-08-24",
+      "endDate": null,
+      "time": "10:00",
+      "timezone": "UTC",
+      "note": "Listed under 'Dates and Deadlines'",
+      "passed": false,
+      "raw": "Aug 24 '26 10:00 AM UTC"
+    },
+    {
+      "group": "Volunteers",
+      "label": "Volunteer Shift Selection Begins",
+      "date": "2026-09-22",
+      "endDate": null,
+      "time": "10:00",
+      "timezone": "UTC",
+      "note": "Listed under 'Dates and Deadlines'",
+      "passed": false,
+      "raw": "Sep 22 '26 10:00 AM UTC"
+    }
+  ]
+}

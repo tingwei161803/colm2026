@@ -1,0 +1,2257 @@
+[
+  {
+    "id": "haips",
+    "name": "2nd Workshop on Human-Centered Privacy and Security for Language Models",
+    "shortName": "HAIPS",
+    "edition": "2nd",
+    "contact": "Tianshi Li",
+    "organizers": [
+      "Tianshi Li (Northeastern University)",
+      "Toby Jia-Jun Li (University of Notre Dame)",
+      "Yaxing Yao (Johns Hopkins University)",
+      "Sauvik Das (Carnegie Mellon University)",
+      "Niloofar Mireshghallah (humans& / Carnegie Mellon University)"
+    ],
+    "date": "2026-10-09",
+    "startTime": "8:30 AM PDT",
+    "endTime": "6:00 PM PDT",
+    "room": null,
+    "website": "https://haips.com",
+    "colmUrl": "https://colm.cc/virtual/2026/workshop/2562",
+    "description": "Language models are rapidly becoming embedded in the interaction fabric of our society — as assistants, tutors, collaborators, and autonomous agents across domains from healthcare to software engineering to creative work. Their versatility makes them uniquely powerful but also uniquely hard to secure: privacy and security risks arise not just from model internals but from the rich, open-ended ways people interact with and through these systems. Humans sit at the center of these challenges — as victims of privacy violations and manipulation, as intentional or unintentional facilitators of risk, and as bystanders whose data is swept up without consent. HAIPS@COLM aims to bring a human-centered, interdisciplinary lens to LM privacy and security, building on the 1st HAIPS Workshop held at ACM CCS 2025.",
+    "topics": [
+      "Human expectations, consent, and control over data used in LM systems",
+      "Privacy- and security-preserving LM infrastructure for real-world deployment contexts",
+      "User-facing protections that help people understand and prevent LM privacy and security risks",
+      "Human oversight, delegation, and accountability in agentic, personalized, and tool-using LM systems",
+      "Evaluation and benchmarking of LM privacy, security, and safety through a human lens",
+      "Human impacts of adversarial LM-enabled privacy and security threats",
+      "User vulnerability, manipulation, deception, and dark patterns involving language models",
+      "Effects of language models used as simulated users, evaluators, auditors, or research participants",
+      "LM-powered tools that support privacy, security, safety, and human agency",
+      "Developer and organizational practices, risks, and responsibilities in LM design and deployment",
+      "Human-centered policy and governance for LM privacy, security, and safety"
+    ],
+    "schedule": [
+      {
+        "time": "9:00 AM",
+        "title": "Opening remarks",
+        "speaker": null
+      },
+      {
+        "time": "9:10 AM",
+        "title": "Invited talk (remote)",
+        "speaker": "Florian Tramèr (ETH Zurich)"
+      },
+      {
+        "time": "9:40 AM",
+        "title": "Invited talk",
+        "speaker": "Helen Nissenbaum (Cornell Tech)"
+      },
+      {
+        "time": "10:10 AM",
+        "title": "Coffee break + posters",
+        "speaker": null
+      },
+      {
+        "time": "10:35 AM",
+        "title": "Invited talk",
+        "speaker": "Ruoxi Jia (Virginia Tech)"
+      },
+      {
+        "time": "11:05 AM",
+        "title": "Invited talk",
+        "speaker": "Maarten Sap (Carnegie Mellon University)"
+      },
+      {
+        "time": "11:35 AM",
+        "title": "Invited talk",
+        "speaker": "Nina Taft (Google)"
+      },
+      {
+        "time": "12:05 PM",
+        "title": "Lunch",
+        "speaker": null
+      },
+      {
+        "time": "1:25 PM",
+        "title": "Panel discussion",
+        "speaker": "Helen Nissenbaum, Ruoxi Jia, Maarten Sap, Nina Taft; moderator TBD"
+      },
+      {
+        "time": "2:10 PM",
+        "title": "Break",
+        "speaker": null
+      },
+      {
+        "time": "2:15 PM",
+        "title": "Spotlight: PrivacySIM: Evaluating LLM Simulation of User Privacy Behavior",
+        "speaker": "James Flemings, Murali Annavaram"
+      },
+      {
+        "time": "2:25 PM",
+        "title": "Spotlight: Natively Unlearnable Large Language Models",
+        "speaker": "Gaurav Rohit Ghosal, Pratyush Maini, Aditi Raghunathan"
+      },
+      {
+        "time": "2:35 PM",
+        "title": "Spotlight: Your Agent, Their Asset: A Real-World Safety Analysis of OpenClaw",
+        "speaker": "Zijun Wang et al."
+      },
+      {
+        "time": "2:45 PM",
+        "title": "Spotlight: Risk vs. Reward: Supporting Practitioners' Understanding of LLM Privacy Risks",
+        "speaker": "Aseem Shrey, Weiqian Zhang, Ece Gumusel, Hana Habib"
+      },
+      {
+        "time": "2:55 PM",
+        "title": "Spotlight: Loose Lips: Understanding Privacy Leakage in Agentic Dialogue",
+        "speaker": "Soumya Sharma et al."
+      },
+      {
+        "time": "3:05 PM",
+        "title": "Spotlight: Act on Your Behalf, Beyond Your Authorization: Benchmarking LLM Agent Authorization Alignment",
+        "speaker": "Zhiping Zhang, Zihao Huang, Franklin Mingzhe Li, Tianshi Li"
+      },
+      {
+        "time": "3:15 PM",
+        "title": "Spotlight: Auditing Prompt Injection Defenses Before They Reach Users",
+        "speaker": "Xiaoxue Yang, Bozhidar Stevanoski, Matthieu Meeus, Yves-Alexandre de Montjoye"
+      },
+      {
+        "time": "3:25 PM",
+        "title": "Poster session + coffee",
+        "speaker": null
+      },
+      {
+        "time": "4:15 PM",
+        "title": "Unconference discussions",
+        "speaker": null
+      },
+      {
+        "time": "5:15 PM",
+        "title": "Closing remarks",
+        "speaker": null
+      }
+    ],
+    "speakers": [
+      "Helen Nissenbaum (Cornell Tech)",
+      "Ruoxi Jia (Virginia Tech)",
+      "Maarten Sap (Carnegie Mellon University)",
+      "Nina Taft (Google)",
+      "Florian Tramèr (ETH Zurich)"
+    ],
+    "deadlines": [
+      {
+        "label": "Submission deadline",
+        "date": "2026-06-23",
+        "note": "AoE"
+      },
+      {
+        "label": "Notification of acceptance",
+        "date": "2026-07-24",
+        "note": null
+      },
+      {
+        "label": "Camera-ready deadline",
+        "date": "2026-08-20",
+        "note": null
+      },
+      {
+        "label": "Workshop day",
+        "date": "2026-10-09",
+        "note": null
+      }
+    ],
+    "links": {
+      "cfp": "https://haips.com/#cfp",
+      "submission": "https://openreview.net/group?id=colmweb.org/COLM/2026/Workshop/HAIPS",
+      "schedule": "https://haips.com/#schedule",
+      "previousEdition": "https://haips.com/haips2025"
+    }
+  },
+  {
+    "id": "actionable-interpretability",
+    "name": "Actionable Interpretability",
+    "shortName": null,
+    "edition": "2nd",
+    "contact": "Tal Haklay",
+    "organizers": [
+      "Tal Haklay (Goodfire)",
+      "Hadas Orgad (Kempner Institute, Harvard University)",
+      "Anja Reusch (Technion)",
+      "Marius Mosbach (McGill University and Mila – Quebec AI Institute)",
+      "Sarah Wiegreffe (University of Maryland)",
+      "Ian Tenney (Google DeepMind)",
+      "Mor Geva (Tel Aviv University)",
+      "Asaf Avrahamy (Meta FAIR and Tel Aviv University)"
+    ],
+    "date": "2026-10-09",
+    "startTime": "8:30 AM PDT",
+    "endTime": "6:00 PM PDT",
+    "room": null,
+    "website": "https://actionable-interpretability.github.io/",
+    "colmUrl": "https://colm.cc/virtual/2026/workshop/2553",
+    "description": "The workshop on Actionable Interpretability@COLM2026 aims to foster discussions on leveraging interpretability insights to drive tangible advancements in AI across diverse domains. We welcome contributions that move beyond theoretical analysis, demonstrating concrete improvements in model alignment, robustness, and real-world applications. Additionally, we seek to explore the challenges inherent in translating interpretability research into actionable impact.",
+    "topics": [
+      "Practical applications of interpretability insights to hallucinations, bias, adversarial robustness, and model reliability",
+      "Interpretability in high-stakes and less-explored domains (healthcare, finance, cybersecurity)",
+      "Comparative analyses of interpretability-based approaches versus fine-tuning, prompting, and other techniques",
+      "New model architectures, training paradigms or design choices informed by interpretability findings",
+      "Interpretability in complex scenarios such as reasoning processes or multi-turn interactions",
+      "Realistic benchmarking and assessment methods for the real-world impact of interpretability insights",
+      "Critical discussions on the feasibility, limitations, and future directions of actionable interpretability research"
+    ],
+    "schedule": null,
+    "speakers": [
+      "Yonatan Belinkov (Technion)",
+      "Tom McGrath (Goodfire)",
+      "Christopher Potts (Stanford University)",
+      "Dhanya Sridhar (Université de Montréal / Mila)"
+    ],
+    "deadlines": [
+      {
+        "label": "Main submission deadline",
+        "date": "2026-06-24",
+        "note": "AoE; extended from June 23"
+      },
+      {
+        "label": "Acceptance notification",
+        "date": "2026-07-24",
+        "note": null
+      },
+      {
+        "label": "Fast track submission deadline (accepted COLM 2026 papers)",
+        "date": "2026-08-09",
+        "note": "AoE; the CFP page's dates list says August 7"
+      },
+      {
+        "label": "Workshop day",
+        "date": "2026-10-09",
+        "note": null
+      }
+    ],
+    "links": {
+      "cfp": "https://actionable-interpretability.github.io/cfp/",
+      "submission": "https://openreview.net/group?id=colmweb.org/COLM/2026/Workshop/AIW",
+      "twitter": "https://x.com/ActInterp",
+      "bluesky": "https://bsky.app/profile/actinterp.bsky.social",
+      "previousEdition": "https://actionable-interpretability.github.io/2025/"
+    }
+  },
+  {
+    "id": "advml-frontiers-cotma",
+    "name": "AdvML-Frontiers × CoTMA: From Model Security to Compositional Threats in Multi-Agent AI Systems",
+    "shortName": "AdvML-Frontiers × CoTMA",
+    "edition": null,
+    "contact": "Sijia Liu",
+    "organizers": [
+      "Sijia Liu (Michigan State University)",
+      "Pin-Yu Chen (IBM Research, USA)",
+      "Dongxiao Zhu (Wayne State University, USA)",
+      "Eric Wong (University of Pennsylvania, USA)",
+      "Yao Qin (UC Santa Barbara, USA)",
+      "Kathrin Grosse (IBM Research Europe, Switzerland)",
+      "Baharan Mirzasoleiman (UCLA, USA)",
+      "Sanmi Koyejo (Stanford University, USA)",
+      "Abhinav Mohanty (Amazon AGI)",
+      "Tong Wang (Amazon AGI)",
+      "Swabha Swayamdipta (University of Southern California)",
+      "Ninareh Mehrabi (Meta)",
+      "Anil Ramakrishna (Meta)",
+      "Yeonsung Jung (KAIST AI)",
+      "Homa Hosseinmardi (UCLA)",
+      "Christos Christodoulopoulos (UK ICO)",
+      "Bingqi Shang (Michigan State University; Workshop Publicity Student Chair)"
+    ],
+    "date": "2026-10-09",
+    "startTime": "8:30 AM PDT",
+    "endTime": "6:00 PM PDT",
+    "room": null,
+    "website": "https://advml-frontier.github.io/",
+    "colmUrl": "https://colm.cc/virtual/2026/workshop/2557",
+    "description": "The AdvML-Frontiers × CoTMA workshop is a cross-community effort that unifies two complementary workshop brands: AdvML-Frontiers and CoTMA (Compositional Threats in Multi-Agent AI Systems). As foundation models evolve from standalone predictors into reusable assets and interconnected multi-agent systems, the adversarial surface of AI has expanded far beyond traditional input-output robustness. Building on the AdvML-Frontiers theme, the workshop focuses on securing frontier models both as valuable assets and as complex systems. Complementing this perspective, CoTMA focuses on compositional and interaction-layer threats in multi-agent AI systems, where vulnerabilities emerge through communication, delegation, shared memory, tool use, and coordination among agents.",
+    "topics": [
+      "Adversarial machine learning for foundation models",
+      "Multi-agent AI security and compositional threats",
+      "Inter-agent attacks and trust exploitation",
+      "Prompt injection and indirect prompt attacks",
+      "Memory poisoning and RAG security",
+      "Tool-use and API exploitation",
+      "Model provenance, fingerprinting, and watermarking",
+      "Model stealing and supply-chain attacks",
+      "Backdoors and poisoning in frontier model pipelines",
+      "Adversarial attacks on reasoning models and chain-of-thought",
+      "Test-time adaptation and intervention security",
+      "Robustness of agentic and embodied AI systems",
+      "Security for multimodal models and VLAs",
+      "Alignment and safety evaluation for frontier systems",
+      "Theoretical foundations of robustness, controllability, and identifiability",
+      "Governance, auditing, and accountability for AI agents",
+      "Benchmarks and red-teaming frameworks for agentic systems"
+    ],
+    "schedule": [
+      {
+        "time": "8:30 AM",
+        "title": "Opening Remarks",
+        "speaker": null
+      },
+      {
+        "time": "8:40 AM",
+        "title": "Invited Talk (AdvML)",
+        "speaker": "Nicole Nichols (Palo Alto Networks)"
+      },
+      {
+        "time": "9:10 AM",
+        "title": "Invited Talk (AdvML)",
+        "speaker": "Somesh Jha (University of Wisconsin–Madison)"
+      },
+      {
+        "time": "9:40 AM",
+        "title": "Coffee Break",
+        "speaker": null
+      },
+      {
+        "time": "9:55 AM",
+        "title": "AdvML Rising Star Award Announcement",
+        "speaker": null
+      },
+      {
+        "time": "10:00 AM",
+        "title": "Rising Star Award Presentation: What Does It Mean for a Language Model to Forget?",
+        "speaker": "Youssef Allouah"
+      },
+      {
+        "time": "10:15 AM",
+        "title": "Rising Star Award Presentation: Unlearning, Privacy Leakage, and Adversarial Interaction",
+        "speaker": "Vaidehi Patil"
+      },
+      {
+        "time": "10:30 AM",
+        "title": "Rising Star Award Presentation: Reliability Over the Lifetime of Evolving AI Systems",
+        "speaker": "Jianing Zhu"
+      },
+      {
+        "time": "10:45 AM",
+        "title": "Invited Talk (CoTMA)",
+        "speaker": "Evangelos Papalexakis (University of California, Riverside)"
+      },
+      {
+        "time": "11:15 AM",
+        "title": "Invited Talk (CoTMA)",
+        "speaker": "Rahul Gupta (Amazon AGI)"
+      },
+      {
+        "time": "11:45 AM",
+        "title": "Oral/Spotlight Paper Presentations I",
+        "speaker": null
+      },
+      {
+        "time": "12:00 PM",
+        "title": "Lunch",
+        "speaker": null
+      },
+      {
+        "time": "1:15 PM",
+        "title": "Poster Session 1",
+        "speaker": null
+      },
+      {
+        "time": "1:55 PM",
+        "title": "Invited Talk (AdvML)",
+        "speaker": "Nathalie Baracaldo (IBM Research)"
+      },
+      {
+        "time": "2:25 PM",
+        "title": "Invited Talk (CoTMA)",
+        "speaker": "Eugene Bagdasarian (UMass Amherst & Google)"
+      },
+      {
+        "time": "2:55 PM",
+        "title": "Invited Talk (AdvML)",
+        "speaker": "Motahhare Eslami (Carnegie Mellon University)"
+      },
+      {
+        "time": "3:25 PM",
+        "title": "Oral/Spotlight Paper Presentations II",
+        "speaker": null
+      },
+      {
+        "time": "3:40 PM",
+        "title": "Coffee Break + Poster Session 2",
+        "speaker": null
+      },
+      {
+        "time": "4:30 PM",
+        "title": "Panel",
+        "speaker": "Evtimov, Beirami, Cameron, Bagdasarian"
+      },
+      {
+        "time": "5:25 PM",
+        "title": "Closing Remarks",
+        "speaker": null
+      }
+    ],
+    "speakers": [
+      "Nicole Nichols (Palo Alto Networks)",
+      "Somesh Jha (University of Wisconsin–Madison)",
+      "Evangelos Papalexakis (University of California, Riverside)",
+      "Rahul Gupta (Amazon AGI)",
+      "Nathalie Baracaldo (IBM Research)",
+      "Eugene Bagdasarian (UMass Amherst & Google)",
+      "Motahhare Eslami (Carnegie Mellon University)"
+    ],
+    "deadlines": [
+      {
+        "label": "Submission deadline",
+        "date": "2026-06-30",
+        "note": "AoE; extended from June 23"
+      },
+      {
+        "label": "Rising Star Award application materials",
+        "date": "2026-07-24",
+        "note": "AoE"
+      },
+      {
+        "label": "Notification to authors",
+        "date": "2026-07-31",
+        "note": "extended from July 24"
+      },
+      {
+        "label": "Rising Star Award recommendation letters",
+        "date": "2026-07-31",
+        "note": "AoE"
+      },
+      {
+        "label": "Workshop date",
+        "date": "2026-10-09",
+        "note": null
+      }
+    ],
+    "links": {
+      "cfp": "https://advml-frontier.github.io/#CallForPapers",
+      "submission": "https://openreview.net/group?id=colmweb.org/COLM/2026/Workshop/AdvML-Frontiers-CoTMA",
+      "schedule": "https://advml-frontier.github.io/#schedule",
+      "risingStarAward": "https://sites.google.com/view/advml/advml-rising-star-award",
+      "previousEdition": "https://advml-frontier.github.io/past/neurips2024/index.html"
+    }
+  },
+  {
+    "id": "ai-measurement-science",
+    "name": "AI Measurement Science: Toward Rigorous AI Evaluation",
+    "shortName": "AIMS",
+    "edition": "1st",
+    "contact": "Sang Truong",
+    "organizers": [
+      "Sang Truong (Stanford University)",
+      "Sanmi Koyejo (Stanford University)",
+      "Olawale Salaudeen (Microsoft Research / UIUC)",
+      "Nhi Truong (Stanford University)",
+      "Berivan Isik (Google DeepMind)",
+      "Luke Guerdan (Carnegie Mellon University)",
+      "Xing Xie (Microsoft Research Asia)"
+    ],
+    "date": "2026-10-09",
+    "startTime": "8:30 AM PDT",
+    "endTime": "6:00 PM PDT",
+    "room": null,
+    "website": "https://aimslab.stanford.edu/workshop",
+    "colmUrl": "https://colm.cc/virtual/2026/workshop/2561",
+    "description": "We are excited to announce the inaugural AI Measurement Science Workshop, co-located with COLM 2026 at the Hilton San Francisco Union Square. The workshop is a one-day, in-person event on October 9, 2026, bringing together researchers from machine learning, statistics, psychometrics, economics, and policy to develop a unified perspective on measurement for frontier AI systems. As AI systems become increasingly embedded in real-world workflows, existing evaluation paradigms face fundamental limitations. This workshop frames evaluation as a problem of AI measurement science. We focus on three tightly coupled challenges (measurement of interactive systems, measurement under strategic optimization, and measurement under non-stationarity) and aim to define common abstractions and open research directions for this emerging area.",
+    "topics": [
+      "Interactive measurement: evaluation of policies, long-horizon behavior, tool-using agents, and statistical validity with non-i.i.d. observations",
+      "Measurement under strategic optimization: evaluation as a game, robustness to gaming and contamination, incentive-compatible or adaptive leaderboards",
+      "Measurement under non-stationarity: covariate, label, and construct drift; adaptive test design, recalibration, longitudinal monitoring",
+      "Competition track: write-ups from the Predictive AI Evaluation Challenge"
+    ],
+    "schedule": [
+      {
+        "time": "8:30 AM",
+        "title": "Opening remarks",
+        "speaker": "Sanmi Koyejo"
+      },
+      {
+        "time": "8:45 AM",
+        "title": "Invited Talk",
+        "speaker": "Daniel Kang (UIUC)"
+      },
+      {
+        "time": "9:15 AM",
+        "title": "The Predictive AI Evaluation Challenge",
+        "speaker": "Sang Truong"
+      },
+      {
+        "time": "9:45 AM",
+        "title": "Invited Talk",
+        "speaker": "Serena Wang (Harvard / UBC)"
+      },
+      {
+        "time": "10:15 AM",
+        "title": "Poster session 1 (40 posters)",
+        "speaker": null
+      },
+      {
+        "time": "11:30 AM",
+        "title": "Invited Talk",
+        "speaker": "Jacob Steinhardt (UC Berkeley / Transluce)"
+      },
+      {
+        "time": "12:00 PM",
+        "title": "Networking lunch",
+        "speaker": null
+      },
+      {
+        "time": "12:30 PM",
+        "title": "Invited Talk",
+        "speaker": "Elham Tabassi (Brookings)"
+      },
+      {
+        "time": "1:00 PM",
+        "title": "Contributed talks (selected from submissions)",
+        "speaker": null
+      },
+      {
+        "time": "2:00 PM",
+        "title": "Poster session 2 (40 posters)",
+        "speaker": null
+      },
+      {
+        "time": "3:15 PM",
+        "title": "Debate, panel discussion, and group discussion",
+        "speaker": null
+      },
+      {
+        "time": "4:45 PM",
+        "title": "Mentorship session",
+        "speaker": "Berivan Isik"
+      },
+      {
+        "time": "5:45 PM",
+        "title": "Closing remarks",
+        "speaker": "Sanmi Koyejo"
+      }
+    ],
+    "speakers": [
+      "Daniel Kang (UIUC)",
+      "Serena Wang (Harvard / UBC)",
+      "Jacob Steinhardt (UC Berkeley / Transluce)",
+      "Elham Tabassi (Brookings)"
+    ],
+    "deadlines": [
+      {
+        "label": "Research track submission deadline",
+        "date": "2026-06-23",
+        "note": "AoE"
+      },
+      {
+        "label": "Research track notification",
+        "date": "2026-07-24",
+        "note": null
+      },
+      {
+        "label": "Competition track submission deadline",
+        "date": "2026-08-15",
+        "note": "AoE"
+      },
+      {
+        "label": "Camera-ready due",
+        "date": "2026-09-21",
+        "note": null
+      },
+      {
+        "label": "Workshop",
+        "date": "2026-10-09",
+        "note": null
+      }
+    ],
+    "links": {
+      "cfp": "https://aimslab.stanford.edu/workshop#call-for-papers",
+      "submission": "https://openreview.net/group?id=colmweb.org/COLM/2026/Workshop/AIMS",
+      "schedule": "https://aimslab.stanford.edu/workshop#schedule",
+      "competition": "https://aimslab.stanford.edu/competition",
+      "discord": "https://discord.gg/DQZgXCEJjc"
+    }
+  },
+  {
+    "id": "efficient-reasoning",
+    "name": "COLM 2026 Workshop on Efficient Reasoning",
+    "shortName": null,
+    "edition": "2nd",
+    "contact": "Zefan Cai",
+    "organizers": [
+      "Zefan Cai (UW–Madison)",
+      "Cheng Luo (Caltech / TikTok)",
+      "Yijiang Li (UC San Diego)",
+      "Weijia Shi (University of Washington)",
+      "Songlin Yang (MIT CSAIL)",
+      "Jiawei Zhao (Meta AI)",
+      "Zhen Dong (UC Santa Barbara)",
+      "Haozheng Luo (Northwestern University)",
+      "Zhijian Liu (UCSD)",
+      "Beidi Chen (Carnegie Mellon University)",
+      "Jiahao Yu (New York University Abu Dhabi)",
+      "Rui-jie Zhu (UC Santa Cruz)",
+      "Xinnan Dai (Michigan State University)"
+    ],
+    "date": "2026-10-09",
+    "startTime": "8:30 AM PDT",
+    "endTime": "6:00 PM PDT",
+    "room": null,
+    "website": "https://wdlctc.github.io/efficient-reasoning-2026/",
+    "colmUrl": "https://colm.cc/virtual/2026/workshop/2549",
+    "description": "Reasoning is rapidly moving beyond text-only benchmarks into multimodal, spatial, and embodied settings, where models must interpret long contexts, reason over visual scenes, plan actions, use tools, and interact with dynamic environments. This shift is especially visible in code agents, scientific assistants, embodied systems, and multimodal decision-making pipelines, where strong reasoning quality must now coexist with tight constraints on latency, memory, throughput, and serving cost. The central question is therefore no longer only how to make models reason better, but how to make them reason efficiently, robustly, and at scale in the wild. Building on the success of the 1st Workshop on Efficient Reasoning at NeurIPS 2025 (1,000+ attendees, 275 submissions), this second edition at COLM 2026 will bring together researchers and practitioners working across data, algorithms, systems, and real-world applications to tackle the challenges of making reasoning practical under real-world constraints.",
+    "topics": [
+      "Pipelines for creating high-quality training data under resource constraints",
+      "Benchmark methodologies for the efficiency and efficacy of reasoning models in real-world settings",
+      "Training reasoning models with a better efficiency/performance trade-off",
+      "Accelerating inference through algorithm and system design",
+      "Multimodal, spatial, and embodied reasoning under efficiency constraints",
+      "Theoretical analysis of the time and space complexity of reasoning models",
+      "Empirical investigations of practical efficiency (latency, throughput, memory)",
+      "Efficient large-scale RL training systems and on-device inference engines",
+      "KV-cache compression and memory management for long-context reasoning",
+      "Safety and robustness of efficient reasoning pipelines",
+      "Efficient deployments and applications of reasoning models"
+    ],
+    "schedule": [
+      {
+        "time": "9:15 AM",
+        "title": "Opening Remarks",
+        "speaker": null
+      },
+      {
+        "time": "9:30 AM",
+        "title": "Invited Talk: Building Scientific Worlds at Scale",
+        "speaker": "Heng Ji (UIUC)"
+      },
+      {
+        "time": "10:00 AM",
+        "title": "Oral: Context-Aware RL for Agentic and Multimodal LLMs",
+        "speaker": "Peiyang Xu"
+      },
+      {
+        "time": "10:15 AM",
+        "title": "Oral: Ignorance Is Shared, Knowledge Is Private",
+        "speaker": "Nikhil Ranjan"
+      },
+      {
+        "time": "10:30 AM",
+        "title": "Invited Talk",
+        "speaker": "Jiajun Wu (Stanford)"
+      },
+      {
+        "time": "11:00 AM",
+        "title": "Invited Talk",
+        "speaker": "Kai-Wei Chang (UCLA)"
+      },
+      {
+        "time": "11:30 AM",
+        "title": "Invited Talk",
+        "speaker": "Sewon Min (UC Berkeley)"
+      },
+      {
+        "time": "12:00 PM",
+        "title": "Lunch Break & Poster Session 1",
+        "speaker": null
+      },
+      {
+        "time": "1:30 PM",
+        "title": "Invited Talk",
+        "speaker": "Junjie Hu (University of Wisconsin)"
+      },
+      {
+        "time": "2:00 PM",
+        "title": "Invited Talk",
+        "speaker": "Manling Li (Northwestern University)"
+      },
+      {
+        "time": "2:30 PM",
+        "title": "Oral: Express Language Modeling",
+        "speaker": "Albert Gong"
+      },
+      {
+        "time": "2:45 PM",
+        "title": "Oral: Rebellious Student: Reversing Teacher Signals for Reasoning Exploration with Self-Distilled RLVR",
+        "speaker": "Jeonghye Kim"
+      },
+      {
+        "time": "3:00 PM",
+        "title": "Oral: PRESTO: Prefix-Aligned Tree Drafting for Diffusion Speculative Decoding",
+        "speaker": "Zheng Wang"
+      },
+      {
+        "time": "3:15 PM",
+        "title": "Afternoon Break",
+        "speaker": null
+      },
+      {
+        "time": "3:30 PM",
+        "title": "Invited Talk",
+        "speaker": "Yuandong Tian (Stealth AI, ex-Meta)"
+      },
+      {
+        "time": "4:00 PM",
+        "title": "Invited Talk",
+        "speaker": "Niklas Muennighoff (Stanford)"
+      },
+      {
+        "time": "4:30 PM",
+        "title": "Panel Discussion",
+        "speaker": null
+      },
+      {
+        "time": "5:15 PM",
+        "title": "Poster Session 2",
+        "speaker": null
+      }
+    ],
+    "speakers": [
+      "Kai-Wei Chang (UCLA)",
+      "Junjie Hu (University of Wisconsin)",
+      "Heng Ji (UIUC)",
+      "Sewon Min (UC Berkeley)",
+      "Niklas Muennighoff (Stanford)",
+      "Yuandong Tian (Stealth AI, ex-Meta)",
+      "Jiajun Wu (Stanford)",
+      "Manling Li (Northwestern University)"
+    ],
+    "deadlines": [
+      {
+        "label": "Submission deadline",
+        "date": "2026-07-19",
+        "note": "AoE; extended from July 12"
+      },
+      {
+        "label": "Notification of acceptance",
+        "date": "2026-08-05",
+        "note": "AoE; postponed from July 24 and July 31"
+      },
+      {
+        "label": "Workshop day",
+        "date": "2026-10-09",
+        "note": null
+      }
+    ],
+    "links": {
+      "cfp": "https://wdlctc.github.io/efficient-reasoning-2026/#call",
+      "submission": "https://openreview.net/group?id=colmweb.org/COLM/2026/Workshop/Efficient_Reasoning",
+      "reviewerForm": "https://docs.google.com/forms/d/e/1FAIpQLScG0B4oGHxt-ZZ-S---jE-EZqwZB-AUkNZvv6TSc9SDJj3ZrA/viewform",
+      "previousEdition": "https://efficient-reasoning.github.io/"
+    }
+  },
+  {
+    "id": "context-beyond-window",
+    "name": "COLM Workshop on Context Beyond the Window: Persistent Knowledge in Language Models",
+    "shortName": "CBW",
+    "edition": null,
+    "contact": "Dane Malenfant",
+    "organizers": [
+      "Siddarth Venkatraman (Mistral · Mila)",
+      "Dane Malenfant (McGill · Mila)",
+      "Emiliano Penaloza (Microsoft · Mila)",
+      "Sharut Gupta (MIT CSAIL)",
+      "Thomas Jiralerspong (Anthropic (Astra Fellow) · UdeM · Mila)",
+      "Benjamin Therien (Mila · UdeM)",
+      "Alicia Sun (Reflection AI)",
+      "Guillaume Lajoie (Mila · UdeM · Google Research)",
+      "Martin Klissarov (Google DeepMind · McGill · Mila)",
+      "Danqi Chen (Princeton CS · Thinking Machines)"
+    ],
+    "date": "2026-10-09",
+    "startTime": "8:30 AM PDT",
+    "endTime": "6:00 PM PDT",
+    "room": null,
+    "website": "https://context-beyond-window.github.io/",
+    "colmUrl": "https://colm.cc/virtual/2026/workshop/2560",
+    "description": "Modern language models operate within finite context windows, yet many real-world tasks require models to absorb, retain, and act on information that far exceeds any single prompt. This workshop addresses the full spectrum of context management: fitting more into the window, maintaining state across interactions, and transferring knowledge into parameters. We frame this around the trade-off between context-time memory (information supplied at inference) and weight-time memory (information absorbed into parameters). Our goal is to build a shared vocabulary across subcommunities that rarely meet in one venue: long-context modeling, retrieval-augmented systems, continual learning, knowledge distillation, and LLM agents.",
+    "topics": [
+      "Context compression and summarization",
+      "Long-context and infinite-context architectures",
+      "Memory-augmented and recurrent models",
+      "KV cache optimization",
+      "Retrieval-augmented generation",
+      "Multi-turn and multi-session context management",
+      "Agentic memory and orchestration",
+      "Knowledge distillation and internalization",
+      "Continual and lifelong learning",
+      "State space models",
+      "Test-time training and memorization",
+      "Benchmarks and evaluation"
+    ],
+    "schedule": [
+      {
+        "time": "9:00 AM",
+        "title": "Welcome remarks",
+        "speaker": "Organizers"
+      },
+      {
+        "time": "9:10 AM",
+        "title": "Invited talk (Session 1: Context and Architectures)",
+        "speaker": "Yoshua Bengio"
+      },
+      {
+        "time": "9:55 AM",
+        "title": "Invited talk",
+        "speaker": "Albert Gu"
+      },
+      {
+        "time": "10:40 AM",
+        "title": "Spotlight talks (2 × 15 min)",
+        "speaker": "Contributed speakers"
+      },
+      {
+        "time": "11:10 AM",
+        "title": "Poster session 1 + coffee",
+        "speaker": null
+      },
+      {
+        "time": "12:10 PM",
+        "title": "Lunch",
+        "speaker": null
+      },
+      {
+        "time": "1:10 PM",
+        "title": "Invited talk (Session 2: Retrieval and In-Context Memory)",
+        "speaker": "Rishabh Agarwal"
+      },
+      {
+        "time": "2:05 PM",
+        "title": "Invited talk",
+        "speaker": "Omar Khattab"
+      },
+      {
+        "time": "2:50 PM",
+        "title": "Spotlight talks (2 × 15 min)",
+        "speaker": "Contributed speakers"
+      },
+      {
+        "time": "3:20 PM",
+        "title": "Invited talk (Session 3: Knowledge Internalization)",
+        "speaker": "Aakanksha Chowdhery"
+      },
+      {
+        "time": "4:05 PM",
+        "title": "Poster session 2 + coffee",
+        "speaker": null
+      },
+      {
+        "time": "5:05 PM",
+        "title": "Invited talk (Session 4: Synthesis)",
+        "speaker": "Sabri Eyuboglu"
+      },
+      {
+        "time": "5:50 PM",
+        "title": "Closing remarks & best-paper award",
+        "speaker": "Organizers"
+      }
+    ],
+    "speakers": [
+      "Yoshua Bengio (Mila · LawZero · UdeM)",
+      "Aakanksha Chowdhery (Reflection AI · Stanford)",
+      "Omar Khattab (MIT EECS · CSAIL)",
+      "Albert Gu (CMU · Cartesia AI)",
+      "Rishabh Agarwal (Periodic Labs · McGill)",
+      "Sabri Eyuboglu (Engram · Stanford)"
+    ],
+    "deadlines": [
+      {
+        "label": "Submission deadline",
+        "date": "2026-06-23",
+        "note": "23:59 AoE"
+      },
+      {
+        "label": "Notification of acceptance",
+        "date": "2026-07-24",
+        "note": null
+      },
+      {
+        "label": "Camera-ready deadline",
+        "date": "2026-08-30",
+        "note": "on OpenReview"
+      },
+      {
+        "label": "Workshop day",
+        "date": "2026-10-09",
+        "note": null
+      }
+    ],
+    "links": {
+      "cfp": "https://context-beyond-window.github.io/#cfp",
+      "submission": "https://openreview.net/group?id=colmweb.org/COLM/2026/Workshop/CBW",
+      "schedule": "https://context-beyond-window.github.io/#schedule"
+    }
+  },
+  {
+    "id": "genai4world",
+    "name": "Generative AI for the World: The First Workshop on Globalizing Tasks, Evaluations, and Systems",
+    "shortName": "GenAI4World",
+    "edition": "1st",
+    "contact": "Juhyun Oh",
+    "organizers": [
+      "Juhyun Oh (KAIST)",
+      "Haneul Yoo (NYU)",
+      "Simran Khanuja (CMU)",
+      "Naitian Zhou (UC Berkeley)",
+      "Michael Saxon (Google Deepmind)",
+      "Sil Hamilton (Cornell University)"
+    ],
+    "date": "2026-10-09",
+    "startTime": "8:30 AM PDT",
+    "endTime": "6:00 PM PDT",
+    "room": null,
+    "website": "https://sites.google.com/view/genai4world/",
+    "colmUrl": "https://colm.cc/virtual/2026/workshop/2555",
+    "description": "Generative AI holds an unprecedented promise: for the first time, a single technology may enable communication and mutual understanding across the world's languages, cultures, and communities. Yet the global deployment of these systems reveals how far we remain from achieving this vision. This workshop brings together industry practitioners, researchers, and global users at a critical moment to ask: what would it take for AI to truly serve everyone? Tasks, evaluations, and systems themselves must be rethought at a global scale. We advocate for globalization, not localization—not merely adapting systems to fit diverse contexts, but allowing global diversity to shape how they are built from the ground up.",
+    "topics": [
+      "Globalizing tasks: understudied or absent tasks in non-English, non-Western contexts",
+      "Evaluation beyond performance: register, cultural expectation, usability across contexts and modalities",
+      "Data collection and annotation across languages and cultures",
+      "Innovations and vulnerabilities from the world: global users' experiences informing system design and exposing risks",
+      "Modeling for global understanding: models not bound to any single language or culture",
+      "Interdisciplinary and cross-modal insights bridging NLP, computer vision, audio, social sciences and humanities"
+    ],
+    "schedule": null,
+    "speakers": [
+      "Garvit Luhadia (United Nations)",
+      "Julia Kreutzer (Cohere Labs)",
+      "Mitesh M. Khapra (IIT Madras)",
+      "Vinodkumar Prabhakaran (Google Research)"
+    ],
+    "deadlines": [
+      {
+        "label": "Workshop track paper submission deadline",
+        "date": "2026-06-30",
+        "note": "AoE; extended from June 23"
+      },
+      {
+        "label": "Conference track paper submission deadline",
+        "date": "2026-07-17",
+        "note": "AoE; for papers already accepted elsewhere"
+      },
+      {
+        "label": "Notification of acceptance",
+        "date": "2026-07-24",
+        "note": "AoE"
+      },
+      {
+        "label": "Workshop day",
+        "date": "2026-10-09",
+        "note": null
+      }
+    ],
+    "links": {
+      "cfp": "https://sites.google.com/view/genai4world/call-for-papers",
+      "submission": "https://openreview.net/group?id=colmweb.org/COLM/2026/Workshop/GenAI4World",
+      "schedule": "https://sites.google.com/view/genai4world/schedule",
+      "acceptedPapers": "https://sites.google.com/view/genai4world/accepted-submissions",
+      "twitter": "https://x.com/GenAI4World",
+      "reviewerForm": "https://forms.gle/6KeQhcpE2U3MAWGE9"
+    }
+  },
+  {
+    "id": "situated-embodied-interaction",
+    "name": "Learning from Situated and Embodied Interaction",
+    "shortName": "LSEI",
+    "edition": null,
+    "contact": "Zineng Tang",
+    "organizers": [
+      "Alane Suhr (UC Berkeley)",
+      "Zineng Tang (UC Berkeley)",
+      "Yu-Cheng Chou (Johns Hopkins University, NVIDIA)",
+      "Josue Torres-Fonseca (University of Michigan)",
+      "Anya Ji (UC Berkeley)",
+      "Leena Mathur (Carnegie Mellon University)",
+      "Téa Wright (UC Berkeley)",
+      "Joyce Chai (University of Michigan)"
+    ],
+    "date": "2026-10-09",
+    "startTime": "8:30 AM PDT",
+    "endTime": "6:00 PM PDT",
+    "room": null,
+    "website": "https://learning-situated-interaction.github.io/",
+    "colmUrl": "https://colm.cc/virtual/2026/workshop/2563",
+    "description": "How should interactive experience reshape the data, objectives, and evaluations used for language modeling? Despite remarkable progress from scaling over passive corpora, the projected exhaustion of high-quality text poses a growing bottleneck. Interaction with environments, humans, and other agents offers learning signals that are difficult to recover from passive data alone, including pragmatic grounding, internal world models, and social signals. This workshop studies how embodied multi-turn interaction with environments, humans, and other agents can serve as a learning signal for language models. We bring together researchers from language modeling, NLP, embodied AI, robotics, web agents, and multi-agent systems (communities that often study related problems but publish in separate venues).",
+    "topics": [
+      "Situated interaction (agent–environment): interaction in web, simulated, or physical environments as training signal",
+      "Multi-agent interaction: self-play and communicative success for pragmatic reasoning and social understanding",
+      "Cooperative interaction: human-agent interaction and human-in-the-loop feedback in grounded, collaborative settings",
+      "Evaluation and objectives: benchmarks, data, and learning objectives beyond passive learning or imitation"
+    ],
+    "schedule": null,
+    "speakers": [
+      "Been Kim (Google DeepMind)",
+      "Prithviraj Ammanabrolu (UC San Diego, NVIDIA)",
+      "Noam Brown (OpenAI)",
+      "Diyi Yang (Stanford University)",
+      "Heng Ji (University of Illinois Urbana-Champaign)"
+    ],
+    "deadlines": [
+      {
+        "label": "Submission deadline",
+        "date": "2026-07-14",
+        "note": "AoE; extended from June 30"
+      },
+      {
+        "label": "Notification of acceptance",
+        "date": "2026-07-24",
+        "note": "AoE"
+      },
+      {
+        "label": "Workshop day",
+        "date": "2026-10-09",
+        "note": null
+      }
+    ],
+    "links": {
+      "cfp": "https://learning-situated-interaction.github.io/#cfp",
+      "submission": "https://openreview.net/group?id=colmweb.org/COLM/2026/Workshop/LSEI",
+      "reviewerForm": "https://docs.google.com/forms/d/e/1FAIpQLScd6hc9fwp2koFVkPYrhelJknXajro4CS-hr6lOfsupG_PDKw/viewform"
+    }
+  },
+  {
+    "id": "daih",
+    "name": "LLM/VLM Deployment Opportunities and Risks in Healthcare",
+    "shortName": "DAIH",
+    "edition": null,
+    "contact": "Haoran Zhang",
+    "organizers": [
+      "Yuexing Hao (MIT · Microsoft)",
+      "Shan Chen (Phare Health · R37 Lab)",
+      "Yuxin Xiao (MIT IDSS)",
+      "Haoran Zhang (MIT EECS)",
+      "Stella Li (University of Washington)",
+      "Awa Dieng (MIT EECS)",
+      "Tom Hartvigsen (University of Virginia)",
+      "Jason Fries (Stanford Medicine)",
+      "Jack Gallifant (Phare Health · R37 Lab)",
+      "Angelina Wang (Cornell University)",
+      "Yulia Tsvetkov (University of Washington)",
+      "Marzyeh Ghassemi (MIT)"
+    ],
+    "date": "2026-10-09",
+    "startTime": "8:30 AM PDT",
+    "endTime": "6:00 PM PDT",
+    "room": null,
+    "website": "https://daih2026.github.io/",
+    "colmUrl": "https://colm.cc/virtual/2026/workshop/2558",
+    "description": "A full-day workshop on what it actually takes to responsibly deploy language and vision-language models in clinical settings. Deploying AI in Healthcare: a forum for the evaluation, governance, clinical workflow, and operational reality of foundation models in medicine. Benchmark performance is a poor proxy for real-world readiness. DAIH brings together machine learning researchers, physicians, health-system leaders, and policy researchers to tackle safety, equity, privacy, regulation, workflow fit, and post-deployment monitoring.",
+    "topics": [
+      "Real-world deployment and clinical integration",
+      "Multimodal clinical reasoning and decision support",
+      "Human–AI collaboration in clinical workflows",
+      "Clinical documentation, summarization, and chart review",
+      "Patient-facing communication and health literacy",
+      "Negative results and failure case analyses from real-world deployments",
+      "Clinical evaluation beyond benchmark accuracy",
+      "Hallucination detection, characterization, and mitigation in medical contexts",
+      "Robustness under temporal, institutional, and demographic distribution shift",
+      "Post-deployment surveillance and error analysis",
+      "Fairness and bias auditing across patient populations",
+      "Privacy-preserving methods for clinical LLM/VLM deployment",
+      "Regulatory compliance and emerging governance frameworks",
+      "Accountability and liability in clinical AI systems"
+    ],
+    "schedule": [
+      {
+        "time": "9:00 AM",
+        "title": "Opening Remarks",
+        "speaker": null
+      },
+      {
+        "time": "9:10 AM",
+        "title": "Keynote",
+        "speaker": "Sanmi Koyejo (Stanford University)"
+      },
+      {
+        "time": "9:55 AM",
+        "title": "Invited Talk",
+        "speaker": "Majid Afshar (University of Wisconsin–Madison)"
+      },
+      {
+        "time": "10:30 AM",
+        "title": "Coffee Break",
+        "speaker": null
+      },
+      {
+        "time": "10:45 AM",
+        "title": "Panel I: Building AI-Native Health Systems",
+        "speaker": "Martin Seneviratne (R1 RCM), Aishwarya Mandyam (Sprinter Health), Yongshuo Zong (Google), Jason Fries (Snorkel AI)"
+      },
+      {
+        "time": "11:30 AM",
+        "title": "Contributed Oral Session I (3 × 8 min talk + 2 min Q&A)",
+        "speaker": null
+      },
+      {
+        "time": "12:00 PM",
+        "title": "Lunch",
+        "speaker": null
+      },
+      {
+        "time": "1:00 PM",
+        "title": "Invited Talk",
+        "speaker": "Emma Pierson (UC Berkeley)"
+      },
+      {
+        "time": "1:35 PM",
+        "title": "Contributed Oral Session II (4 × 8 min talk + 2 min Q&A)",
+        "speaker": null
+      },
+      {
+        "time": "2:15 PM",
+        "title": "Poster Session (all accepted posters, with refreshments)",
+        "speaker": null
+      },
+      {
+        "time": "3:30 PM",
+        "title": "Coffee Break",
+        "speaker": null
+      },
+      {
+        "time": "3:45 PM",
+        "title": "Invited Talk",
+        "speaker": "Monica Agrawal (Duke University)"
+      },
+      {
+        "time": "4:20 PM",
+        "title": "Panel II: Clinical AI Deployment & Evaluation",
+        "speaker": "Wei Liu (Mayo Clinic), Corinna Loeckenhoff (Cornell University), Emily Alsentzer (Stanford University), Vishnu Ravi (Stanford University)"
+      },
+      {
+        "time": "5:05 PM",
+        "title": "Awards, Closing Remarks",
+        "speaker": null
+      }
+    ],
+    "speakers": [
+      "Sanmi Koyejo (Stanford University)",
+      "Majid Afshar (University of Wisconsin–Madison)",
+      "Emma Pierson (UC Berkeley)",
+      "Monica Agrawal (Duke University)"
+    ],
+    "deadlines": [
+      {
+        "label": "Submissions open",
+        "date": "2026-05-23",
+        "note": null
+      },
+      {
+        "label": "Submission deadline",
+        "date": "2026-06-30",
+        "note": "AoE"
+      },
+      {
+        "label": "Reviews due",
+        "date": "2026-07-16",
+        "note": "AoE"
+      },
+      {
+        "label": "Notification",
+        "date": "2026-07-24",
+        "note": "AoE"
+      },
+      {
+        "label": "Workshop day",
+        "date": "2026-10-09",
+        "note": null
+      }
+    ],
+    "links": {
+      "cfp": "https://daih2026.github.io/#submissions",
+      "submission": "https://openreview.net/group?id=colmweb.org/COLM/2026/Workshop/DAIH",
+      "schedule": "https://daih2026.github.io/#schedule",
+      "committee": "https://daih2026.github.io/committee.html"
+    }
+  },
+  {
+    "id": "lm4sci",
+    "name": "LM4Sci 2.0: The Second Workshop on Language Models for Scientific Discovery",
+    "shortName": "LM4Sci",
+    "edition": "2nd",
+    "contact": "Chenglei Si",
+    "organizers": [
+      "Chenglei Si (Stanford University)",
+      "Shannon Zejiang Shen (MIT)",
+      "Hanane Nour Moussa (Ohio State University)",
+      "Yanzhe Zhang (Georgia Institute of Technology)",
+      "Akari Asai (University of Washington)",
+      "Mark Yatskar (University of Pennsylvania)",
+      "Huan Sun (Ohio State University)",
+      "Diyi Yang (Stanford University)"
+    ],
+    "date": "2026-10-09",
+    "startTime": "8:30 AM PDT",
+    "endTime": "6:00 PM PDT",
+    "room": null,
+    "website": "https://lm4sci.github.io/",
+    "colmUrl": "https://colm.cc/virtual/2026/workshop/2566",
+    "description": "Significant advancements in Large Language Models (LLMs) have spurred interest in using them to assist researchers in various scientific tasks, such as idea generation, experiment execution and automated ML engineering, searching and synthesizing literature reviews and scientific theories, literature-based question-answering, data analysis and data-driven discovery, and even achieving novel state-of-the-art discoveries and executing the entire end-to-end research pipeline including paper and report generation. The focus of our workshop is on developing LLMs and AI systems that can accelerate scientific research in various scientific domains and assist human researchers. We aim to bring together researchers from different communities, including ML, NLP, Human-Computer Interaction, and various scientific disciplines such as biology and chemistry, to work together on the design, development, and evaluation of various forms of scientific LLMs and systems.",
+    "topics": [
+      "Training specialized LLMs for scientific domains or applications",
+      "LLM agents to accelerate complex scientific workflows",
+      "New human-AI collaboration paradigms to empower human scientists",
+      "Domain-specific foundation models for scientific applications",
+      "Quantitative, symbolic, and physics-based reasoning in foundation models",
+      "End-to-end research assistants and agents for scientific workflows",
+      "Evaluation and analysis of AI-generated research artifacts",
+      "Benchmarks and evaluators for domain knowledge and capabilities of scientific LLMs",
+      "Attribution, factuality, and hallucination mitigation in scientific contexts",
+      "Multimodal scientific document understanding and knowledge extraction",
+      "Position papers on societal impact, safety risks of autonomous research agents, and the role of AI in scientific discovery"
+    ],
+    "schedule": null,
+    "speakers": null,
+    "deadlines": [
+      {
+        "label": "Submission deadline",
+        "date": "2026-06-28",
+        "note": "11:59pm AoE"
+      },
+      {
+        "label": "Reviews due",
+        "date": "2026-07-20",
+        "note": "AoE"
+      },
+      {
+        "label": "Decision notification",
+        "date": "2026-07-24",
+        "note": "AoE"
+      },
+      {
+        "label": "Workshop day",
+        "date": "2026-10-09",
+        "note": null
+      }
+    ],
+    "links": {
+      "cfp": "https://lm4sci.github.io/docs/2026/call-for-papers",
+      "submission": "https://openreview.net/group?id=colmweb.org/COLM/2026/Workshop/LM4Sci",
+      "schedule": "https://lm4sci.github.io/docs/2026/schedule",
+      "overview": "https://lm4sci.github.io/docs/2026",
+      "previousEdition": "https://lm4sci.github.io/docs/2025"
+    }
+  },
+  {
+    "id": "moss",
+    "name": "Methods and Opportunities at Small Scale (MOSS)",
+    "shortName": "MOSS",
+    "edition": null,
+    "contact": "Bingbin Liu",
+    "organizers": [
+      "Abhishek Panigrahi (Google DeepMind)",
+      "Bhavya Vasudeva (UC San Diego)",
+      "Bingbin Liu (Kempner Institute at Harvard)",
+      "Elisabetta Cornacchia (Bocconi University)",
+      "Andrej Risteski (Carnegie Mellon University)",
+      "Julia Kempe (Courant Institute at NYU; AMI Labs)",
+      "Sewon Min (UC Berkeley)",
+      "Yejin Choi (Stanford University)"
+    ],
+    "date": "2026-10-09",
+    "startTime": "8:30 AM PDT",
+    "endTime": "6:00 PM PDT",
+    "room": null,
+    "website": "https://sites.google.com/view/moss-colm-2026/",
+    "colmUrl": "https://colm.cc/virtual/2026/workshop/2564",
+    "description": "As the current LLM research community pushes towards massive scale, this workshop takes a complementary approach by focusing on the under-explored small-scale regime, where scale encompasses compute, data, and model size. We ask: to what extent is scale necessary, and how far can we push toward smaller settings while maintaining competitive performance and enabling scientifically meaningful discoveries? Beyond transferring insights from small- to large-scale settings, we emphasize the intrinsic value of understanding small-scale regimes. This workshop aims to highlight the methods, opportunities, and insights enabled by small-scale experimentation, and to foster discussion on how such approaches can broaden participation and accelerate progress in LLM research.",
+    "topics": [
+      "LLM training: architectures, optimizers, training dynamics, emergent abilities, pre-/post-training strategies, data curation",
+      "Inference-time methods: prompt optimization, self-improvement, test-time scaling, test-time training",
+      "Evaluation and benchmarks: stress tests, synthetic tasks, evaluation protocols and metrics",
+      "Interpretability and safety: mechanistic interpretability, alignment, robustness, steering and monitoring",
+      "Survey or position papers on methods, opportunities, and limitations at small scale"
+    ],
+    "schedule": [
+      {
+        "time": "9:00 AM",
+        "title": "Opening Remarks",
+        "speaker": null
+      },
+      {
+        "time": "9:10 AM",
+        "title": "Invited Talks #1, #2 (2 × 40 min)",
+        "speaker": "Danqi Chen, Omar Khattab"
+      },
+      {
+        "time": "10:30 AM",
+        "title": "Coffee break",
+        "speaker": null
+      },
+      {
+        "time": "10:45 AM",
+        "title": "Invited Talk #3 (40 min)",
+        "speaker": "Andrew Ilyas"
+      },
+      {
+        "time": "11:25 AM",
+        "title": "Contributed Talks and Demos (3 × 15 min)",
+        "speaker": null
+      },
+      {
+        "time": "12:10 PM",
+        "title": "Lunch break",
+        "speaker": null
+      },
+      {
+        "time": "1:30 PM",
+        "title": "Panel Discussion",
+        "speaker": null
+      },
+      {
+        "time": "2:30 PM",
+        "title": "Coffee break",
+        "speaker": null
+      },
+      {
+        "time": "2:40 PM",
+        "title": "Invited Talks #4, #5",
+        "speaker": "Tatsu Hashimoto, Dimitris Papailiopoulos"
+      },
+      {
+        "time": "4:00 PM",
+        "title": "Poster Session & Closing Remarks",
+        "speaker": null
+      }
+    ],
+    "speakers": [
+      "Danqi Chen (Princeton)",
+      "Tatsu Hashimoto (Stanford)",
+      "Andrew Ilyas (CMU)",
+      "Omar Khattab (MIT)",
+      "Dimitris Papailiopoulos (MSR / UW–Madison)",
+      "Songlin Yang (Thinking Machines)"
+    ],
+    "deadlines": [
+      {
+        "label": "Paper & notebook submission deadline",
+        "date": "2026-07-03",
+        "note": "AoE; later submissions may be allowed depending on capacity"
+      },
+      {
+        "label": "Notification",
+        "date": "2026-07-24",
+        "note": null
+      },
+      {
+        "label": "Workshop day",
+        "date": "2026-10-09",
+        "note": null
+      }
+    ],
+    "links": {
+      "cfp": "https://sites.google.com/view/moss-colm-2026/call-for-papers",
+      "submission": "https://openreview.net/group?id=colmweb.org/COLM/2026/Workshop/MOSS",
+      "speakers": "https://sites.google.com/view/moss-colm-2026/speakers",
+      "acceptedPapers": "https://sites.google.com/view/moss-colm-2026/accepted-papers",
+      "faq": "https://sites.google.com/view/moss-colm-2026/faqs",
+      "github": "https://github.com/abhishekpanigrahi1996/MOSS"
+    }
+  },
+  {
+    "id": "nonar-lm",
+    "name": "Non-Autoregressive Language Models for Fast and Flexible Text Generation",
+    "shortName": "NonAR-LM",
+    "edition": null,
+    "contact": "Fred Peng",
+    "organizers": [
+      "Fred Peng (Duke University)",
+      "Marianne Arriola (Cornell University)",
+      "Jaeyeon Kim (Harvard University)",
+      "Siyan Zhao (UCLA)",
+      "Alexander Tong (Aithyra)",
+      "Arnaud Doucet (Google DeepMind · University of Oxford)",
+      "Brendan O'Donoghue (Google DeepMind)",
+      "Yuxuan Song (ByteDance Seed)"
+    ],
+    "date": "2026-10-09",
+    "startTime": "8:30 AM PDT",
+    "endTime": "6:00 PM PDT",
+    "room": null,
+    "website": "https://pengzhangzhi.github.io/NonAR-LM/",
+    "colmUrl": "https://colm.cc/virtual/2026/workshop/2552",
+    "description": "Autoregressive next-token prediction has long been the dominant paradigm for language modeling, thanks to its simplicity, scalability, and strong empirical performance. Yet the left-to-right factorization imposes constraints that limit efficiency, controllability, and global coherence. Recent advances in non-autoregressive modeling offer a fundamentally different approach to discrete sequence generation. Instead of committing to a fixed left-to-right order, these models enable parallel decoding, generate tokens in any order, and can revise earlier decisions. They span masked and uniform-state diffusion, discrete flow matching, and any-order autoregression, and are now competitive at scale and increasingly deployed in industry systems.",
+    "topics": [
+      "Modeling & training: discrete diffusion, uniform-state diffusion, flow-based, and any-order approaches",
+      "Inference & sampling: iterative refinement, parallel decoding, controllable and constrained generation, planning and correction",
+      "Evaluation & efficiency: evaluation beyond left-to-right likelihood, parallel generation, latency-constrained inference",
+      "Applications across language, code, and biological sequences"
+    ],
+    "schedule": [
+      {
+        "time": "9:00 AM",
+        "title": "Opening Remarks",
+        "speaker": null
+      },
+      {
+        "time": "9:10 AM",
+        "title": "Invited Talk 1 (40 min)",
+        "speaker": null
+      },
+      {
+        "time": "9:50 AM",
+        "title": "Invited Talk 2 (40 min)",
+        "speaker": null
+      },
+      {
+        "time": "10:30 AM",
+        "title": "Coffee & Poster Session 1",
+        "speaker": null
+      },
+      {
+        "time": "11:30 AM",
+        "title": "Invited Talk 3 (40 min)",
+        "speaker": null
+      },
+      {
+        "time": "12:10 PM",
+        "title": "Contributed Talks I (3 spotlight talks × 10 min)",
+        "speaker": null
+      },
+      {
+        "time": "12:40 PM",
+        "title": "Lunch",
+        "speaker": null
+      },
+      {
+        "time": "1:50 PM",
+        "title": "Invited Talk 4 (40 min)",
+        "speaker": null
+      },
+      {
+        "time": "2:30 PM",
+        "title": "Invited Talk 5 (40 min)",
+        "speaker": null
+      },
+      {
+        "time": "3:10 PM",
+        "title": "Contributed Talks II (3 spotlight talks × 10 min)",
+        "speaker": null
+      },
+      {
+        "time": "3:40 PM",
+        "title": "Coffee & Poster Session 2",
+        "speaker": null
+      },
+      {
+        "time": "4:40 PM",
+        "title": "Invited Talk 6 (40 min)",
+        "speaker": null
+      },
+      {
+        "time": "5:20 PM",
+        "title": "Panel Discussion: The future of diffusion language generation",
+        "speaker": "Fred Peng (moderator), Aditya Grover, Subham Sekhar Sahoo, Aaron Lou"
+      },
+      {
+        "time": "6:20 PM",
+        "title": "Closing Remarks",
+        "speaker": null
+      }
+    ],
+    "speakers": [
+      "Stefano Ermon (Stanford)",
+      "Shansan Gong (University of Hong Kong)",
+      "Aditya Grover (UCLA)",
+      "Jiaxin Shi (Meta SuperIntelligence Labs)",
+      "Arash Vahdat (NVIDIA Research)",
+      "Mengdi Wang (Princeton University)",
+      "Subham Sekhar Sahoo (MBZUAI – IFM; panelist)",
+      "Aaron Lou (OpenAI; panelist)"
+    ],
+    "deadlines": [
+      {
+        "label": "Submissions due",
+        "date": "2026-06-30",
+        "note": "AoE, via OpenReview"
+      },
+      {
+        "label": "Notifications",
+        "date": "2026-07-24",
+        "note": null
+      },
+      {
+        "label": "Workshop day",
+        "date": "2026-10-09",
+        "note": null
+      }
+    ],
+    "links": {
+      "cfp": "https://pengzhangzhi.github.io/NonAR-LM/#cfp",
+      "submission": "https://openreview.net/group?id=colmweb.org/COLM/2026/Workshop/NonAR-LM",
+      "schedule": "https://pengzhangzhi.github.io/NonAR-LM/#schedule",
+      "reviewerForm": "https://forms.gle/K3wfLD6WjuHgXCT78",
+      "github": "https://github.com/pengzhangzhi/NonAR-LM"
+    }
+  },
+  {
+    "id": "tokenization",
+    "name": "Second Tokenization Workshop",
+    "shortName": "TokShop",
+    "edition": "2nd",
+    "contact": "Tomasz Limisiewicz",
+    "organizers": [
+      "Tomasz Limisiewicz (University of Washington / Meta)",
+      "Valentin Hofmann (LMU Munich)",
+      "Sachin Kumar (The Ohio State University)",
+      "Jindřich Libovický (Charles University)",
+      "Jindřich Helcl (University of Oslo)",
+      "Orevaoghene Ahia (University of Washington)",
+      "Elizabeth Salesky (Google Deepmind)",
+      "Yuki Asano (University of Technology Nuremberg)",
+      "Yuval Pinter (Ben-Gurion University of the Negev)"
+    ],
+    "date": "2026-10-09",
+    "startTime": "8:30 AM PDT",
+    "endTime": "6:00 PM PDT",
+    "room": null,
+    "website": "https://tokenization-workshop.github.io/",
+    "colmUrl": "https://colm.cc/virtual/2026/workshop/2556",
+    "description": "Tokenization–the process of converting raw data into discrete units for model input and output–has emerged as a critical component across machine learning domains. Originally central to natural language processing (NLP), tokenization is now equally essential in multimodal learning, computer vision, speech processing, and other areas. Recent research has shown that tokenization strategies significantly impact model utility, efficiency, and generalization, sparking a surge of interest in this foundational topic. The Second Tokenization Workshop (TokShop) at COLM 2026 aims to bring together researchers and practitioners from all corners of machine learning to explore tokenization in its broadest sense.",
+    "topics": [
+      "Subword tokenization (WordPiece, BPE, UnigramLM) and extensions",
+      "Tokenization for various modalities (images, audio, video) and cross-modal representation alignment",
+      "Multilingual tokenization and tokenization-induced failure modes",
+      "Tokenizer modification after model training",
+      "Alternative input representations (patches, bytes, pixels)",
+      "Tokenization and statistics (e.g. compression effectiveness)"
+    ],
+    "schedule": null,
+    "speakers": [
+      "Tiago Pimentel (ETH Zürich)"
+    ],
+    "deadlines": [
+      {
+        "label": "Submission begins",
+        "date": "2026-05-20",
+        "note": null
+      },
+      {
+        "label": "Submission deadline",
+        "date": "2026-06-26",
+        "note": "11:59pm AoE; extended from June 23"
+      },
+      {
+        "label": "Notification of acceptance",
+        "date": "2026-07-24",
+        "note": null
+      },
+      {
+        "label": "Workshop day",
+        "date": "2026-10-09",
+        "note": null
+      }
+    ],
+    "links": {
+      "cfp": "https://tokenization-workshop.github.io/#call-for-papers",
+      "submission": "https://openreview.net/group?id=colmweb.org/COLM/2026/Workshop/TokShop",
+      "speakers": "https://tokenization-workshop.github.io/speakers/",
+      "schedule": "https://tokenization-workshop.github.io/schedule/",
+      "previousEdition": "https://tokenization-workshop.github.io/accepted/"
+    }
+  },
+  {
+    "id": "social-sim",
+    "name": "Social Sim'26: Fidelity in Applications",
+    "shortName": "Social Sim'26",
+    "edition": "2nd",
+    "contact": "Zachary Yang",
+    "organizers": [
+      "Zachary Yang (Ubisoft La Forge | McGill University | Mila)",
+      "Maximillian Puelma Touzel (Mila)",
+      "Xuhui Zhou (Carnegie Mellon University)",
+      "Yunze Xiao (Carnegie Mellon University)",
+      "Lynnette Hui Xian Ng (Carnegie Mellon University)",
+      "Jean-Francois Godbout (Université de Montréal | Mila)",
+      "Reihaneh Rabbany (McGill University | Mila)",
+      "Maarten Sap (Carnegie Mellon University)"
+    ],
+    "date": "2026-10-09",
+    "startTime": "8:30 AM PDT",
+    "endTime": "6:00 PM PDT",
+    "room": null,
+    "website": "https://sites.google.com/view/social-sims-with-llms",
+    "colmUrl": "https://colm.cc/virtual/2026/workshop/2559",
+    "description": "In an era where digital interactions increasingly shape our social fabric, LLM-based social simulation offers a powerful lens to understand complex societal dynamics. As the scope and ambition of these simulations expand, however, important methodological and conceptual challenges become increasingly salient. Beyond compelling demonstrations, questions remain around evaluation, robustness, interpretability, and empirical grounding. Now in its second iteration, our workshop invites researchers, practitioners, and thought leaders to explore rigorous and responsible approaches to LLM-based social simulation. Serving as a meeting point for communities spanning machine learning, social science, psychology, and policy, the workshop emphasizes validation and methodological soundness while fostering interdisciplinary dialogue on the ethical and societal implications of large-scale simulated societies.",
+    "topics": [
+      "Simulation evaluation and fidelity: distinguishing substantive social dynamics from prompting or model-bias artifacts",
+      "Validation against real-world data; data-grounded simulations",
+      "LLM-based agent modeling: architectures, scaling, and societal-scale phenomena",
+      "Persona modeling: psychologically plausible, consistent, and faithful agent personas",
+      "Cultural evolution: norms, beliefs, and behaviors over time",
+      "Information diffusion in simulated populations",
+      "Human-AI hybrid simulations",
+      "Simulation interpretability",
+      "Applications: governance, platform design, and societal risk analysis",
+      "Ethical, societal, and policy implications of realistic simulations"
+    ],
+    "schedule": [
+      {
+        "time": "9:00 AM",
+        "title": "Opening Remarks",
+        "speaker": null
+      },
+      {
+        "time": "9:15 AM",
+        "title": "Keynotes 1–3",
+        "speaker": null
+      },
+      {
+        "time": "10:30 AM",
+        "title": "Coffee Break",
+        "speaker": null
+      },
+      {
+        "time": "11:00 AM",
+        "title": "Spotlight Talks (3)",
+        "speaker": null
+      },
+      {
+        "time": "11:30 AM",
+        "title": "Keynotes 4 & 5",
+        "speaker": null
+      },
+      {
+        "time": "12:30 PM",
+        "title": "Sponsored Lunch",
+        "speaker": null
+      },
+      {
+        "time": "1:00 PM",
+        "title": "Poster Session",
+        "speaker": null
+      },
+      {
+        "time": "2:00 PM",
+        "title": "Shared-Task Discussion",
+        "speaker": null
+      },
+      {
+        "time": "2:30 PM",
+        "title": "Breakout Groups 1",
+        "speaker": null
+      },
+      {
+        "time": "3:00 PM",
+        "title": "Coffee Break",
+        "speaker": null
+      },
+      {
+        "time": "3:30 PM",
+        "title": "Breakout Groups 2",
+        "speaker": null
+      },
+      {
+        "time": "4:00 PM",
+        "title": "Panel Discussion",
+        "speaker": null
+      },
+      {
+        "time": "5:00 PM",
+        "title": "Closing Remarks",
+        "speaker": null
+      }
+    ],
+    "speakers": [
+      "Noah Goodman (Stanford)",
+      "Logan Cross (DeepMind | Stanford)",
+      "Marwa Abdulhai (UC Berkeley)",
+      "Zhongyu Wei (Fudan University)",
+      "Slava Jankin (University of Birmingham)"
+    ],
+    "deadlines": [
+      {
+        "label": "Submission deadline",
+        "date": "2026-06-26",
+        "note": "AoE; extended from June 23"
+      },
+      {
+        "label": "Accept/reject notification",
+        "date": "2026-07-24",
+        "note": "AoE"
+      },
+      {
+        "label": "Camera-ready deadline",
+        "date": "2026-07-31",
+        "note": "AoE"
+      },
+      {
+        "label": "Workshop day",
+        "date": "2026-10-09",
+        "note": null
+      }
+    ],
+    "links": {
+      "cfp": "https://sites.google.com/view/social-sims-with-llms/call-for-papers",
+      "submission": "https://openreview.net/group?id=colmweb.org/COLM/2026/Workshop/Social_Sim",
+      "sharedTask": "https://sites.google.com/view/social-sims-with-llms/shared-task",
+      "acceptedPapers": "https://openreview.net/group?id=colmweb.org/COLM/2026/Workshop/Social_Sim#tab-accept-poster",
+      "slack": "https://join.slack.com/t/stamina-wg/shared_invite/zt-3z49egjoy-74fWM7aRp4UkhMCwbfmdSA",
+      "previousEdition": "https://sites.google.com/view/social-sims-with-llms/social-sim25"
+    }
+  },
+  {
+    "id": "lifelong-agent",
+    "name": "The 2nd Workshop on Lifelong Agent: Learning, Aligning, Evolving",
+    "shortName": null,
+    "edition": "2nd",
+    "contact": "Cheng Qian",
+    "organizers": [
+      "Cheng Qian (University of Illinois Urbana-Champaign)",
+      "Emre Can Acikgoz (University of Illinois Urbana-Champaign)",
+      "Hongru Wang (University of Edinburgh)",
+      "Wenyue Hua (Microsoft Research, AI Frontiers)",
+      "Spandana Gella (ServiceNow AI Research / McGill University)",
+      "Jonas Hübotter (ETH Zürich)",
+      "Zhenfei Yin (University of Oxford)",
+      "Siyuan Wang (The Chinese University of Hong Kong)",
+      "Yingcheng Wu (Stanford University)",
+      "Manling Li (Northwestern University)"
+    ],
+    "date": "2026-10-09",
+    "startTime": "8:30 AM PDT",
+    "endTime": "6:00 PM PDT",
+    "room": null,
+    "website": "https://lifelongagent.github.io/",
+    "colmUrl": "https://colm.cc/virtual/2026/workshop/2551",
+    "description": "Artificial intelligence is entering a new phase: from one-shot assistants to persistent agents that remember, act, and adapt across extended interactions. Recent work increasingly studies agents as stateful systems with memory, planning, tool use, and environment interaction, rather than static models evaluated only on short-horizon benchmarks. This shift makes the central challenge more concrete: how can agents continuously improve while remaining reliable, efficient, and aligned over time? A lifelong agent should not only acquire new knowledge and skills, but also manage memory, personalize safely, interact with evolving tool ecosystems, and withstand long-term deployment without drift or brittle failures. This workshop brings these emerging directions under a unified agenda centered on agents that learn, align, and evolve throughout their lifespan.",
+    "topics": [
+      "Persistent memory and personalization",
+      "Continual adaptation of agentic LLMs",
+      "Computer-use and web agents",
+      "Protocols, tools, and interoperability",
+      "Dynamic alignment and auditing",
+      "Reliability, observability, and evaluation",
+      "Multi-agent lifelong systems",
+      "Efficient and sustainable lifelong agents"
+    ],
+    "schedule": [
+      {
+        "time": "8:45 AM",
+        "title": "Opening Remarks",
+        "speaker": "Organizers"
+      },
+      {
+        "time": "9:00 AM",
+        "title": "Invited Talk 1",
+        "speaker": "Graham Neubig (Carnegie Mellon University / OpenHands)"
+      },
+      {
+        "time": "9:30 AM",
+        "title": "Invited Talk 2",
+        "speaker": "Azalia Mirhoseini (Stanford University / Google DeepMind)"
+      },
+      {
+        "time": "10:00 AM",
+        "title": "Coffee Break & Poster Session I",
+        "speaker": null
+      },
+      {
+        "time": "11:00 AM",
+        "title": "Oral Presentations (10 minutes each)",
+        "speaker": null
+      },
+      {
+        "time": "11:30 AM",
+        "title": "Invited Talk 3",
+        "speaker": "Siva Reddy (McGill University / Mila)"
+      },
+      {
+        "time": "12:00 PM",
+        "title": "Invited Talk 4",
+        "speaker": "Natasha Jaques (University of Washington / Google DeepMind)"
+      },
+      {
+        "time": "12:30 PM",
+        "title": "Lunch",
+        "speaker": null
+      },
+      {
+        "time": "1:30 PM",
+        "title": "Invited Talk 5",
+        "speaker": "Sergey Levine (UC Berkeley)"
+      },
+      {
+        "time": "2:00 PM",
+        "title": "Panel Discussion I",
+        "speaker": null
+      },
+      {
+        "time": "2:30 PM",
+        "title": "Invited Talk 6",
+        "speaker": "Asli Celikyilmaz (Microsoft)"
+      },
+      {
+        "time": "3:00 PM",
+        "title": "Coffee Break & Poster Session II",
+        "speaker": null
+      },
+      {
+        "time": "4:00 PM",
+        "title": "Invited Talk 7",
+        "speaker": "Yu Su (The Ohio State University)"
+      },
+      {
+        "time": "4:30 PM",
+        "title": "Invited Talk 8",
+        "speaker": "Yejin Choi (Stanford University / Nvidia)"
+      },
+      {
+        "time": "5:00 PM",
+        "title": "Panel Discussion II",
+        "speaker": null
+      },
+      {
+        "time": "5:30 PM",
+        "title": "Awards and Closing Remarks",
+        "speaker": "Organizers"
+      }
+    ],
+    "speakers": [
+      "Graham Neubig (Carnegie Mellon University / OpenHands)",
+      "Azalia Mirhoseini (Stanford University / Google DeepMind)",
+      "Siva Reddy (McGill University / Mila / Canada CIFAR AI Chair)",
+      "Natasha Jaques (University of Washington / Google DeepMind)",
+      "Sergey Levine (University of California, Berkeley)",
+      "Asli Celikyilmaz (Microsoft Research)",
+      "Yu Su (The Ohio State University)",
+      "Yejin Choi (Stanford University / Nvidia)"
+    ],
+    "deadlines": [
+      {
+        "label": "Submission deadline for workshop contributions",
+        "date": "2026-07-03",
+        "note": "AoE; strict, no extensions"
+      },
+      {
+        "label": "Accept/reject notification",
+        "date": "2026-07-31",
+        "note": "AoE"
+      },
+      {
+        "label": "Financial assistance application deadline",
+        "date": "2026-08-30",
+        "note": "23:59 AoE"
+      },
+      {
+        "label": "Workshop day",
+        "date": "2026-10-09",
+        "note": null
+      }
+    ],
+    "links": {
+      "cfp": "https://lifelongagent.github.io/#topic",
+      "submission": "https://openreview.net/group?id=colmweb.org/COLM/2026/Workshop/LLA",
+      "schedule": "https://lifelongagent.github.io/#schedule",
+      "financialAssistance": "https://forms.gle/DE3L2P4Zt9M2Nob27",
+      "previousEdition": "https://lifelongagent.github.io/iclr26.html",
+      "project": "https://lifelongagent.github.io/Project-Lifelong-Agent/index.html"
+    }
+  },
+  {
+    "id": "agent-behavior",
+    "name": "Workshop on Agent Behavior",
+    "shortName": "WAB",
+    "edition": null,
+    "contact": "Manuel Cherep",
+    "organizers": [
+      "Manuel Cherep (MIT; co-lead organizer)",
+      "Nikhil Singh (Dartmouth College; co-lead organizer)",
+      "Hao Zhu (Stanford University)",
+      "Yanzhe Zhang (Georgia Institute of Technology)",
+      "David (Xinyang) Han (UC Berkeley)",
+      "Benjamin Manning (MIT)",
+      "Isotta Magistrali (ETH Zürich)",
+      "Saab Mansour (Amazon)",
+      "Weronika Łajewska (Amazon)",
+      "Pattie Maes (MIT)"
+    ],
+    "date": "2026-10-09",
+    "startTime": "8:30 AM PDT",
+    "endTime": "6:00 PM PDT",
+    "room": null,
+    "website": "https://www.aiagentbehavior.com",
+    "colmUrl": "https://colm.cc/virtual/2026/workshop/2550",
+    "description": "The dominant paradigm in AI agent research is heavily capability-centric. Agents are primarily evaluated on what they achieve, and progress is measured by rigidly closing the gap between observed and desired performance. Though this has undoubtedly driven remarkable advances, it represents an incomplete account of agency that completely sidesteps a critical question: how do agents achieve what they achieve? We propose a workshop centered on this complementary question, which we refer to as the study of agent behavior. This encompasses the full range of both observable and latent processes governing an agent's actions, including its decision-making strategies, its interaction patterns, its internal representations, and its responses to interventions.",
+    "topics": [
+      "Behavioral evaluations beyond task success, with causal or mechanistic explanations",
+      "Agentic interactions: behavior generation, social simulation, and multi-agent dynamics",
+      "Interventions: post-training, environment design, and structural constraints to steer behavior",
+      "Social and ethical implications: accountability for policymakers and deployment practitioners",
+      "Behavior foundation models that capture, generate, or simulate diverse AI behaviors"
+    ],
+    "schedule": [
+      {
+        "time": "8:30 AM",
+        "title": "Opening Remarks",
+        "speaker": null
+      },
+      {
+        "time": "9:00 AM",
+        "title": "Keynote 1",
+        "speaker": null
+      },
+      {
+        "time": "9:30 AM",
+        "title": "Keynote 2",
+        "speaker": null
+      },
+      {
+        "time": "10:00 AM",
+        "title": "Poster Session I",
+        "speaker": null
+      },
+      {
+        "time": "11:30 AM",
+        "title": "Lunch",
+        "speaker": null
+      },
+      {
+        "time": "1:00 PM",
+        "title": "Spotlight Talks",
+        "speaker": null
+      },
+      {
+        "time": "2:00 PM",
+        "title": "Keynote 3",
+        "speaker": null
+      },
+      {
+        "time": "2:30 PM",
+        "title": "Break",
+        "speaker": null
+      },
+      {
+        "time": "3:00 PM",
+        "title": "Keynote 4",
+        "speaker": null
+      },
+      {
+        "time": "3:30 PM",
+        "title": "Keynote 5",
+        "speaker": null
+      },
+      {
+        "time": "4:00 PM",
+        "title": "Poster Session II",
+        "speaker": null
+      },
+      {
+        "time": "5:30 PM",
+        "title": "Closing Remarks",
+        "speaker": null
+      }
+    ],
+    "speakers": [
+      "Colin Camerer (California Institute of Technology)",
+      "Diyi Yang (Stanford University)",
+      "Sophia Kazinnik (Stanford University)",
+      "Kawin Ethayarajh (University of Chicago)",
+      "Natasha Jaques (University of Washington)"
+    ],
+    "deadlines": [
+      {
+        "label": "Submission deadline",
+        "date": "2026-06-30",
+        "note": "AoE; extended from June 23"
+      },
+      {
+        "label": "Acceptance notification",
+        "date": "2026-07-24",
+        "note": "at the latest"
+      },
+      {
+        "label": "Workshop day",
+        "date": "2026-10-09",
+        "note": null
+      }
+    ],
+    "links": {
+      "cfp": "https://www.aiagentbehavior.com/#submissions",
+      "submission": "https://openreview.net/group?id=colmweb.org/COLM/2026/Workshop/WAB",
+      "schedule": "https://www.aiagentbehavior.com/#schedule",
+      "acceptedPapers": "https://www.aiagentbehavior.com/#accepted-papers",
+      "benchmarkTemplate": "https://www.aiagentbehavior.com/COLM_2026_WAB_Benchmark_Proposal_Template.zip"
+    }
+  },
+  {
+    "id": "re-data",
+    "name": "Workshop on Responsibly Enabling Data for Foundation Models",
+    "shortName": "Re-Data",
+    "edition": null,
+    "contact": "Anil Ramakrishna",
+    "organizers": [
+      "Anil Ramakrishna (Meta)",
+      "Zheng Xu (Meta)",
+      "Gautam Kamath (University of Waterloo, Vector Institute, and NYU)",
+      "Kamalika Chaudhuri (Google DeepMind)",
+      "Om Thakkar (OpenAI)",
+      "Natalia Ponomareva (Google)",
+      "Aleksandra Korolova (Princeton)"
+    ],
+    "date": "2026-10-09",
+    "startTime": "8:30 AM PDT",
+    "endTime": "6:00 PM PDT",
+    "room": null,
+    "website": "https://re-data-colm2026.github.io/",
+    "colmUrl": "https://colm.cc/virtual/2026/workshop/2565",
+    "description": "As foundation models scale, available training data sources have rapidly depleted. However, several forms of valuable data artifacts such as medical records, legal, and financial documents are restricted from use in model training due to their sensitive nature. In addition, the strong reasoning capabilities in current generative models have opened the possibility for highly personalizable AI applications but these remain bottlenecked by limited access to high quality user data. Hence, it is of immense value to responsibly unlock these data sources (for example: using data transformation or constrained training paradigms) or to generate synthetic alternatives. In this workshop, we aim to bring together domain experts in data, privacy, model training, and legal policy, to advance the frontier of responsibly leveraging such sensitive data with foundation models.",
+    "topics": [
+      "Data transformation: de-identification, anonymization, pseudonymization",
+      "Synthetic data generation: controlled regeneration, data diversity",
+      "Novel training paradigms: differential privacy, federated learning, architectural solutions",
+      "Evaluation & auditing: privacy attack benchmarks, utility-privacy tradeoffs",
+      "Policy: compliance, new regulations on data sharing"
+    ],
+    "schedule": [
+      {
+        "time": "8:45 AM",
+        "title": "Welcome and Opening Remarks",
+        "speaker": null
+      },
+      {
+        "time": "9:00 AM",
+        "title": "Invited Talk 1: Data-Efficient Foundation Model Pre-Training",
+        "speaker": "Sewon Min"
+      },
+      {
+        "time": "9:35 AM",
+        "title": "Invited Talk 2: Private Text Generation with LLMs: Mechanisms, Applications, and Audits",
+        "speaker": "Krishna Pillutla"
+      },
+      {
+        "time": "10:10 AM",
+        "title": "Invited Talk 3: Overclaiming in Frontier Coding Agents",
+        "speaker": "Nouha Dziri"
+      },
+      {
+        "time": "10:45 AM",
+        "title": "Coffee Break",
+        "speaker": null
+      },
+      {
+        "time": "11:00 AM",
+        "title": "Oral Presentations",
+        "speaker": null
+      },
+      {
+        "time": "12:00 PM",
+        "title": "Lunch",
+        "speaker": null
+      },
+      {
+        "time": "1:30 PM",
+        "title": "Invited Talk 4: The Legal Life of a Dataset: What Makes Training Data Usable?",
+        "speaker": "Janel Thamkul"
+      },
+      {
+        "time": "2:05 PM",
+        "title": "Invited Talk 5: Emergent Misalignment through the lens of Memorization",
+        "speaker": "Niloofar Mireshghallah"
+      },
+      {
+        "time": "2:40 PM",
+        "title": "Invited Talk 6: Creating RL Environments for Responsible Frontier Model Post-Training",
+        "speaker": "Alex Dimakis"
+      },
+      {
+        "time": "3:15 PM",
+        "title": "Coffee Break",
+        "speaker": null
+      },
+      {
+        "time": "3:30 PM",
+        "title": "Poster Session",
+        "speaker": null
+      },
+      {
+        "time": "5:00 PM",
+        "title": "Closing Remarks",
+        "speaker": null
+      }
+    ],
+    "speakers": [
+      "Sewon Min (UC Berkeley)",
+      "Alex Dimakis (UC Berkeley, Bespoke Labs)",
+      "Nouha Dziri (Cohere Labs)",
+      "Niloofar Mireshghallah (Humans&, CMU)",
+      "Janel Thamkul (Deputy General Counsel, ex-Anthropic, ex-Google)",
+      "Krishna Pillutla (IIT Madras)"
+    ],
+    "deadlines": [
+      {
+        "label": "Submissions open",
+        "date": "2026-05-27",
+        "note": null
+      },
+      {
+        "label": "Submission deadline",
+        "date": "2026-06-28",
+        "note": "AoE; extended from June 23"
+      },
+      {
+        "label": "Acceptance notifications",
+        "date": "2026-07-24",
+        "note": null
+      },
+      {
+        "label": "Workshop day",
+        "date": "2026-10-09",
+        "note": null
+      }
+    ],
+    "links": {
+      "cfp": "https://re-data-colm2026.github.io/#cfp",
+      "submission": "https://openreview.net/group?id=colmweb.org/COLM/2026/Workshop/Re-Data",
+      "schedule": "https://re-data-colm2026.github.io/#schedule"
+    }
+  },
+  {
+    "id": "science-ai",
+    "name": "Workshop on Scientific Understanding of Foundation Models",
+    "shortName": "Sci-FM",
+    "edition": null,
+    "contact": "Hanlin Zhang",
+    "organizers": [
+      "Hanlin Zhang",
+      "Natalie Abreu",
+      "Alex Damian",
+      "Sham Kakade",
+      "Yizhou Liu",
+      "Sewon Min",
+      "Yizhong Wang",
+      "Kaiyue Wen"
+    ],
+    "date": "2026-10-09",
+    "startTime": "8:30 AM PDT",
+    "endTime": "6:00 PM PDT",
+    "room": null,
+    "website": "https://science-ai-2026.github.io",
+    "colmUrl": "https://colm.cc/virtual/2026/workshop/2554",
+    "description": "Despite the extraordinary capabilities of modern foundation models, our scientific understanding of these systems remains remarkably shallow. We can observe that scaling works — but we cannot yet predict when capabilities will grow, why certain representations form, or how reasoning behavior arises from training dynamics. This workshop aims to catalyze a shift from capability demonstration to formal, testable theory. We seek to uncover laws, invariants, and causal structures — and to develop rigorous evaluation methodologies that can make foundation models more controllable, reliable, and interpretable. By bringing together researchers from theory, empirical ML, interpretability, optimization, evaluation, and scientific methodology, we aim to lay groundwork for a genuine science of foundation models — one built on predictive understanding, not post-hoc narrative.",
+    "topics": [
+      "Training dynamics, data, and optimization: data curation and mixtures, optimization at scale, limits of scaling laws",
+      "Post-training, reward modeling, and alignment: RL and self-improvement, reward overoptimization, RL environments, post-training datasets",
+      "Evaluation science and reliability: measurement methodology, discontinuous capability gains, reproducibility, automated analysis of model behavior"
+    ],
+    "schedule": [
+      {
+        "time": "8:45 AM",
+        "title": "Opening Remarks",
+        "speaker": null
+      },
+      {
+        "time": "9:00 AM",
+        "title": "Invited Talk: Post-training Data & TerminalBench",
+        "speaker": "Ludwig Schmidt"
+      },
+      {
+        "time": "9:30 AM",
+        "title": "Invited Talk: Physics of ML and Scaling Laws",
+        "speaker": "Surya Ganguli"
+      },
+      {
+        "time": "10:00 AM",
+        "title": "Morning Break",
+        "speaker": null
+      },
+      {
+        "time": "10:30 AM",
+        "title": "Invited Talk: Scaling Collapse & Epiplexity",
+        "speaker": "Andrew Gordon Wilson"
+      },
+      {
+        "time": "11:00 AM",
+        "title": "Invited Talk: Theoretical Understanding of Optimization",
+        "speaker": "Zhiyuan Li"
+      },
+      {
+        "time": "11:30 AM",
+        "title": "Contributed Oral Talks (3 papers)",
+        "speaker": null
+      },
+      {
+        "time": "12:00 PM",
+        "title": "Lunch Break & Poster Session I",
+        "speaker": null
+      },
+      {
+        "time": "1:30 PM",
+        "title": "Invited Talk: Post-Training Recipe and Evaluation",
+        "speaker": "Valentina Pyatkin"
+      },
+      {
+        "time": "2:00 PM",
+        "title": "Invited Talk: Nemotron: Lessons in Large-Scale Training",
+        "speaker": "Mohammad Shoeybi"
+      },
+      {
+        "time": "2:30 PM",
+        "title": "Contributed Oral Talks (4 papers)",
+        "speaker": null
+      },
+      {
+        "time": "3:00 PM",
+        "title": "Afternoon Break",
+        "speaker": null
+      },
+      {
+        "time": "3:30 PM",
+        "title": "Invited Talk: Observational Studies & Prescriptive Scaling",
+        "speaker": "Jikai Jin"
+      },
+      {
+        "time": "4:00 PM",
+        "title": "Invited Talk: Open-Source LLM Training & Transparency",
+        "speaker": "Hector Liu"
+      },
+      {
+        "time": "4:30 PM",
+        "title": "Panel Discussion",
+        "speaker": null
+      },
+      {
+        "time": "5:15 PM",
+        "title": "Poster Session II & Closing Remarks",
+        "speaker": null
+      }
+    ],
+    "speakers": [
+      "Jikai Jin (Stanford University)",
+      "Surya Ganguli (Stanford University)",
+      "Zhiyuan Li (Toyota Technological Institute at Chicago)",
+      "Hector Liu (MBZUAI Institute of Foundation Models Silicon Valley Lab)",
+      "Valentina Pyatkin (Allen Institute for AI / University of Washington)",
+      "Ludwig Schmidt (Stanford University & Anthropic)",
+      "Mohammad Shoeybi (NVIDIA)",
+      "Andrew Gordon Wilson (New York University)"
+    ],
+    "deadlines": [
+      {
+        "label": "Submission deadline",
+        "date": "2026-06-23",
+        "note": "11:59 PM AoE"
+      },
+      {
+        "label": "Author notification",
+        "date": "2026-07-24",
+        "note": null
+      },
+      {
+        "label": "Camera-ready deadline",
+        "date": "2026-08-26",
+        "note": null
+      },
+      {
+        "label": "Workshop date",
+        "date": "2026-10-09",
+        "note": null
+      }
+    ],
+    "links": {
+      "cfp": "https://science-ai-2026.github.io/#cfp",
+      "submission": "https://openreview.net/group?id=colmweb.org/COLM/2026/Workshop/Sci-FM",
+      "schedule": "https://science-ai-2026.github.io/#schedule",
+      "acceptedPapers": "https://science-ai-2026.github.io/accepted-papers"
+    }
+  }
+]

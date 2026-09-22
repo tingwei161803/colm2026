@@ -2,7 +2,7 @@
 
 把 [Conference on Language Modeling (COLM) 2026](https://colmweb.org/) 官網的所有內容,整理成一個**可搜尋、可篩選、雙語、可深連結**的純靜態單頁網站。
 
-> 🌐 **線上版**:<https://tingwei161803.github.io/colm-info/>
+> 🌐 **線上版**:<https://colm2026.peteraim.com/>
 
 COLM 是聚焦於「廣義語言建模」的學術會議,2026 年 10 月 6–9 日於**美國舊金山 Hilton Union Square** 舉行。本站把官網十多個頁面(關於、重要日期、徵稿、各類指南與政策、工作坊、組織成員、FAQ)整併成單一頁面,讓你用一個搜尋框就找到所有資訊。
 
@@ -26,7 +26,7 @@ COLM 是聚焦於「廣義語言建模」的學術會議,2026 年 10 月 6–9 �
 ## 📂 內容結構
 
 ```
-colm-info/
+colm2026/
 ├── index.html          # 單頁:版面、SEO/OG/JSON-LD、hero、搜尋、卡片、詳情視窗
 ├── assets/
 │   ├── styles.css      # minimalist 編輯風 + MD3 深淺色 token(純 CSS)

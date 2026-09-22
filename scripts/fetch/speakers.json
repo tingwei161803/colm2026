@@ -1,0 +1,12 @@
+{
+  "_note": "Affiliations are NOT published on colm.cc. Added from the speakers' public university/lab profiles (verified 2026-09-22). Keep in sync with schedule-NOTES.md.",
+  "Chelsea Finn": {"affiliation": "Stanford University", "url": "https://ai.stanford.edu/~cbfinn/"},
+  "Jennifer Pan": {"affiliation": "Stanford University", "url": "https://jenpan.com/"},
+  "John Langford": {"affiliation": "Microsoft Research", "url": "https://hunch.net/~jl/"},
+  "Henry Farrell": {"affiliation": "Johns Hopkins University (SNF Agora Institute / SAIS)", "url": "https://sais.jhu.edu/directory/henry-farrell"},
+  "Jason Eisner": {"affiliation": "Johns Hopkins University / Microsoft Semantic Machines", "url": "https://www.cs.jhu.edu/~jason/"},
+  "James Evans": {"affiliation": "University of Chicago", "url": "https://sociology.uchicago.edu/directory/james-evans"},
+  "Jeremy Avigad": {"affiliation": "Carnegie Mellon University", "url": "https://www.andrew.cmu.edu/user/avigad/"},
+  "Rose Yu": {"affiliation": "UC San Diego", "url": "https://roseyu.com/"},
+  "Alison Gopnik": {"affiliation": "UC Berkeley", "url": "http://alisongopnik.com/"}
+}
