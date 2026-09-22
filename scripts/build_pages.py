@@ -285,7 +285,7 @@ def build(page_key: str, lang: str) -> tuple[str, str]:
     </p>
   </footer>
 
-  <！-- ==== Scripts （order matters：shell → data → page）==== -->
+  <!-- ==== Scripts （order matters：shell → data → page）==== -->
 {scripts}
 </body>
 </html>
