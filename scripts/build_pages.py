@@ -29,6 +29,14 @@ DOMAIN = "https://colm2026.peteraim.com"
 ZH_DIR = "zh"
 GA_ID = "G-55QL75DCKR"
 
+# Share card + its alt text. Absolute URL on purpose: crawlers do not resolve
+# relative og:image. Regenerate the PNG with scripts/make_brand_assets.py.
+OG_IMAGE = f"{DOMAIN}/assets/og-image.png"
+OG_ALT = (
+    "COLM 2026 \u2014 The 3rd Conference on Language Modeling, "
+    "Hilton Union Square, San Francisco, October 6\u20139, 2026"
+)
+
 FONTS = (
     '<link rel="preconnect" href="https://fonts.googleapis.com" />\n'
     '  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />\n'
@@ -209,15 +217,26 @@ def build(page_key: str, lang: str) -> tuple[str, str]:
   <link rel="alternate" hreflang="x-default" href="{url_en}" />
   <meta name="theme-color" content="#3C5A78" />
 
+  <!-- ==== Icons ==== -->
+  <link rel="icon" href="{root}assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="{root}assets/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="{root}assets/apple-touch-icon.png" />
+
   <!-- ==== Open Graph / Twitter ==== -->
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="COLM 2026" />
   <meta property="og:title" content="{title}" />
   <meta property="og:description" content="{desc}" />
   <meta property="og:url" content="{url_self}" />
   <meta property="og:locale" content="{'zh_TW' if L == 'zh' else 'en_US'}" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="{OG_IMAGE}" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="{OG_ALT}" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="{title}" />
   <meta name="twitter:description" content="{desc}" />
+  <meta name="twitter:image" content="{OG_IMAGE}" />
 
   <!-- ==== JSON-LD structured data ==== -->
   <script type="application/ld+json">

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="COLM 2026">
+  <!-- Slate square + open "C". The letter is a path, not <text>: an SVG favicon
+       is its own document and never gets the page's webfonts, so a <text> mark
+       would fall back to whatever serif each OS happens to ship. -->
+  <rect width="64" height="64" rx="14" fill="#3C5A78"/>
+  <path d="M45.50 15.91 A21 21 0 1 0 45.50 48.09 L39.39 40.81 A11.5 11.5 0 1 1 39.39 23.19 Z" fill="#FBFBFA"/>
+</svg>

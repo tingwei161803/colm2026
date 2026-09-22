@@ -55,13 +55,17 @@ colm2026/
 │   ├── site.css       多頁新增：頂列、下拉、抽屜、主從版面、篩選、議程
 │   ├── shell.js       共用 chrome：頂列、抽屜、主題、語言連結、footer、dialog
 │   ├── app.js         首頁區段渲染（typed section registry + scrollspy）
-│   └── schedule.js · papers.js · workshops.js
+│   ├── schedule.js · papers.js · workshops.js
+│   ├── favicon.svg    站徽（唯一來源；字母畫成 path，SVG favicon 吃不到 webfont）
+│   ├── favicon-32.png · apple-touch-icon.png · icon-512.png   由 favicon.svg 產生
+│   └── og-image.png   1200×630 分享預覽圖
 ├── data/              產生檔（不要手改）：data.js、schedule.js、papers.js、papers-abstracts.*.js、workshops.js
 ├── data-src/          來源 JSON：papers / schedule / workshops / topics / zh / papers-zh / papers-topics
 ├── scripts/
 │   ├── build_data.py      data-src/*.json → data/*.js（合併中文與主題）
 │   ├── build_pages.py     8 個 HTML 外殼 + sitemap.xml + robots.txt + en/ 轉址殘頁
 │   ├── prerender.py       把 JS 渲染結果烤進靜態 HTML（SEO / 無 JS）
+│   ├── make_brand_assets.py  favicon.svg → 各尺寸 PNG + og-image.png
 │   ├── zh_punct.py        中文字串半形標點 → 全形
 │   ├── shot.py            Playwright：8 頁截圖 + console 錯誤檢查
 │   └── fetch/             從 colm.cc 與工作坊官網重抓資料（見 scripts/fetch/README.md）
@@ -90,6 +94,12 @@ uv run python scripts/build_pages.py       # 8 頁外殼 + sitemap + robots
 uv run --with playwright python scripts/prerender.py   # 烤進靜態內容（需 chromium）
 uv run --with playwright python scripts/shot.py        # 截圖 + console 檢查（輸出到 tmp/shots/）
 uv run python scripts/zh_punct.py --check data/data.js data-src/zh.json   # 中文標點檢查
+```
+
+改動站徽或分享圖時才需要重產圖（`assets/*.png` 是產生檔，不要手改）：
+
+```bash
+uv run --with playwright python scripts/make_brand_assets.py
 ```
 
 第一次跑 Playwright：`uv run --with playwright playwright install chromium`。
