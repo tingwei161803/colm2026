@@ -1,7 +1,7 @@
-"""Generate the 8 HTML shells (4 pages × en/zh) for the COLM 2026 site.
+"""Generate the 10 HTML shells (5 pages × en/zh) for the COLM 2026 site.
 
 Usage:
-    uv run python scripts/build_pages.py            # writes the 8 pages + sitemap.xml + robots.txt + en/ stub
+    uv run python scripts/build_pages.py            # writes the 10 pages + sitemap.xml + robots.txt + en/ stub
     uv run python scripts/build_pages.py --out tmp/preview
 
 Only the *shell* is generated here: <head> meta/SEO, app bar, drawer, page
@@ -92,6 +92,20 @@ PAGES = {
         "scripts": ["data/workshops.js", "assets/workshops.js"],
         "ld": "WebPage",
     },
+    "map": {
+        "slug": "map/",
+        "title": {"en": "Local Map · COLM 2026", "zh": "在地地圖 · COLM 2026"},
+        "desc": {"en": "Map of the official COLM 2026 San Francisco picks — restaurants, late-night food, cafés, bars, museums and parks near Hilton Union Square — with a safety heat layer from SFPD incident data and one-tap Google Maps links.",
+                 "zh": "COLM 2026 官方舊金山在地推薦地圖：Hilton Union Square 附近的餐廳、宵夜、咖啡、酒吧、博物館與公園，附 SFPD 事件資料做成的治安熱區，一鍵開啟 Google Maps。"},
+        "h1": {"en": "Local Map", "zh": "在地地圖"},
+        "sub": {"en": "The official list of places near the Hilton, by category, plus where to take extra care. Toggle layers, tap a pin for links, or locate yourself.",
+                "zh": "官方整理的 Hilton 周邊推薦地點，依分類顯示，另外標出需要多注意的區域。可開關圖層、點地標看連結，或顯示你目前的位置。"},
+        "scripts": ["data/map.js", "assets/map.js"],
+        "css": ["https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"],
+        "vendor": ["https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js",
+                   "https://cdnjs.cloudflare.com/ajax/libs/leaflet.heat/0.2.0/leaflet-heat.js"],
+        "ld": "WebPage",
+    },
 }
 
 PAGE_BODY = {
@@ -147,6 +161,29 @@ PAGE_BODY = {
     </div>
   </main>
 """,
+    "map": """
+  <main class="page page--wide">
+    <header class="page-head">
+      <h1>{h1}</h1>
+      <p class="page-head__sub">{sub}</p>
+    </header>
+    <div class="mapview">
+      <div class="mapview__map" id="mapBox">
+        <div id="map" class="map" role="region" aria-label="{h1}"></div>
+      </div>
+      <aside class="mapview__side">
+        <section class="layers" id="layers" aria-label="Layers"></section>
+        <div class="filters filters--flat">
+          <div class="search"><span class="material-symbols-rounded" aria-hidden="true">search</span>
+            <input type="search" id="q" placeholder="Search" aria-label="Search"></div>
+          <div class="filter-meta"><span><b id="countN">0</b> <span id="countLabel"></span></span><span id="sortLabel"></span></div>
+        </div>
+        <ul class="rows" id="placeList" aria-label="{h1}"></ul>
+      </aside>
+    </div>
+    <section class="mapguide" id="guide"></section>
+  </main>
+""",
 }
 
 
@@ -191,7 +228,9 @@ def build(page_key: str, lang: str) -> tuple[str, str]:
     }[p["ld"]]
 
     body = PAGE_BODY[page_key].format(h1=p.get("h1", {}).get(L, ""), sub=p.get("sub", {}).get(L, ""))
-    scripts = "\n".join(f'  <script src="{root}{s}"></script>' for s in ["assets/shell.js"] + p["scripts"])
+    vendor = "".join(f'  <script src="{v}"></script>\n' for v in p.get("vendor", []))
+    scripts = vendor + "\n".join(f'  <script src="{root}{s}"></script>' for s in ["assets/shell.js"] + p["scripts"])
+    page_css = "".join(f'\n  <link rel="stylesheet" href="{c}" />' for c in p.get("css", []))
 
     return path + "index.html", f"""<!DOCTYPE html>
 <html lang="{html_lang}" data-theme="light">
@@ -247,7 +286,7 @@ def build(page_key: str, lang: str) -> tuple[str, str]:
   {FONTS}
 
   <link rel="stylesheet" href="{root}assets/styles.css" />
-  <link rel="stylesheet" href="{root}assets/site.css" />
+  <link rel="stylesheet" href="{root}assets/site.css" />{page_css}
 </head>
 <body data-page="{page_key}" data-root="{root}">
   <!-- ==== App bar: brand · top nav · language · theme ==== -->
@@ -304,7 +343,7 @@ def build(page_key: str, lang: str) -> tuple[str, str]:
     </p>
   </footer>
 
-  <!-- ==== Scripts （order matters：shell → data → page）==== -->
+  <!-- ==== Scripts （order matters：vendor → shell → data → page）==== -->
 {scripts}
 </body>
 </html>

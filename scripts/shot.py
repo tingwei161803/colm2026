@@ -1,7 +1,7 @@
 """Smoke-test the template pages: console errors + screenshots (desktop & phone).
 
 Usage: uv run --with playwright python scripts/shot.py [base] [paths...]
-       default base = http://127.0.0.1:4173  paths = all 8 pages
+       default base = http://127.0.0.1:4173  paths = all 10 pages
 Screenshots land in tmp/shots/<name>-{desktop,phone}.png
 """
 from __future__ import annotations
@@ -16,7 +16,7 @@ OUT = ROOT / "tmp/shots"   # gitignored
 OUT.mkdir(parents=True, exist_ok=True)
 
 base = sys.argv[1] if len(sys.argv) > 1 else "http://127.0.0.1:4173"
-paths = sys.argv[2:] or ["/", "/zh/", "/schedule/", "/zh/schedule/", "/papers/", "/zh/papers/", "/workshops/", "/zh/workshops/"]
+paths = sys.argv[2:] or ["/", "/zh/", "/schedule/", "/zh/schedule/", "/papers/", "/zh/papers/", "/workshops/", "/zh/workshops/", "/map/", "/zh/map/"]
 
 # per-page interaction before the screenshot (so the detail panel is populated)
 def interact(page, path: str) -> None:
@@ -32,6 +32,10 @@ def interact(page, path: str) -> None:
     elif "workshops" in path:
         page.locator("#list .row").first.click()
         page.wait_for_timeout(200)
+    elif "map" in path:
+        page.wait_for_selector(".leaflet-marker-icon", timeout=10000)
+        page.locator("#placeList .row").first.click()
+        page.wait_for_timeout(1200)          # flyTo + popup
     elif "schedule" in path:
         page.locator("details").first.click() if page.locator("details").count() else None
         page.wait_for_timeout(200)

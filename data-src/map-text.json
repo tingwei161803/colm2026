@@ -1,0 +1,78 @@
+{
+ "_comment": "地圖頁的雙語文字：分類、在地導覽（改寫自官方試算表的 Intro 分頁）、注意區域。注意區域的位置取自 data-src/safety.json 最密集的幾群格子，說明是本站自己寫的，不是 COLM 官方建議。",
+
+ "venue": {
+  "name": "Hilton San Francisco Union Square",
+  "address": "333 O'Farrell St, San Francisco, CA 94102",
+  "lat": 37.785734, "lng": -122.410437,
+  "gmaps": "https://www.google.com/maps/search/?api=1&query=Hilton+San+Francisco+Union+Square"
+ },
+
+ "categories": {
+  "food":      {"zh": "餐廳",                   "icon": "restaurant",   "short": {"en": "Restaurants", "zh": "餐廳"}},
+  "latenight": {"zh": "深夜美食",               "icon": "bedtime",      "short": {"en": "Late night",  "zh": "深夜"}},
+  "cafe":      {"zh": "手搖、烘焙與咖啡",       "icon": "local_cafe",   "short": {"en": "Cafés & bakeries", "zh": "咖啡烘焙"}},
+  "bars":      {"zh": "酒吧",                   "icon": "local_bar",    "short": {"en": "Bars",        "zh": "酒吧"}},
+  "culture":   {"zh": "博物館、藝術與景點",     "icon": "museum",       "short": {"en": "Museums & sights", "zh": "博物館景點"}},
+  "parks":     {"zh": "附近的公園",             "icon": "park",         "short": {"en": "Parks",       "zh": "公園"}},
+  "further":   {"zh": "較遠的公園、博物館與步道", "icon": "hiking",     "short": {"en": "Further out", "zh": "較遠景點"}}
+ },
+
+ "guide": [
+  {"icon": "location_city",
+   "title": {"en": "The neighborhood", "zh": "會場周邊"},
+   "text": {"en": "The Hilton sits on the border between Union Square and the Tenderloin, a neighborhood with high levels of homelessness that is the locus of the city's fentanyl crisis — and also a rich cultural district with the theater district, vibrant bars, historic LGBTQ+ activism and incredible late-night food. Take common-sense precautions and visit with compassion.",
+            "zh": "Hilton 位在 Union Square 與 Tenderloin 的交界。Tenderloin 遊民很多，也是舊金山芬太尼危機的中心；但它同時是文化豐富的街區：劇院區、熱鬧的酒吧、LGBTQ+ 運動的歷史現場，還有很棒的宵夜。請保持基本警覺，也請帶著同理心走訪。"}},
+  {"icon": "directions_transit",
+   "title": {"en": "Getting around", "zh": "交通"},
+   "text": {"en": "Powell Street station, a short walk away, serves Muni Metro (T to Chinatown; J K L M N S to the Ferry Building; K L M S to the Castro) and BART (Ferry Building, the Mission, Berkeley, Oakland). Tap a credit card on every Muni vehicle, cable cars included, and on BART — tap the same card again to exit. The historic F streetcar runs along Market Street to the Ferry Building and the Castro.",
+            "zh": "走路就到的 Powell Street 站有 Muni Metro（T 線到中國城；J、K、L、M、N、S 到 Ferry Building；K、L、M、S 到 Castro）與 BART（Ferry Building、Mission、Berkeley、Oakland）。所有 Muni 車輛（含叮噹車）和 BART 都能直接感應信用卡；BART 出站要再感應同一張卡。Market Street 上的 F 線復古路面電車可到 Ferry Building 和 Castro。"}},
+  {"icon": "directions_walk",
+   "title": {"en": "What “nearby” means", "zh": "「附近」的定義"},
+   "text": {"en": "The official list picks places within a 20-minute walk, or one 20-minute ride on BART, Muni or a cable car with no transfers. San Francisco is a compact 7×7-mile city that rewards walking — there is far more than fits on any list, so go explore.",
+            "zh": "官方清單挑的是走路 20 分鐘內、或搭一趟 BART／Muni／叮噹車 20 分鐘內（不用轉乘）到得了的地方。舊金山只有 7×7 英里，很適合散步；清單只是一小部分，歡迎自己去探索。"}}
+ ],
+
+ "resources": [
+  {"url": "https://www.sfcityguides.org/", "en": "SF City Guides — free walking tours", "zh": "SF City Guides —— 免費導覽散步"},
+  {"url": "https://www.atlasobscura.com/things-to-do/san-francisco-california", "en": "Atlas Obscura — cool, hidden and unusual things to do", "zh": "Atlas Obscura —— 冷門、隱藏、奇特的去處"},
+  {"url": "https://crosstowntrail.org/", "en": "SF Crosstown Trail — urban hikes across the city", "zh": "SF Crosstown Trail —— 橫越全市的城市步道"},
+  {"url": "https://fleetweeksf.org/", "en": "Fleet Week (Oct 4–12) — ships and air shows", "zh": "艦隊週（10/4–10/12）—— 軍艦與飛行表演"},
+  {"url": "https://www.nps.gov/alca/index.htm", "en": "Alcatraz, if you have never been", "zh": "惡魔島（Alcatraz），沒去過的話"},
+  {"url": "https://sf.funcheap.com/", "en": "SF Funcheap — fun and cheap events", "zh": "SF Funcheap —— 好玩又便宜的活動"},
+  {"url": "https://www.garysguide.com/events?region=sf", "en": "Gary's Guide — SF AI / tech events", "zh": "Gary's Guide —— 舊金山 AI／科技活動"},
+  {"url": "https://gamh.com/", "en": "Music & theatre nearby: Great American Music Hall, SFJAZZ, Rickshaw Stop, The Curran, A.C.T., The Warfield", "zh": "附近的音樂與劇場：Great American Music Hall、SFJAZZ、Rickshaw Stop、The Curran、A.C.T.、The Warfield"}
+ ],
+
+ "zones": [
+  {"id": "tenderloin", "lat": 37.7838, "lng": -122.4138, "r": 320,
+   "name": {"en": "Tenderloin core", "zh": "Tenderloin 核心區"},
+   "note": {"en": "Eddy, Turk, Ellis and Golden Gate between Jones and Larkin — open-air drug use and dealing, and the densest cluster of assaults near the venue. Walking through by day is common; avoid lingering, especially after dark. Heading north or east from the Hilton (Geary → Powell) keeps you out of it.",
+            "zh": "Eddy、Turk、Ellis、Golden Gate 這幾條街在 Jones 到 Larkin 之間的路段：露天用藥與毒品交易，也是會場附近傷害案最密集的一群。白天穿過去的人很多，但不要逗留，天黑後尤其注意。從 Hilton 往北或往東走（Geary → Powell）就不會經過。"}},
+  {"id": "un-plaza", "lat": 37.7806, "lng": -122.4135, "r": 170,
+   "name": {"en": "UN Plaza / Civic Center BART", "zh": "UN Plaza／Civic Center BART 站"},
+   "note": {"en": "The plaza and station entrances at Market & 7th–8th see heavy drug activity. If you take BART, Powell Street is the nicer station for the Hilton.",
+            "zh": "Market 與 7th–8th 街口的廣場和車站出入口毒品活動很多。搭 BART 的話，到 Hilton 用 Powell Street 站比較好。"}},
+  {"id": "sixth-street", "lat": 37.7805, "lng": -122.4088, "r": 220,
+   "name": {"en": "6th Street (Market → Howard)", "zh": "6th Street（Market 到 Howard）"},
+   "note": {"en": "Among the densest blocks in the data. Walking from the Hilton to SoMa or the Moscone Center, use 4th or 5th Street instead.",
+            "zh": "以街廓來算是資料裡最密集的路段之一。從 Hilton 走去 SoMa 或 Moscone Center，改走 4th 或 5th Street。"}},
+  {"id": "sixteenth-bart", "lat": 37.7650, "lng": -122.4196, "r": 180,
+   "name": {"en": "16th St Mission BART", "zh": "16th St Mission BART 站"},
+   "note": {"en": "The station plazas at 16th & Mission are one of the two hottest cells in the data (with 6th & Market). Fine to pass through on the way to Mission restaurants; don't hang around, and keep your phone away at night.",
+            "zh": "16th 與 Mission 街口的車站廣場是整份資料最熱的兩格之一（另一格是 6th 與 Market）。去 Mission 吃飯經過沒問題，但不要停留，晚上手機收好。"}},
+  {"id": "twentyfourth-bart", "lat": 37.7524, "lng": -122.4185, "r": 140,
+   "name": {"en": "24th St Mission BART", "zh": "24th St Mission BART 站"},
+   "note": {"en": "Busier and calmer than 16th St, but still a hotspot around the station plazas, especially late. La Taqueria and La Vaca Birria are a short walk away.",
+            "zh": "比 16th St 站熱鬧也平靜一些，但車站廣場周邊仍是熱點，深夜尤其如此。La Taqueria 和 La Vaca Birria 走幾步就到。"}}
+ ],
+
+ "tips": {
+  "en": ["Main streets are busy and generally fine by day; the heat shows where incidents are reported, not where you will be harmed.",
+         "After dark, prefer lit main streets or a rideshare for longer walks, and keep your phone out of reach of passing hands.",
+         "Car break-ins are very common — never leave anything visible in a car (they are not counted in this map)."],
+  "zh": ["白天主要街道人很多，大致沒問題；熱區代表「事件被通報的地方」，不等於你一定會遇到危險。",
+         "天黑後盡量走有路燈的主要街道，距離長就叫車；手機別拿在路過的人伸手就搶得到的地方。",
+         "車窗被砸偷東西非常常見 —— 車上不要留任何看得到的物品（這類案件沒算進這張地圖）。"]
+ }
+}

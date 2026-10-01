@@ -26,6 +26,20 @@ cp papers.json schedule.json workshops.json ../../data-src/
 cd ../.. && uv run python scripts/build_data.py && uv run python scripts/build_pages.py && uv run python scripts/prerender.py
 ```
 
+## 地圖頁（在 repo 根目錄直接跑，不用複製到 tmp/）
+
+```bash
+# 官方試算表（分類、價位、描述、Google Maps 連結）+ My Maps KML（座標）→ data-src/places.json
+uv run --with openpyxl --with certifi python scripts/fetch/build_places.py
+# SFPD 事件通報（DataSF）最近 365 天 → 約 110 m 格點 → data-src/safety.json
+uv run --with certifi python scripts/fetch/build_safety.py
+
+uv run python scripts/build_data.py        # → data/map.js
+```
+
+新增地點後記得在 `data-src/places-zh.json` 補中文描述（`build_data.py` 印出的 `zh` 數字會少）。
+注意區域（`data-src/map-text.json` 的 `zones`）是手動整理的，位置對照 `safety.json` 最熱的幾群格子。
+
 ## 其他資料來源（不在這些腳本裡）
 
 | 檔案 | 怎麼來的 |

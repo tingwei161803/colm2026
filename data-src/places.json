@@ -1,0 +1,1361 @@
+{
+ "source": {
+  "sheet": "https://docs.google.com/spreadsheets/d/1xy8HOYJOyWzFqnsmr06t-NcVoLKDuwqb1A1Es6iaY3I/edit",
+  "mymaps": "https://www.google.com/maps/d/viewer?mid=1U_Po7vWtGCGrEnHJ3LWl_hbvMd0TWEo",
+  "note": "COLM 2026 SF local information, curated by Dan Jurafsky for COLM 2026."
+ },
+ "categories": [
+  {
+   "id": "food",
+   "en": "Restaurants Nearby"
+  },
+  {
+   "id": "latenight",
+   "en": "Late Night Restaurants Nearby"
+  },
+  {
+   "id": "cafe",
+   "en": "Boba, Bakeries and Cafes Nearby"
+  },
+  {
+   "id": "bars",
+   "en": "Bars Nearby"
+  },
+  {
+   "id": "culture",
+   "en": "Museums, Art, Tourist Attractions"
+  },
+  {
+   "id": "parks",
+   "en": "Parks Nearby"
+  },
+  {
+   "id": "further",
+   "en": "More Distant Parks, Museums, Trails"
+  }
+ ],
+ "places": [
+  {
+   "id": "taishan-cuisine",
+   "name": "Taishan Cuisine",
+   "cats": [
+    "food",
+    "latenight"
+   ],
+   "price": "$$",
+   "desc": "Taishan (=Toisan, autonym Hoisan) is the region of Guangdong Province that was the early source of much of San Francisco's Chinese population, and this restaurant is the best Taishanese restaurant in town. Famous for their yellow-eel rice clay pot, roast chicken, 5-spice duck, frogs legs, and cauliflower with preserved pork. Also open very late (3am?) for those of you who are jet-lagged.",
+   "lat": 37.797296,
+   "lng": -122.409876,
+   "gmaps": "https://maps.google.com/?cid=12074723343404816441"
+  },
+  {
+   "id": "r-g-lounge",
+   "name": "R & G Lounge",
+   "cats": [
+    "food"
+   ],
+   "price": "$$$",
+   "desc": "Classic Cantonese seafood (salt-and-pepper crab, Cantonese clear-steamed fish, or black cod).",
+   "lat": 37.794115,
+   "lng": -122.404942,
+   "gmaps": "https://maps.google.com/?cid=9919333893051552971"
+  },
+  {
+   "id": "capital",
+   "name": "Capital",
+   "cats": [
+    "food"
+   ],
+   "price": "$$",
+   "desc": "Probably the best crispy salt-and-pepper wings you will eat this year. Also other standard Cantonese fare.",
+   "lat": 37.794079,
+   "lng": -122.407102,
+   "gmaps": "https://maps.google.com/?cid=8449894009395527665"
+  },
+  {
+   "id": "four-kings",
+   "name": "Four Kings 四大天王",
+   "cats": [
+    "food"
+   ],
+   "price": "$$$",
+   "desc": "SF Chronicle's #1 resto in SF. Elevated Cantonese. Hard to get into but you can sometimes succeed if you wait in line before they open.",
+   "lat": 37.794071,
+   "lng": -122.405103,
+   "gmaps": "https://maps.google.com/?cid=4146869141711067415"
+  },
+  {
+   "id": "lai-hong-lounge",
+   "name": "Lai Hong Lounge",
+   "cats": [
+    "food"
+   ],
+   "price": "$$",
+   "desc": "Classic HK-style dimsum. Possibly the last place that still uses carts, at least on the weekend.",
+   "lat": 37.797856,
+   "lng": -122.410125,
+   "gmaps": "https://maps.google.com/?cid=4422164072418167881"
+  },
+  {
+   "id": "hons-wun-tun-house",
+   "name": "Hon’s Wun-Tun House 洪記面家",
+   "cats": [
+    "food"
+   ],
+   "price": "$",
+   "desc": "Best HK wonton noodles in town. Very busy.",
+   "lat": 37.795033,
+   "lng": -122.406059,
+   "gmaps": "https://maps.google.com/?cid=9755410395794651298"
+  },
+  {
+   "id": "palette-tea-house",
+   "name": "Palette Tea House",
+   "cats": [
+    "food"
+   ],
+   "price": "$$$",
+   "desc": "High-end dim sum by the owner of Koi Palace. (In Ghirardelli Square, on the beautiful waterfront and an early (1962) case of adaptive reuse that turned a brick chocolate factory into shops.)",
+   "lat": 37.805627,
+   "lng": -122.422835,
+   "gmaps": "https://maps.google.com/?cid=16511280044574109475"
+  },
+  {
+   "id": "harborview-restaurant-bar",
+   "name": "Harborview Restaurant & Bar",
+   "cats": [
+    "food"
+   ],
+   "price": "$$$",
+   "desc": "Cantonese, dimsum and also dinner, amazing views.",
+   "lat": 37.794714,
+   "lng": -122.396185,
+   "gmaps": "https://maps.google.com/?cid=14619576797544353265"
+  },
+  {
+   "id": "yuet-lee-seafood-restaurant",
+   "name": "Yuet Lee Seafood Restaurant",
+   "cats": [
+    "food"
+   ],
+   "price": "$$",
+   "desc": "Classic late-nite Hong Kong-style Cantonese food (well, these days just til 11pm).",
+   "lat": 37.797803,
+   "lng": -122.408474,
+   "gmaps": "https://maps.google.com/?cid=16513233873255887771"
+  },
+  {
+   "id": "the-happy-crane",
+   "name": "The Happy Crane",
+   "cats": [
+    "food"
+   ],
+   "price": "$$$",
+   "desc": "The latest hot place. Cantonese meets molecular gastronomy. Hard to get into.",
+   "lat": 37.777491,
+   "lng": -122.4233,
+   "gmaps": "https://maps.google.com/?cid=7771351813149830286"
+  },
+  {
+   "id": "cantoo-latin-asian-rotisserie",
+   "name": "Cantoo Latin Asian Rotisserie",
+   "cats": [
+    "food"
+   ],
+   "price": "$$",
+   "desc": "Venezuelan Chinese! Gritty part of the neighborhood.",
+   "lat": 37.785833,
+   "lng": -122.414161,
+   "gmaps": "https://maps.google.com/?cid=8866778469025323854"
+  },
+  {
+   "id": "mensho-tokyo-sf",
+   "name": "Mensho Tokyo SF",
+   "cats": [
+    "food"
+   ],
+   "price": "$$",
+   "desc": "US spinoff of Tokyo brand. Gritty part of the neighborhood.",
+   "lat": 37.786735,
+   "lng": -122.414343,
+   "gmaps": "https://maps.google.com/?cid=17252469779755439990"
+  },
+  {
+   "id": "rintaro",
+   "name": "Rintaro",
+   "cats": [
+    "food"
+   ],
+   "price": "$$$$",
+   "desc": "Izakaya",
+   "lat": 37.768875,
+   "lng": -122.415136,
+   "gmaps": "https://maps.google.com/?cid=16233121339072713172"
+  },
+  {
+   "id": "aji-kiji",
+   "name": "Aji Kiji",
+   "cats": [
+    "food"
+   ],
+   "price": "$$",
+   "desc": "Sushi, takeout only",
+   "lat": 37.791541,
+   "lng": -122.404397,
+   "gmaps": "https://maps.google.com/?cid=15761026593608593110"
+  },
+  {
+   "id": "taishoken-san-francisco",
+   "name": "Taishoken San Francisco",
+   "cats": [
+    "food"
+   ],
+   "price": "$$",
+   "desc": "Tokyo-style ramen and tsukemen noodles in the Mission",
+   "lat": 37.762224,
+   "lng": -122.421497,
+   "gmaps": "https://maps.google.com/?cid=15092084496708632332"
+  },
+  {
+   "id": "kin-khao",
+   "name": "Kin Khao",
+   "cats": [
+    "food"
+   ],
+   "price": "$$$",
+   "desc": "Issan cuisine of Northern Thailand. One Michelin star. Curries made in house.",
+   "lat": 37.785241,
+   "lng": -122.409331,
+   "gmaps": "https://maps.google.com/?cid=12526953157639105755"
+  },
+  {
+   "id": "nari",
+   "name": "Nari",
+   "cats": [
+    "food"
+   ],
+   "price": "$$$",
+   "desc": "Creative Thai from Pim Techamuanvivit in a beautiful space with high ceilings and clerestory windows.",
+   "lat": 37.785418,
+   "lng": -122.428789,
+   "gmaps": "https://maps.google.com/?cid=17431474946500495682"
+  },
+  {
+   "id": "lers-ros-thai",
+   "name": "Lers Ros Thai",
+   "cats": [
+    "food"
+   ],
+   "price": "$$",
+   "desc": "Famous local Thai. Excellent Larb. Gritty neighborhood.",
+   "lat": 37.77696,
+   "lng": -122.421752,
+   "gmaps": "https://maps.google.com/?cid=10393259441545295445"
+  },
+  {
+   "id": "house-of-thai",
+   "name": "House of Thai",
+   "cats": [
+    "food"
+   ],
+   "price": "$$",
+   "desc": "Great pork leg stew with Thai pickled cabbage..",
+   "lat": 37.786249,
+   "lng": -122.418339,
+   "gmaps": "https://maps.google.com/?cid=16276300264244903701"
+  },
+  {
+   "id": "khao-tiew",
+   "name": "Khao Tiew",
+   "cats": [
+    "food"
+   ],
+   "price": "$$",
+   "desc": "Excellent Thai. Long line. Make reservations. Not walkable but a quick 20minute ride on the K,L, or M Muni",
+   "lat": 37.741087,
+   "lng": -122.465068,
+   "gmaps": "https://maps.google.com/?cid=15524093667039907294"
+  },
+  {
+   "id": "burma-love",
+   "name": "Burma Love",
+   "cats": [
+    "food"
+   ],
+   "price": "$$",
+   "desc": "Branch from local \"Burma Superstar\" group.",
+   "lat": 37.7829,
+   "lng": -122.407858,
+   "gmaps": "https://maps.google.com/?cid=9105128907468650161"
+  },
+  {
+   "id": "lunette",
+   "name": "Lunette",
+   "cats": [
+    "food"
+   ],
+   "price": "$$",
+   "desc": "Casual Cambodian in the Ferry Building",
+   "lat": 37.795218,
+   "lng": -122.392982,
+   "gmaps": "https://maps.google.com/?cid=15858702250847672950"
+  },
+  {
+   "id": "copra",
+   "name": "Copra",
+   "cats": [
+    "food"
+   ],
+   "price": "$$$",
+   "desc": "Amazing Kerala food from Srijith Gopinathan.",
+   "lat": 37.78537,
+   "lng": -122.432789,
+   "gmaps": "https://maps.google.com/?cid=2014299451089600556"
+  },
+  {
+   "id": "bodega-sf",
+   "name": "Bodega SF",
+   "cats": [
+    "food"
+   ],
+   "price": "$$",
+   "desc": "High-energy Vietnamese (Bò-Dê-Gà -=Beef, lamb, chicken) with good cocktails.",
+   "lat": 37.784826,
+   "lng": -122.409302,
+   "gmaps": "https://maps.google.com/?cid=8398096136453693148"
+  },
+  {
+   "id": "kokkari-estiatorio",
+   "name": "Kokkari Estiatorio",
+   "cats": [
+    "food"
+   ],
+   "price": "$$$$",
+   "desc": "Upscale Greek food.",
+   "lat": 37.797032,
+   "lng": -122.399756,
+   "gmaps": "https://maps.google.com/?cid=12957869814535908416"
+  },
+  {
+   "id": "il-casaro-pizzeria",
+   "name": "Il Casaro Pizzeria",
+   "cats": [
+    "food"
+   ],
+   "price": "$$",
+   "desc": "Neapolitan style pizza",
+   "lat": 37.798472,
+   "lng": -122.407328,
+   "gmaps": "https://maps.google.com/?cid=6781377139221339014"
+  },
+  {
+   "id": "golden-boy-pizza",
+   "name": "Golden Boy Pizza",
+   "cats": [
+    "food"
+   ],
+   "price": "$",
+   "desc": "Sicilian-style pizza by the slice.",
+   "lat": 37.799762,
+   "lng": -122.408093,
+   "gmaps": "https://maps.google.com/?cid=16218573224995018158"
+  },
+  {
+   "id": "cotogna",
+   "name": "Cotogna",
+   "cats": [
+    "food"
+   ],
+   "price": "$$$$",
+   "desc": "Upscale-yet-cozy Italian",
+   "lat": 37.797445,
+   "lng": -122.403576,
+   "gmaps": "https://maps.google.com/?cid=3844909922527115641"
+  },
+  {
+   "id": "tonys-pizza-napoletana",
+   "name": "Tony's Pizza Napoletana",
+   "cats": [
+    "food"
+   ],
+   "price": "$$",
+   "desc": "SF Chronicle calls it an \"encyclopedia of pizza\". Tony Gemignano's Napolitan pizza ranked #5 in the world recently.",
+   "lat": 37.800382,
+   "lng": -122.409046,
+   "gmaps": "https://maps.google.com/?cid=13813662513369709376"
+  },
+  {
+   "id": "flour-water",
+   "name": "Flour + Water",
+   "cats": [
+    "food"
+   ],
+   "price": "$$$",
+   "desc": "Mission pasta.",
+   "lat": 37.75894,
+   "lng": -122.412286,
+   "gmaps": "https://maps.google.com/?cid=7434356861941711840"
+  },
+  {
+   "id": "flour-water-pizzeria",
+   "name": "Flour + Water Pizzeria",
+   "cats": [
+    "food"
+   ],
+   "price": "$$",
+   "desc": "Large North Beach pizzeria (check out the glassed-in dough room)",
+   "lat": 37.800073,
+   "lng": -122.409429,
+   "gmaps": "https://maps.google.com/?cid=6930621733942882290"
+  },
+  {
+   "id": "montesacro-soma",
+   "name": "Montesacro SoMa",
+   "cats": [
+    "food"
+   ],
+   "price": "$$",
+   "desc": "Hole-in-the-wall pinseria.",
+   "lat": 37.781551,
+   "lng": -122.410134,
+   "gmaps": "https://maps.google.com/?cid=11576266575661012832"
+  },
+  {
+   "id": "rich-table",
+   "name": "Rich Table",
+   "cats": [
+    "food"
+   ],
+   "price": "$$$",
+   "desc": "California farmhouse-chic.",
+   "lat": 37.774866,
+   "lng": -122.42285,
+   "gmaps": "https://maps.google.com/?cid=8889672814233392895"
+  },
+  {
+   "id": "nopa",
+   "name": "Nopa",
+   "cats": [
+    "food"
+   ],
+   "price": "$$$",
+   "desc": "Slightly further away, but fun, bustling, cocktails. Best pork chop in the city.",
+   "lat": 37.774901,
+   "lng": -122.437508,
+   "gmaps": "https://maps.google.com/?cid=6373257973262962437"
+  },
+  {
+   "id": "maison-nico",
+   "name": "Maison Nico",
+   "cats": [
+    "food",
+    "cafe"
+   ],
+   "price": "$$",
+   "desc": "Wonderful epicerie/bakery. Croissants, pistachio Paris-Brest, pâté en croûte. Also an outlet across the street in the Transamerica building.",
+   "lat": 37.795789,
+   "lng": -122.403233,
+   "gmaps": "https://maps.google.com/?cid=1251710682997881049"
+  },
+  {
+   "id": "verjus",
+   "name": "Verjus",
+   "cats": [
+    "food"
+   ],
+   "price": "$$$",
+   "desc": "Fun high-energy \"glam French\" (says the SF Chronicle) wine bar, seafood, crudités,",
+   "lat": 37.795726,
+   "lng": -122.402723,
+   "gmaps": "https://maps.google.com/?cid=12797050616792312158"
+  },
+  {
+   "id": "la-mar-cocina-peruana-san-francisco",
+   "name": "La Mar Cocina Peruana San Francisco",
+   "cats": [
+    "food"
+   ],
+   "price": "$$$",
+   "desc": "One of Gastón Acurio's 10 La Mar's across the world. Peruvian cebiche and other seafood.",
+   "lat": 37.797239,
+   "lng": -122.395392,
+   "gmaps": "https://maps.google.com/?cid=12288100453195726903"
+  },
+  {
+   "id": "chao-pescao",
+   "name": "Chao Pescao",
+   "cats": [
+    "food"
+   ],
+   "price": "$$",
+   "desc": "Cuban/Colombian",
+   "lat": 37.780694,
+   "lng": -122.416542,
+   "gmaps": "https://maps.google.com/?cid=14469817475199888138"
+  },
+  {
+   "id": "la-vaca-birria",
+   "name": "La Vaca Birria",
+   "cats": [
+    "food"
+   ],
+   "price": "$$",
+   "desc": "On 24th street, the heart of La Mission. Possibly the best quesabirria tacos in the city, (although El Patrón on South Van Ness might be better on some days). Halal. People also like the grilled cheese burrito.",
+   "lat": 37.752915,
+   "lng": -122.411431,
+   "gmaps": "https://maps.google.com/?cid=14791641875717612830"
+  },
+  {
+   "id": "la-taqueria",
+   "name": "La Taqueria",
+   "cats": [
+    "food"
+   ],
+   "price": "$",
+   "desc": "Award-winning tacos and burritos. Excellent carnitas and the beans are also fabulous. There's a line.",
+   "lat": 37.750896,
+   "lng": -122.418087,
+   "gmaps": "https://maps.google.com/?cid=2449088951294747765"
+  },
+  {
+   "id": "om-sabor",
+   "name": "Om Sabor",
+   "cats": [
+    "food"
+   ],
+   "price": "$$",
+   "desc": "Excellent vegan food hidden inside a bar.",
+   "lat": 37.778087,
+   "lng": -122.42268,
+   "gmaps": "https://maps.google.com/?cid=2439976837139767128"
+  },
+  {
+   "id": "hog-island-oyster-co",
+   "name": "Hog Island Oyster Co.",
+   "cats": [
+    "food"
+   ],
+   "price": "$$",
+   "desc": "Sit outside the Ferry Building off the Embarcadero, get a plate of oysters and a beer or a cocktail, and watch the Bay.",
+   "lat": 37.795965,
+   "lng": -122.393417,
+   "gmaps": "https://maps.google.com/?cid=9442219819750554241"
+  },
+  {
+   "id": "liholiho-yacht-club",
+   "name": "Liholiho Yacht Club",
+   "cats": [
+    "food"
+   ],
+   "price": "$$$",
+   "desc": "Hard to categorize. Hawaii-influenced and delicious.",
+   "lat": 37.788226,
+   "lng": -122.414605,
+   "gmaps": "https://maps.google.com/?cid=12785219178625967625"
+  },
+  {
+   "id": "taksim",
+   "name": "Taksim",
+   "cats": [
+    "food"
+   ],
+   "price": "$$$",
+   "desc": "Turkish/Mediterranean/Californian",
+   "lat": 37.778673,
+   "lng": -122.39737,
+   "gmaps": "https://maps.google.com/?cid=10137657024759162468"
+  },
+  {
+   "id": "tadich-grill",
+   "name": "Tadich Grill",
+   "cats": [
+    "food"
+   ],
+   "price": "$$$",
+   "desc": "SF Classic. Oldest continuously operated restaurant in SF, since 1849. Popular: sand dabs, cioppino, branzino.",
+   "lat": 37.793435,
+   "lng": -122.399449,
+   "gmaps": "https://maps.google.com/?cid=7707263299283615717"
+  },
+  {
+   "id": "house-of-prime-rib",
+   "name": "House of Prime Rib",
+   "cats": [
+    "food"
+   ],
+   "price": "$$$$",
+   "desc": "SF Classic.",
+   "lat": 37.793433,
+   "lng": -122.422732,
+   "gmaps": "https://maps.google.com/?cid=4535787543201006809"
+  },
+  {
+   "id": "sams-grill-seafood-restaurant",
+   "name": "Sam's Grill & Seafood Restaurant",
+   "cats": [
+    "food"
+   ],
+   "price": "$$$",
+   "desc": "SF Classic.",
+   "lat": 37.790945,
+   "lng": -122.403653,
+   "gmaps": "https://maps.google.com/?cid=10274727953971653721"
+  },
+  {
+   "id": "sears-fine-food",
+   "name": "Sears Fine Food",
+   "cats": [
+    "food"
+   ],
+   "price": "$$",
+   "desc": "SF Classic. Old fashioned dinner food, famous for their Swedish pancakes and other breakfasts",
+   "lat": 37.788794,
+   "lng": -122.408741,
+   "gmaps": "https://maps.google.com/?cid=11557307547305264890"
+  },
+  {
+   "id": "ferry-building",
+   "name": "Ferry Building",
+   "cats": [
+    "food"
+   ],
+   "price": "$$",
+   "desc": "Famous food hall on the Bay.",
+   "lat": 37.795443,
+   "lng": -122.393614,
+   "gmaps": "https://maps.google.com/?cid=7851923780944608967"
+  },
+  {
+   "id": "belden-place",
+   "name": "Belden Place",
+   "cats": [
+    "food"
+   ],
+   "price": "$$",
+   "desc": "Not a resto but a small semi-covered street with 4-5 restaurants, convenient if you're walking with a crowd: Leleka Ukrainian (dumplings), Khan Karahi Pakistani (chapli kabob, karahi (wok) dishes), and etc.",
+   "lat": 37.791249,
+   "lng": -122.403697,
+   "gmaps": "https://maps.google.com/?cid=11279456986404502825"
+  },
+  {
+   "id": "suavecito-birria-tacos-sf",
+   "name": "Suavecito Birria & Tacos SF",
+   "cats": [
+    "latenight"
+   ],
+   "price": null,
+   "desc": "Popular late-night birria",
+   "lat": 37.788588,
+   "lng": -122.414827,
+   "gmaps": "https://maps.google.com/?cid=6664043223445952347"
+  },
+  {
+   "id": "cocobang",
+   "name": "Cocobang",
+   "cats": [
+    "latenight"
+   ],
+   "price": null,
+   "desc": "Korean fried chicken and other bar food right nearby and open late (2am!). Often a line.",
+   "lat": 37.787636,
+   "lng": -122.411513,
+   "gmaps": "https://maps.google.com/?cid=9850875129472306288"
+  },
+  {
+   "id": "zzan-korean-restaurant",
+   "name": "ZZAN Korean Restaurant",
+   "cats": [
+    "latenight"
+   ],
+   "price": null,
+   "desc": "Korean comfort food nearby and open late",
+   "lat": 37.787609,
+   "lng": -122.412415,
+   "gmaps": "https://maps.google.com/?cid=8719010995287695731"
+  },
+  {
+   "id": "the-public-izakaya",
+   "name": "The Public Izakaya",
+   "cats": [
+    "latenight"
+   ],
+   "price": null,
+   "desc": "Late-night izakaya",
+   "lat": 37.78784,
+   "lng": -122.413566,
+   "gmaps": "https://maps.google.com/?cid=3891717342975319883"
+  },
+  {
+   "id": "hinodeya-ramen-union-square",
+   "name": "HINODEYA Ramen Union Square",
+   "cats": [
+    "latenight"
+   ],
+   "price": null,
+   "desc": "Japanese dashi-style ramen. Open late",
+   "lat": 37.786274,
+   "lng": -122.408517,
+   "gmaps": "https://maps.google.com/?cid=15710928742549781021"
+  },
+  {
+   "id": "orphan-andys-restaurant",
+   "name": "Orphan Andy's Restaurant",
+   "cats": [
+    "latenight"
+   ],
+   "price": null,
+   "desc": "Famous Castro diner. Open 24 hours (except closes early sun and mon)",
+   "lat": 37.762426,
+   "lng": -122.434889,
+   "gmaps": "https://maps.google.com/?cid=10041217971138293323"
+  },
+  {
+   "id": "black-sugar-boba-bar",
+   "name": "Black Sugar - Boba Bar",
+   "cats": [
+    "cafe"
+   ],
+   "price": null,
+   "desc": "Boba across the street from the conference",
+   "lat": 37.786287,
+   "lng": -122.41019,
+   "gmaps": "https://maps.google.com/?cid=6831867855759609434"
+  },
+  {
+   "id": "heytea-metreon",
+   "name": "HEYTEA (Metreon)",
+   "cats": [
+    "cafe"
+   ],
+   "price": null,
+   "desc": "Takeout only.",
+   "lat": 37.783965,
+   "lng": -122.403167,
+   "gmaps": "https://maps.google.com/?cid=5585828892679083805"
+  },
+  {
+   "id": "one65-san-francisco",
+   "name": "ONE65 San Francisco",
+   "cats": [
+    "cafe"
+   ],
+   "price": null,
+   "desc": "Won best croissant in the SF Chronicle tasting recently. Viennoisserie, macarons, light lunch",
+   "lat": 37.786246,
+   "lng": -122.407371,
+   "gmaps": "https://maps.google.com/?cid=12717132763794429512"
+  },
+  {
+   "id": "b-patisserie",
+   "name": "b. patisserie",
+   "cats": [
+    "cafe"
+   ],
+   "price": null,
+   "desc": "Kiosk in Union Square of local bakery famous for kouign-amann",
+   "lat": 37.787754,
+   "lng": -122.408055,
+   "gmaps": "https://maps.google.com/?cid=6741639305478909956"
+  },
+  {
+   "id": "arsicault-bakery",
+   "name": "Arsicault Bakery",
+   "cats": [
+    "cafe"
+   ],
+   "price": null,
+   "desc": "Bakery. Famous for croissants and other viennoisserie.",
+   "lat": 37.780837,
+   "lng": -122.413349,
+   "gmaps": "https://maps.google.com/?cid=12431703149500480606"
+  },
+  {
+   "id": "parachute-bakery",
+   "name": "Parachute Bakery",
+   "cats": [
+    "cafe"
+   ],
+   "price": null,
+   "desc": "Maybe the hottest new bakery in SF. Inside the Ferry Building.",
+   "lat": 37.796186,
+   "lng": -122.394002,
+   "gmaps": "https://maps.google.com/?cid=725268654691222244"
+  },
+  {
+   "id": "le-carousel-patisserie-at-tilden",
+   "name": "Le Carousel Patisserie at Tilden",
+   "cats": [
+    "cafe"
+   ],
+   "price": null,
+   "desc": null,
+   "lat": 37.785607,
+   "lng": -122.411492,
+   "gmaps": "https://maps.google.com/?cid=13119272942642355781"
+  },
+  {
+   "id": "capital-one-cafe",
+   "name": "Capital One Café",
+   "cats": [
+    "cafe"
+   ],
+   "price": null,
+   "desc": "Large practical (if perhaps un-lovely) laptop cafe in bank lobby, free wifi and power, Verve coffee.",
+   "lat": 37.788722,
+   "lng": -122.403917,
+   "gmaps": "https://maps.google.com/?cid=14770861260889611985"
+  },
+  {
+   "id": "caffe-trieste",
+   "name": "Caffe Trieste",
+   "cats": [
+    "cafe"
+   ],
+   "price": null,
+   "desc": "Old school Italian caffe. Francis Ford Coppola wrote the prompt book for The Godfather here. The jukebox is legendary.",
+   "lat": 37.798642,
+   "lng": -122.407314,
+   "gmaps": "https://maps.google.com/?cid=17162634662590724078"
+  },
+  {
+   "id": "origin-lab-coffee-matcha",
+   "name": "Origin Lab Coffee & Matcha",
+   "cats": [
+    "cafe"
+   ],
+   "price": null,
+   "desc": "Small but tasty",
+   "lat": 37.789724,
+   "lng": -122.404173,
+   "gmaps": "https://maps.google.com/?cid=9114931074474087601"
+  },
+  {
+   "id": "painted-leopard-coffee",
+   "name": "Painted Leopard Coffee",
+   "cats": [
+    "cafe"
+   ],
+   "price": null,
+   "desc": "Small outlet on Maiden Lane in front of a jewelry store",
+   "lat": 37.788214,
+   "lng": -122.406026,
+   "gmaps": "https://maps.google.com/?cid=13670606923412703581"
+  },
+  {
+   "id": "sightglass-coffee",
+   "name": "Sightglass Coffee",
+   "cats": [
+    "cafe"
+   ],
+   "price": null,
+   "desc": "Large industrial space South of Market",
+   "lat": 37.777036,
+   "lng": -122.408454,
+   "gmaps": "https://maps.google.com/?cid=13926460886861596347"
+  },
+  {
+   "id": "metropolitan-coffee",
+   "name": "Metropolitan Coffee",
+   "cats": [
+    "cafe"
+   ],
+   "price": null,
+   "desc": null,
+   "lat": 37.787555,
+   "lng": -122.404081,
+   "gmaps": "https://maps.google.com/?cid=9388077175484409645"
+  },
+  {
+   "id": "bourbon-branch",
+   "name": "Bourbon & Branch",
+   "cats": [
+    "bars"
+   ],
+   "price": null,
+   "desc": "Speakeasy, password required, so make a reservation. Famous for whiskey..",
+   "lat": 37.786005,
+   "lng": -122.413206,
+   "gmaps": "https://maps.google.com/?cid=16160548279372593156"
+  },
+  {
+   "id": "the-royale",
+   "name": "The Royale",
+   "cats": [
+    "bars"
+   ],
+   "price": null,
+   "desc": "Chill bar with good live music",
+   "lat": 37.78757,
+   "lng": -122.415199,
+   "gmaps": "https://maps.google.com/?cid=13140184576455295372"
+  },
+  {
+   "id": "stookeys-club-moderne",
+   "name": "Stookey's Club Moderne",
+   "cats": [
+    "bars"
+   ],
+   "price": null,
+   "desc": null,
+   "lat": 37.789635,
+   "lng": -122.411919,
+   "gmaps": "https://maps.google.com/?cid=11132652551124695993"
+  },
+  {
+   "id": "persona",
+   "name": "Persona",
+   "cats": [
+    "bars"
+   ],
+   "price": null,
+   "desc": null,
+   "lat": 37.788667,
+   "lng": -122.411513,
+   "gmaps": "https://maps.google.com/?cid=3187571186073552384"
+  },
+  {
+   "id": "propagation",
+   "name": "Propagation",
+   "cats": [
+    "bars"
+   ],
+   "price": null,
+   "desc": null,
+   "lat": 37.787152,
+   "lng": -122.416366,
+   "gmaps": "https://maps.google.com/?cid=7093585944647397873"
+  },
+  {
+   "id": "bottle-club-pub",
+   "name": "Bottle Club Pub",
+   "cats": [
+    "bars"
+   ],
+   "price": null,
+   "desc": null,
+   "lat": 37.786661,
+   "lng": -122.412409,
+   "gmaps": "https://maps.google.com/?cid=8200490028416316397"
+  },
+  {
+   "id": "vesuvio-cafe",
+   "name": "Vesuvio Cafe",
+   "cats": [
+    "bars"
+   ],
+   "price": null,
+   "desc": "Legendary saloon across from City Lights books",
+   "lat": 37.797494,
+   "lng": -122.406454,
+   "gmaps": "https://maps.google.com/?cid=2571023605271570627"
+  },
+  {
+   "id": "specs-twelve-adler-museum-cafe",
+   "name": "Specs' Twelve Adler Museum Cafe",
+   "cats": [
+    "bars"
+   ],
+   "price": null,
+   "desc": "Unique North Beach dive bar and museum",
+   "lat": 37.797657,
+   "lng": -122.406003,
+   "gmaps": "https://maps.google.com/?cid=11727746002803875221"
+  },
+  {
+   "id": "mr-tipples-jazz-club",
+   "name": "Mr. Tipple's Jazz Club",
+   "cats": [
+    "bars"
+   ],
+   "price": null,
+   "desc": "Jazz, cocktails, and dumplings",
+   "lat": 37.77637,
+   "lng": -122.418585,
+   "gmaps": "https://maps.google.com/?cid=18232757425431152586"
+  },
+  {
+   "id": "martunis",
+   "name": "Martuni's",
+   "cats": [
+    "bars"
+   ],
+   "price": null,
+   "desc": "Piano bar",
+   "lat": 37.772133,
+   "lng": -122.422781,
+   "gmaps": "https://maps.google.com/?cid=4337018419964163593"
+  },
+  {
+   "id": "tonga-room-hurricane-bar",
+   "name": "Tonga Room & Hurricane Bar",
+   "cats": [
+    "bars"
+   ],
+   "price": null,
+   "desc": "Famous tiki bar in the Fairmount hotel with a pool with simulated tropical thunderstorms",
+   "lat": 37.792419,
+   "lng": -122.410427,
+   "gmaps": "https://maps.google.com/?cid=17248610247754210041"
+  },
+  {
+   "id": "the-zombie-village",
+   "name": "The Zombie Village",
+   "cats": [
+    "bars"
+   ],
+   "price": null,
+   "desc": "Another tiki bar",
+   "lat": 37.785516,
+   "lng": -122.413206,
+   "gmaps": "https://maps.google.com/?cid=3696484307036394862"
+  },
+  {
+   "id": "smugglers-cove",
+   "name": "Smuggler's Cove",
+   "cats": [
+    "bars"
+   ],
+   "price": null,
+   "desc": "Another tiki bar",
+   "lat": 37.779403,
+   "lng": -122.423372,
+   "gmaps": "https://maps.google.com/?cid=3387281518562663773"
+  },
+  {
+   "id": "pagan-idol",
+   "name": "Pagan Idol",
+   "cats": [
+    "bars"
+   ],
+   "price": null,
+   "desc": "Another tiki bar",
+   "lat": 37.790652,
+   "lng": -122.403481,
+   "gmaps": "https://maps.google.com/?cid=14519862071591661812"
+  },
+  {
+   "id": "harlan-records",
+   "name": "Harlan Records",
+   "cats": [
+    "bars"
+   ],
+   "price": null,
+   "desc": "Japanese listening cocktail bar",
+   "lat": 37.79023,
+   "lng": -122.404997,
+   "gmaps": "https://maps.google.com/?cid=10988060455347322536"
+  },
+  {
+   "id": "the-pawn-shop",
+   "name": "The Pawn Shop",
+   "cats": [
+    "bars"
+   ],
+   "price": null,
+   "desc": "Bring something (cheap) to \"pawn\" to enter a speakeasy hidden behind the storefront",
+   "lat": 37.781035,
+   "lng": -122.40829,
+   "gmaps": "https://maps.google.com/?cid=10991352191867566614"
+  },
+  {
+   "id": "san-francisco-museum-of-modern-art",
+   "name": "San Francisco Museum of Modern Art",
+   "cats": [
+    "culture"
+   ],
+   "price": null,
+   "desc": "Current exhibitions include RM's personal collection (get tickets soon).",
+   "lat": 37.785718,
+   "lng": -122.401051,
+   "gmaps": "https://maps.google.com/?cid=14446598574612765181"
+  },
+  {
+   "id": "asian-art-museum",
+   "name": "Asian Art Museum",
+   "cats": [
+    "culture"
+   ],
+   "price": null,
+   "desc": "Asian art. Current exhibitions include a Ha Chong-Hyun retrospective.",
+   "lat": 37.780277,
+   "lng": -122.416161,
+   "gmaps": "https://maps.google.com/?cid=6096576621440733983"
+  },
+  {
+   "id": "city-lights-booksellers-publishers",
+   "name": "City Lights Booksellers & Publishers",
+   "cats": [
+    "culture"
+   ],
+   "price": null,
+   "desc": "Lawrence Ferlinghetti's iconic bookstore. Open late.",
+   "lat": 37.797627,
+   "lng": -122.406621,
+   "gmaps": "https://maps.google.com/?cid=11740907791137654846"
+  },
+  {
+   "id": "luggage-store-gallery",
+   "name": "Luggage Store Gallery",
+   "cats": [
+    "culture"
+   ],
+   "price": null,
+   "desc": "Art gallery, right near the conference",
+   "lat": 37.781855,
+   "lng": -122.410367,
+   "gmaps": "https://maps.google.com/?cid=3163441254797253262"
+  },
+  {
+   "id": "mission-dolores-cemetery",
+   "name": "Mission Dolores Cemetery",
+   "cats": [
+    "culture"
+   ],
+   "price": null,
+   "desc": "The oldest in the city",
+   "lat": 37.764003,
+   "lng": -122.426915,
+   "gmaps": "https://maps.google.com/?cid=5579675082969303659"
+  },
+  {
+   "id": "clarion-alley-street-art",
+   "name": "Clarion Alley Street Art",
+   "cats": [
+    "culture"
+   ],
+   "price": null,
+   "desc": "Mural art in the Mission",
+   "lat": 37.762982,
+   "lng": -122.420794,
+   "gmaps": "https://maps.google.com/?cid=5899656399032971229"
+  },
+  {
+   "id": "old-mission-dolores-museum",
+   "name": "Old Mission Dolores Museum",
+   "cats": [
+    "culture"
+   ],
+   "price": null,
+   "desc": "In the oldest building in the city (build by the Ohlone Indians).",
+   "lat": 37.764164,
+   "lng": -122.42695,
+   "gmaps": "https://maps.google.com/?cid=14208498395669631716"
+  },
+  {
+   "id": "34-trinity-arts-news",
+   "name": "34 Trinity Arts & News",
+   "cats": [
+    "culture"
+   ],
+   "price": null,
+   "desc": "Tiny fun bookstore kiosk",
+   "lat": 37.79079,
+   "lng": -122.402664,
+   "gmaps": "https://maps.google.com/?cid=17841589042902475292"
+  },
+  {
+   "id": "golden-gate-fortune-cookie-factory",
+   "name": "Golden Gate Fortune Cookie Factory",
+   "cats": [
+    "culture"
+   ],
+   "price": null,
+   "desc": "A fun tourist fortune cookie experience.",
+   "lat": 37.795722,
+   "lng": -122.407336,
+   "gmaps": "https://maps.google.com/?cid=16930207791946126224"
+  },
+  {
+   "id": "exploratorium",
+   "name": "Exploratorium",
+   "cats": [
+    "culture"
+   ],
+   "price": null,
+   "desc": "Fun hands-on science museum for kids and kids-at-heart.",
+   "lat": 37.801665,
+   "lng": -122.397348,
+   "gmaps": "https://maps.google.com/?cid=802656663955829184"
+  },
+  {
+   "id": "transamerica-redwood-park",
+   "name": "Transamerica Redwood Park",
+   "cats": [
+    "parks"
+   ],
+   "price": null,
+   "desc": "Tables and benches under redwoods, newly fixed up.",
+   "lat": 37.795167,
+   "lng": -122.402281,
+   "gmaps": "https://maps.google.com/?cid=4200710933243894137"
+  },
+  {
+   "id": "salesforce-park",
+   "name": "Salesforce Park",
+   "cats": [
+    "parks"
+   ],
+   "price": null,
+   "desc": "2nd floor outdoor park (High Line style) surrounding Salesforce Tower",
+   "lat": 37.78974,
+   "lng": -122.396166,
+   "gmaps": "https://maps.google.com/?cid=7530753700070139721"
+  },
+  {
+   "id": "rincon-park",
+   "name": "Rincon Park",
+   "cats": [
+    "parks"
+   ],
+   "price": null,
+   "desc": "On the Embarcadero with a great view of the Bay",
+   "lat": 37.791613,
+   "lng": -122.389951,
+   "gmaps": "https://maps.google.com/?cid=14131428035636112588"
+  },
+  {
+   "id": "lands-end-trail",
+   "name": "Lands End Trail",
+   "cats": [
+    "further"
+   ],
+   "price": null,
+   "desc": "Possible the most beautiful walk in the city.",
+   "lat": 37.785812,
+   "lng": -122.503315,
+   "gmaps": "https://maps.google.com/?q=Lands+End+Trail,+San+Francisco,+CA+94121,+USA&ftid=0x808587ad575d8a8d:0xb8c53494c0cfebea"
+  },
+  {
+   "id": "sutro-baths",
+   "name": "Sutro Baths",
+   "cats": [
+    "further"
+   ],
+   "price": null,
+   "desc": "Ruins of Adolph Sutro's 1894 massive saltwater swimming pool. Our best ruins. There's a cave, too",
+   "lat": 37.780444,
+   "lng": -122.51365,
+   "gmaps": "https://maps.google.com/?cid=16148491297203403134"
+  },
+  {
+   "id": "baker-beach",
+   "name": "Baker Beach",
+   "cats": [
+    "further"
+   ],
+   "price": null,
+   "desc": "Best beach in the city, with killer view of the Golden Gate Bridge",
+   "lat": 37.793572,
+   "lng": -122.483638,
+   "gmaps": "https://maps.google.com/?cid=10033293525417776409"
+  },
+  {
+   "id": "green-apple-books",
+   "name": "Green Apple Books",
+   "cats": [
+    "further"
+   ],
+   "price": null,
+   "desc": "Lovely used+new books, a bit far (out Geary in the Richmond district).",
+   "lat": 37.783056,
+   "lng": -122.464715,
+   "gmaps": "https://maps.google.com/?cid=10301952828973867919"
+  },
+  {
+   "id": "mission-dolores-park",
+   "name": "Mission Dolores Park",
+   "cats": [
+    "further"
+   ],
+   "price": null,
+   "desc": "Place to sunbathe on our rare warm days.",
+   "lat": 37.760202,
+   "lng": -122.426796,
+   "gmaps": "https://maps.google.com/?cid=11968567728930983264"
+  },
+  {
+   "id": "the-wave-organ",
+   "name": "The Wave Organ",
+   "cats": [
+    "further"
+   ],
+   "price": null,
+   "desc": "Famous acoustic sculpture in the Bay.",
+   "lat": 37.808549,
+   "lng": -122.440131,
+   "gmaps": "https://maps.google.com/?cid=5825472133093641514"
+  },
+  {
+   "id": "filbert-steps",
+   "name": "Filbert Steps",
+   "cats": [
+    "further"
+   ],
+   "price": null,
+   "desc": "Famous wooden stairway from Coit Tower down to the Embarcardero",
+   "lat": 37.802104,
+   "lng": -122.403366,
+   "gmaps": "https://maps.google.com/?cid=10619737660808892495"
+  },
+  {
+   "id": "coit-tower",
+   "name": "Coit Tower",
+   "cats": [
+    "further"
+   ],
+   "price": null,
+   "desc": "Art deco landmark tower on top of Telegraph Hill",
+   "lat": 37.802395,
+   "lng": -122.405822,
+   "gmaps": "https://maps.google.com/?cid=16034424363326561604"
+  },
+  {
+   "id": "de-young-museum",
+   "name": "de Young Museum",
+   "cats": [
+    "further"
+   ],
+   "price": null,
+   "desc": "Museum in Golden Gate Park",
+   "lat": 37.771469,
+   "lng": -122.468676,
+   "gmaps": "https://maps.google.com/?cid=7854251046532539466"
+  },
+  {
+   "id": "golden-gate-bridge-vista-point",
+   "name": "Golden Gate Bridge Vista Point",
+   "cats": [
+    "further"
+   ],
+   "price": null,
+   "desc": "Do see the bridge if you haven't",
+   "lat": 37.807788,
+   "lng": -122.475201,
+   "gmaps": "https://maps.google.com/?cid=18242332009391445523"
+  },
+  {
+   "id": "crissy-field",
+   "name": "Crissy Field",
+   "cats": [
+    "further"
+   ],
+   "price": null,
+   "desc": null,
+   "lat": 37.804026,
+   "lng": -122.465017,
+   "gmaps": "https://maps.google.com/?cid=6563311607205213696"
+  },
+  {
+   "id": "presidio-tunnel-tops",
+   "name": "Presidio Tunnel Tops",
+   "cats": [
+    "further"
+   ],
+   "price": null,
+   "desc": "Newly built park running from the Presidio to the water",
+   "lat": 37.802872,
+   "lng": -122.456329,
+   "gmaps": "https://maps.google.com/?cid=15490826832251148639"
+  }
+ ]
+}
