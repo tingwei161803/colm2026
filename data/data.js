@@ -38,22 +38,24 @@ window.SITE_SECTIONS = [
   },
 
   /* ===================================================================
-     1b · QUICK LINKS — the three sub-pages
+     1b · QUICK LINKS — the four sub-pages
      =================================================================== */
   {
     type: "quick",
     id: "quick",
     nav: false,
     title:    { en: "Plan your week", zh: "規劃你的會議週" },
-    subtitle: { en: "The program, every accepted paper, and all 18 workshops — each on its own page.",
-                zh: "議程、全部接受論文、18 場工作坊 —— 各自獨立成頁。" },
+    subtitle: { en: "The program, every accepted paper, all 18 workshops, and a map of the neighborhood — each on its own page.",
+                zh: "議程、全部接受論文、18 場工作坊，還有會場周邊地圖 —— 各自獨立成頁。" },
     items: [
       { href: "schedule/",  icon: "calendar_month", title: { en: "Schedule", zh: "議程" },
         text: { en: "Keynotes, orals, posters and workshops, day by day, plus every key date.", zh: "逐日主題演講、口頭報告、海報與工作坊，以及所有重要日期。" } },
       { href: "papers/",    icon: "article",        title: { en: "Accepted Papers", zh: "接受論文" },
         text: { en: "Filter by day, room, topic or oral; read abstracts and find the poster board.", zh: "依日期、房間、主題或 Oral 篩選；閱讀摘要、找到海報位置。" } },
       { href: "workshops/", icon: "groups",         title: { en: "Workshops", zh: "工作坊" },
-        text: { en: "What each Friday workshop is about, its program and official site.", zh: "週五每場工作坊的主題、當日議程與官方網站。" } }
+        text: { en: "What each Friday workshop is about, its program and official site.", zh: "週五每場工作坊的主題、當日議程與官方網站。" } },
+      { href: "map/",       icon: "map",            title: { en: "Local Map", zh: "在地地圖" },
+        text: { en: "The official picks for food, bars and sights near the Hilton, plus where to take extra care.", zh: "官方推薦的 Hilton 周邊美食、酒吧與景點，以及需要多注意的區域。" } }
     ]
   },
 
