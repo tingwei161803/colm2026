@@ -6,6 +6,8 @@ Sources (all JSON, public conference data + this site's Chinese text):
   zh.json                                       — hand-written Chinese for workshops / schedule / labels
   papers-zh.json                                — Chinese titles + abstracts   {id: {title, abstract}}
   papers-topics.json                            — topic per paper              {id: topic-id}
+  places.json, places-zh.json, map-text.json    — map page: official SF local-info sheet + Chinese + guide/zones
+  safety.json                                   — SFPD incident counts per ~110 m grid cell (scripts/fetch/build_safety.py)
 
 Outputs:
   data/papers.js                 window.PAPERS_DATA  (core fields, no abstracts)
@@ -13,6 +15,7 @@ Outputs:
   data/papers-abstracts.zh.js    window.PAPERS_ABSTRACTS  {id: abstract}   (lazy-loaded)
   data/schedule.js               window.SCHEDULE_DATA
   data/workshops.js              window.WORKSHOPS_DATA
+  data/map.js                    window.MAP_DATA
 
 Usage:  uv run python scripts/build_data.py [--src data-src] [--out .]
 """
@@ -20,6 +23,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import re
 from datetime import datetime, timezone
 from pathlib import Path
@@ -239,6 +243,50 @@ def build_schedule(src: Path, out: Path, zh: dict, paper_ids: dict, workshops_by
     return {"days": len(days), "sessions": sum(len(d["sessions"]) for d in days), "bytes": size}
 
 
+# ---------------------------------------------------------------- map
+def _meters(lat1: float, lng1: float, lat2: float, lng2: float) -> float:
+    """Equirectangular distance — plenty accurate across a few km of San Francisco."""
+    k = 111_320.0
+    dx = (lng2 - lng1) * k * math.cos(math.radians((lat1 + lat2) / 2))
+    dy = (lat2 - lat1) * k
+    return math.hypot(dx, dy)
+
+
+def build_map(src: Path, out: Path) -> dict:
+    raw = load(src, "places.json", {"categories": [], "places": []})
+    zh = load(src, "places-zh.json", {})
+    text = load(src, "map-text.json", {})
+    safety = load(src, "safety.json", {"meta": {}, "cells": []})
+    cat_text = text.get("categories", {})
+    categories = [{"id": c["id"], "label": {"en": c["en"], "zh": cat_text.get(c["id"], {}).get("zh", c["en"])},
+                   "short": cat_text.get(c["id"], {}).get("short"), "icon": cat_text.get(c["id"], {}).get("icon", "place")}
+                  for c in raw["categories"]]
+    places = [{"id": p["id"], "name": p["name"], "cats": p["cats"], "price": p.get("price"),
+               "desc": bi(p.get("desc"), zh.get(p["id"])), "lat": p["lat"], "lng": p["lng"], "gmaps": p.get("gmaps")}
+              for p in raw["places"]]
+    cells = safety.get("cells", [])
+    zones = []
+    for z in text.get("zones", []):
+        # how many incidents (per group) fall inside the circle — shown in the zone popup
+        inside = [c for c in cells if _meters(z["lat"], z["lng"], c[0], c[1]) <= z["r"]]
+        zones.append({**z, "counts": {"violent": sum(c[2] for c in inside), "drug": sum(c[3] for c in inside),
+                                      "theft": sum(c[4] for c in inside), "night": sum(c[5] for c in inside)}})
+    data = {
+        "source": raw.get("source"),
+        "venue": text.get("venue"),
+        "categories": categories,
+        "places": places,
+        "guide": text.get("guide", []),
+        "resources": text.get("resources", []),
+        "tips": text.get("tips"),
+        "zones": zones,
+        "safety": {"meta": safety.get("meta", {}), "cells": cells},
+    }
+    size = dump_js("MAP_DATA", data, out / "data/map.js")
+    return {"places": len(places), "zh": sum(1 for p in places if p["desc"] and p["desc"]["zh"] != p["desc"]["en"]),
+            "cells": len(cells), "zones": len(zones), "bytes": size}
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--src", default="data-src")
@@ -250,11 +298,13 @@ def main() -> None:
     p = build_papers(src, out, zh)
     w = build_workshops(src, out, zh)
     s = build_schedule(src, out, zh, p["byColmId"], w["byColmUrl"])
+    m = build_map(src, out)
     print(f"papers.js              {p['count']} papers, {p['bytes']/1024:.0f} KB  (topic {p['withTopic']}, zh title {p['withTitleZh']})")
     print(f"papers-abstracts.en.js {p['absEn'][0]} abstracts, {p['absEn'][1]/1024:.0f} KB")
     print(f"papers-abstracts.zh.js {p['absZh'][0]} abstracts, {p['absZh'][1]/1024:.0f} KB")
     print(f"workshops.js           {w['count']} workshops, {w['bytes']/1024:.0f} KB")
     print(f"schedule.js            {s['days']} days / {s['sessions']} sessions, {s['bytes']/1024:.0f} KB")
+    print(f"map.js                 {m['places']} places (zh {m['zh']}), {m['cells']} safety cells, {m['zones']} zones, {m['bytes']/1024:.0f} KB")
 
 
 if __name__ == "__main__":
