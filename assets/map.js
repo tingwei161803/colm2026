@@ -23,7 +23,7 @@
   var UI = {
     en: { layers: "Layers", categories: "Places", all: "All", none: "None", safety: "Safety",
           heat: "Incident heat", heatSub: "SFPD reports, past 12 months", zones: "Caution zones", zonesSub: "Named spots to avoid lingering",
-          fewer: "fewer", more: "more", about: "How this is made", count: "places", empty: "No place matches — turn on more categories or clear the search.",
+          fewer: "fewer", more: "more", about: "How this is made", count: "places", showAll: function (n) { return "Show all " + n + " places"; }, empty: "No place matches — turn on more categories or clear the search.",
           search: "Search places", nearVenue: "Sorted by distance from the Hilton", nearMe: "Sorted by distance from you",
           walk: function (m) { return m + " min walk"; }, km: function (k) { return k + " km"; },
           from: function (d, venue) { return d + (venue ? " from the Hilton" : " from you"); }, gmaps: "Google Maps", walkHere: "Walk here", transitHere: "Transit here",
@@ -42,7 +42,7 @@
           dataset: "Dataset on DataSF", close: "Close", noMap: "The map library couldn't load (offline or blocked). The list below still works and every place links to Google Maps." },
     zh: { layers: "圖層", categories: "地點", all: "全選", none: "全不選", safety: "安全",
           heat: "事件熱區", heatSub: "SFPD 通報，最近 12 個月", zones: "注意區域", zonesSub: "不建議逗留的地點",
-          fewer: "少", more: "多", about: "資料怎麼來的", count: "個地點", empty: "沒有符合的地點 —— 打開更多分類或清除搜尋。",
+          fewer: "少", more: "多", about: "資料怎麼來的", count: "個地點", showAll: function (n) { return "顯示全部 " + n + " 個地點"; }, empty: "沒有符合的地點 —— 打開更多分類或清除搜尋。",
           search: "搜尋地點", nearVenue: "依離 Hilton 的距離排序", nearMe: "依離你的距離排序",
           walk: function (m) { return "步行 " + m + " 分"; }, km: function (k) { return k + " 公里"; },
           from: function (d, venue) { return (venue ? "離 Hilton " : "離你 ") + d; }, gmaps: "Google 地圖", walkHere: "步行導航", transitHere: "大眾運輸導航",
@@ -160,13 +160,19 @@
   }
 
   /* ------------------------------------------------------------ list */
+  /* On phones the list sits under the map and 110 rows are ~7000 px of scrolling before the
+     guide; show the nearest few and let people expand. Desktop keeps the full scrollable panel. */
+  var PHONE_ROWS = 15, showAll = false;
   function paintList() {
     var o = origin();
     var list = D.places.filter(visible).map(function (p) { return { p: p, d: meters(o, p) }; })
       .sort(function (a, b) { return a.d - b.d; });
     $("countN").textContent = list.length;
     $("sortLabel").textContent = o === VENUE ? UI.nearVenue : UI.nearMe;
-    $("placeList").innerHTML = list.length ? list.map(function (x) {
+    var total = list.length;
+    var capped = !showAll && !state.q && SH.isNarrow() && total > PHONE_ROWS + 5;
+    if (capped) list = list.slice(0, PHONE_ROWS);
+    $("placeList").innerHTML = (list.length ? list.map(function (x) {
       var p = x.p;
       return '<li class="row row--compact" tabindex="0" role="button" data-id="' + esc(p.id) + '"' +
         ' aria-current="' + (p.id === selected ? "true" : "false") + '" style="--cat:' + catColor(p.cats[0]) + '">' +
@@ -175,7 +181,9 @@
           (p.price ? '<span class="badge">' + esc(p.price) + '</span>' : "") +
           '<span>' + esc(distText(x.d)) + '</span>' +
         '</div></li>';
-    }).join("") : '<li class="rows__empty">' + esc(UI.empty) + '</li>';
+    }).join("") : '<li class="rows__empty">' + esc(UI.empty) + '</li>') +
+      (capped ? '<li class="rows__more"><button type="button" class="linkish" id="showAll">' + esc(UI.showAll(total)) + '</button></li>' : "");
+    if (capped) $("showAll").addEventListener("click", function () { showAll = true; paintList(); });
     [].forEach.call($("placeList").querySelectorAll(".row"), function (li) {
       li.addEventListener("click", function () { select(li.dataset.id, true); });
       li.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); select(li.dataset.id, true); } });
@@ -385,15 +393,21 @@
     toast(err && err.code === 1 ? UI.denied : UI.geoFail);
   }
 
+  var TOUCH = window.matchMedia("(pointer: coarse)").matches;
+  /* popups never wider than the map minus a margin (a 360 px phone has a ~310 px map) */
+  function popupWidth() { return Math.max(200, Math.min(300, (map ? map.getSize().x : 320) - 48)); }
+
   function initMap() {
     var L = window.L;
     map = L.map("map", { zoomControl: false, scrollWheelZoom: true, tap: true }).setView([VENUE.lat, VENUE.lng], 14);
-    L.control.zoom({ position: "topright" }).addTo(map);
+    /* touch screens pinch to zoom, so drop the +/- buttons there: on a phone they sit on top of
+       popups. The locate button moves to the bottom right, where a thumb reaches it. */
+    if (!TOUCH) L.control.zoom({ position: "topright" }).addTo(map);
     L.tileLayer(TILE, { attribution: ATTR, maxZoom: 19 }).addTo(map);
 
     /* locate-me button (Leaflet control so it sits with the zoom buttons) */
     var Locate = L.Control.extend({
-      options: { position: "topright" },
+      options: { position: TOUCH ? "bottomright" : "topright" },
       onAdd: function () {
         var b = L.DomUtil.create("button", "map-btn");
         b.type = "button";
@@ -429,12 +443,17 @@
     placeLayer = L.layerGroup().addTo(map);
     D.places.forEach(function (p) {
       var m = L.marker([p.lat, p.lng], { icon: pinIcon(p), title: p.name, riseOnHover: true });
-      m.bindPopup(function () { return popupHtml(p); }, { maxWidth: 300, autoPanPaddingTopLeft: [10, 60] });
+      m.bindPopup(function () { return popupHtml(p); }, { maxWidth: popupWidth(), autoPanPadding: [12, 12] });
       m.on("click", function () { select(p.id, false); });
       m.on("popupclose", function () { if (selected === p.id) { selected = null; markRows(); syncUrl(); } });
       markers[p.id] = m;
     });
     applyMarkers();
+    map.on("resize", function () {             // rotation / window resize
+      var w = popupWidth();
+      Object.keys(markers).forEach(function (id) { markers[id].getPopup().options.maxWidth = w; });
+      if (!showAll) paintList();                // phone ↔ wide changes whether the list is capped
+    });
 
     L.marker([VENUE.lat, VENUE.lng], {
       /* a real star shape (inline SVG), not an icon in a circle: the site loads Material Symbols
