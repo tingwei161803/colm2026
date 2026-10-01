@@ -8,6 +8,7 @@ rendered innerHTML of the content region into the generated shell:
   schedule   #daytabs, #program
   papers     #filters, #list
   workshops  #list
+  map        #placeList, #guide   (the Leaflet map itself is runtime-only)
 
 Runtime state that must not be frozen (selected rows, expanded dialog) is
 stripped. Run AFTER build_pages.py — that script writes clean shells.
@@ -31,6 +32,7 @@ PAGES = {
     "schedule/index.html": ["daytabs", "program"],
     "papers/index.html": ["filters", "list"],
     "workshops/index.html": ["list"],
+    "map/index.html": ["placeList", "guide"],
 }
 
 
