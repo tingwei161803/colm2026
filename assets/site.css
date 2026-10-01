@@ -689,6 +689,16 @@
 .pop .linkbtn { padding: 5px 10px; font-size: .8rem; }
 .pop .linkbtn--primary { color: var(--on-primary); }
 
+/* touch screens: bigger targets (≥ 38–44 px) for chips, links and the locate button */
+@media (pointer: coarse) {
+  .layers .chip { min-height: 38px; padding: 7px 12px; }
+  .layers__head .linkish { padding: 10px 10px; }
+  .map-btn { width: 44px; height: 44px; border-radius: 50%; box-shadow: var(--elev-2); border-width: 1px; }
+  .map-btn .material-symbols-rounded { font-size: 22px; }
+  .map .leaflet-bottom.leaflet-right .map-btn { margin-bottom: 22px; }   /* clear the attribution line */
+  .rows__more .linkish { padding: 12px 16px; }
+}
+
 /* guide below the map */
 .mapguide { margin-top: 36px; }
 .mapguide__title { font-family: var(--font-serif); font-weight: 600; font-size: 1.3rem; margin: 0 0 12px; }
