@@ -44,4 +44,14 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://colm2026.peteraim.com/workshops/" />
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://colm2026.peteraim.com/zh/workshops/" />
   </url>
+  <url>
+    <loc>https://colm2026.peteraim.com/map/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://colm2026.peteraim.com/map/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://colm2026.peteraim.com/zh/map/" />
+  </url>
+  <url>
+    <loc>https://colm2026.peteraim.com/zh/map/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://colm2026.peteraim.com/map/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://colm2026.peteraim.com/zh/map/" />
+  </url>
 </urlset>
