@@ -317,7 +317,7 @@
       window.L.circle([z.lat, z.lng], {
         radius: z.r, color: "#c62828", weight: 2, dashArray: "6 5", fillColor: "#e53935", fillOpacity: 0.07, className: "zone"
       }).bindPopup(html, { maxWidth: 320 })
-        .bindTooltip(esc(t(z.name)), { permanent: true, direction: "center", className: "zone-label" })
+        .bindTooltip(esc(t(z.name)), { permanent: true, direction: "center", className: "zone-label", pane: "zoneLabels" })
         .addTo(g);
     });
     return g;
@@ -363,7 +363,7 @@
       meRing = window.L.circle([me.lat, me.lng], { radius: me.acc, className: "me-ring", weight: 1, interactive: false });
       meDot = window.L.marker([me.lat, me.lng], {
         icon: window.L.divIcon({ className: "pin-wrap", html: '<span class="me-dot"></span>', iconSize: [20, 20], iconAnchor: [10, 10] }),
-        zIndexOffset: 1000, keyboard: false
+        zIndexOffset: 6000, keyboard: false
       });
       meLayer = window.L.layerGroup([meRing, meDot]).addTo(map);
     } else {
@@ -414,6 +414,9 @@
     toastEl.setAttribute("role", "status"); toastEl.setAttribute("aria-live", "polite");
     $("mapBox").appendChild(toastEl);
 
+    /* zone names sit under the pins (markerPane = 600); Leaflet's default tooltipPane (650)
+       would cover the venue star's label, which is right next to the Tenderloin zone */
+    map.createPane("zoneLabels").style.zIndex = 550;
     heatLayer = buildHeat();
     zoneLayer = buildZones();
     applySafety();
@@ -434,9 +437,13 @@
     applyMarkers();
 
     L.marker([VENUE.lat, VENUE.lng], {
-      icon: L.divIcon({ className: "pin-wrap", html: '<span class="pin pin--venue"><span class="material-symbols-rounded" aria-hidden="true">star</span></span>',
-                        iconSize: [38, 38], iconAnchor: [19, 19], popupAnchor: [0, -18] }),
-      zIndexOffset: 900, title: VENUE.name
+      /* a real star shape (inline SVG), not an icon in a circle: the site loads Material Symbols
+         with FILL 0 only, so a "filled" star glyph would render as a thin outline */
+      icon: L.divIcon({ className: "pin-wrap", html: '<span class="venue-star">' +
+                          '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>' +
+                          '<span class="venue-star__label">COLM 2026</span></span>',
+                        iconSize: [46, 46], iconAnchor: [23, 24], popupAnchor: [0, -20] }),
+      zIndexOffset: 5000, title: VENUE.name
     }).bindPopup('<div class="pop"><div class="pop__kicker"><span class="badge">' + esc(UI.venue) + '</span></div>' +
       '<h3 class="pop__title">' + esc(VENUE.name) + '</h3><p class="pop__meta">' + esc(VENUE.address || "") + '</p>' +
       '<div class="pop__links">' + (VENUE.gmaps ? linkBtn(UI.gmaps, VENUE.gmaps, "map", true) : "") + '</div></div>').addTo(map);

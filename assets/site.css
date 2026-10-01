@@ -597,12 +597,23 @@
 .pin .material-symbols-rounded { font-size: 17px; }
 [data-theme="dark"] .pin { color: #141218; }
 .leaflet-marker-icon:hover .pin, .leaflet-marker-icon:focus .pin { transform: scale(1.15); }
-.pin--venue {
-  width: 38px; height: 38px;
-  background: var(--primary); color: var(--on-primary);
-  border-width: 3px;
+/* venue: gold star + label — gold is used by nothing else on the map (red = danger, pins = muted cats) */
+.venue-star { position: relative; display: block; width: 46px; height: 46px; }
+.venue-star svg {
+  width: 46px; height: 46px; display: block;
+  fill: #F5B301; stroke: #FFFFFF; stroke-width: 1.4; stroke-linejoin: round;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,.55)) drop-shadow(0 0 6px rgba(245,179,1,.55));
+  transition: transform .12s;
 }
-.pin--venue .material-symbols-rounded { font-size: 22px; font-variation-settings: "FILL" 1; }
+.leaflet-marker-icon:hover .venue-star svg, .leaflet-marker-icon:focus .venue-star svg { transform: scale(1.12); }
+.venue-star__label {
+  position: absolute; top: 100%; left: 50%; transform: translate(-50%, -2px);
+  padding: 1px 7px; border-radius: 6px;
+  background: var(--surface); color: var(--on-surface);
+  border: 1px solid #F5B301;
+  font-size: .7rem; font-weight: 700; letter-spacing: .02em; white-space: nowrap;
+  box-shadow: var(--elev-1);
+}
 .me-dot {
   display: block; width: 20px; height: 20px; border-radius: 50%;
   background: var(--me); border: 3px solid #fff;
