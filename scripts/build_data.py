@@ -216,7 +216,9 @@ def build_schedule(src: Path, out: Path, zh: dict, paper_ids: dict, workshops_by
                              "colmUrl": "https://colm.cc/virtual/2026/events/workshop",
                              "notes": bi("Rooms not published on colm.cc yet.", zh.get("sessionNotes", {}).get("Rooms not published on colm.cc yet.")),
                              "workshops": []}
-                block["workshops"].append({"id": w["id"] if w else s["id"], "name": s["title"], "room": s.get("room")})
+                # room: workshops.json (from the colm.cc workshop pages) is the source; schedule.json as fallback
+                block["workshops"].append({"id": w["id"] if w else s["id"], "name": s["title"],
+                                           "room": (w and w.get("room")) or s.get("room")})
                 continue
             papers = [{"title": p["title"], "authors": p.get("authors"), "start": p.get("start"),
                        "paperId": paper_ids.get(p.get("paperId")), "colmUrl": p.get("colmUrl")} for p in s["papers"]] if s.get("papers") else None
@@ -229,6 +231,8 @@ def build_schedule(src: Path, out: Path, zh: dict, paper_ids: dict, workshops_by
                 "notes": bi(s.get("notes"), zh.get("sessionNotes", {}).get(s.get("notes"))) if s.get("notes") and s["type"] in ("keynote", "panel") else None,
             })
         if block:
+            if all(x["room"] for x in block["workshops"]):
+                block["notes"] = None                       # drop "rooms not published" once every room is known
             sessions.insert(1 if sessions else 0, block)
         days.append({"date": d["date"], "weekday": d.get("weekday"),
                      "label": {"en": d["label"], "zh": zh.get("dayLabels", {}).get(d["label"], d["label"])},
@@ -252,7 +256,8 @@ def build_taiwan(src: Path, out: Path, papers: list[dict]) -> dict:
 
     Poster end times live on the schedule's poster sessions, not on the papers, so they are
     joined in here. Workshop papers (Fri) are not in the accepted list and come from extraPapers;
-    they carry the workshop's poster windows instead (which of them is not announced).
+    they carry the workshop's poster windows instead (which of them is not announced) and the
+    workshop's room from workshops.json.
     """
     raw = load(src, "taiwan.json", {"people": [], "extraPapers": []})
     sched = load(src, "schedule.json", {"days": []})
@@ -287,7 +292,7 @@ def build_taiwan(src: Path, out: Path, papers: list[dict]) -> dict:
                 w = ws.get(x.get("workshop")) or {}
                 slot = {"id": pid, "kind": "workshop", "title": x["title"], "titleZh": x.get("titleZh"),
                         "authors": x["authors"], "day": x["day"], "windows": x.get("posterWindows") or [[None, None]],
-                        "room": x.get("room"), "posterSession": None, "posterNumber": None,
+                        "room": w.get("room"), "posterSession": None, "posterNumber": None,
                         "workshop": {"id": w["id"], "name": w["name"], "shortName": w.get("shortName")} if w else None,
                         "links": {k: v for k, v in (x.get("links") or {}).items() if v}, "inList": False}
             else:

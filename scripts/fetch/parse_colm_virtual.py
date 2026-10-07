@@ -11,6 +11,10 @@ for f in sorted(glob.glob(os.path.join(base, 'colm-virtual', 'workshop-*.html'))
     # lines[0]=title, then 'COLM 2026','Workshop', time line, title, organizers, 'Project Page','Abstract', abstract..., 'Show more'
     name = lines[0]
     time_line = next((l for l in lines if 'Oct 9' in l), None)
+    # the line after the date is the room (e.g. 'Continental Ballroom 6', 'Union Square 22 / Fourth Floor')
+    # unless colm.cc has not published one yet, in which case the title follows directly
+    nxt = lines[lines.index(time_line) + 1] if time_line else None
+    room = nxt if nxt and nxt != name else None
     try:
         i = lines.index('Abstract')
         j = next(k for k in range(i, len(lines)) if lines[k] in ('Show more', 'Log in and register to view live content'))
@@ -26,8 +30,8 @@ for f in sorted(glob.glob(os.path.join(base, 'colm-virtual', 'workshop-*.html'))
     for a in BeautifulSoup(open(f).read(), 'html.parser').find_all('a', href=True):
         if a.get_text(strip=True) == 'Project Page':
             proj = a['href']
-    out[wid] = dict(id=wid, name=name, time=time_line, organizers=orgs, website=proj, abstract=abstract,
+    out[wid] = dict(id=wid, name=name, time=time_line, room=room, organizers=orgs, website=proj, abstract=abstract,
                     colmUrl=f'https://colm.cc/virtual/2026/workshop/{wid}')
 json.dump(out, open(os.path.join(base, 'colm_meta.json'), 'w'), indent=2, ensure_ascii=False)
 for v in out.values():
-    print(v['id'], '|', v['time'], '|', v['name'][:60], '|', len(v['organizers']), 'orgs |', len(' '.join(v['abstract'])), 'chars abstract')
+    print(v['id'], '|', v['time'], '|', v['room'], '|', v['name'][:60], '|', len(v['organizers']), 'orgs |', len(' '.join(v['abstract'])), 'chars abstract')
