@@ -42,6 +42,7 @@ COLM 2026 是第三屆語言模型會議，2026 年 10 月 6–9 日於**美國�
 | 工作坊 | colm.cc 列表 + 各工作坊官網 | 房間取自 colm.cc 各工作坊頁（`parse_colm_virtual.py`），議程頁與台灣人頁共用 |
 | keynote 講者單位 | 講者公開個人頁（colm.cc 只有姓名） | 講題尚未公布 |
 | 地圖地點、分類、描述 | COLM 官方「SF local information」[試算表](https://docs.google.com/spreadsheets/d/1xy8HOYJOyWzFqnsmr06t-NcVoLKDuwqb1A1Es6iaY3I/edit) + [My Maps](https://www.google.com/maps/d/viewer?mid=1U_Po7vWtGCGrEnHJ3LWl_hbvMd0TWEo)（座標） | 中文描述為本站翻譯 |
+| 會場樓層圖 | 會場現場海報（照片，`data-src/venue-floorplan.jpg`） | 指標座標手動量測（`data-src/venue.json`）；Continental 各廳不在海報上，指向一樓指標 |
 | 台灣人名單 | 手動整理（`data-src/taiwan.json`，只存姓名與 paper id） | 主會議論文的標題、作者、時段、房間、看板編號由 build 從官方論文資料帶入；10/9 工作坊論文不在官方接受清單，標題與作者取自 OpenReview 工作坊 venue、房間取自 colm.cc 工作坊頁、海報時段取自工作坊官網 |
 | 治安熱區 | [SFPD Incident Reports](https://data.sfgov.org/Public-Safety/Police-Department-Incident-Reports-2018-to-Present/wg3w-h783)（DataSF），最近 12 個月，約 110 m 格點 | 只算與行人相關的類型；注意區域的文字是本站整理，**非官方建議** |
 
@@ -63,18 +64,20 @@ colm2026/
 │   ├── shell.js       共用 chrome：頂列、抽屜、主題、語言連結、footer、dialog
 │   ├── app.js         首頁區段渲染（typed section registry + scrollspy）
 │   ├── schedule.js · papers.js · workshops.js · map.js · taiwan.js
-│   ├── venue-map.js   會場樓層示意圖（SVG，依現場樓層圖重繪；房間 / 看板編號 → 區塊）
+│   ├── venue-map.js   會場樓層圖：現場海報照片當底圖 + 標亮區塊 + 指標（房間 / 看板編號 → 區塊）
+│   ├── venue/         各樓層裁切圖 *.webp（由 make_venue_images.py 產生）
 │   ├── favicon.svg    站徽（唯一來源；字母畫成 path，SVG favicon 吃不到 webfont）
 │   ├── favicon-32.png · apple-touch-icon.png · icon-512.png   由 favicon.svg 產生
 │   └── og-image.png   1200×630 分享預覽圖
-├── data/              產生檔（不要手改）：data.js、schedule.js、papers.js、papers-abstracts.*.js、workshops.js、map.js、taiwan.js
+├── data/              產生檔（不要手改）：data.js、schedule.js、papers.js、papers-abstracts.*.js、workshops.js、map.js、taiwan.js、venue.js
 ├── data-src/          來源 JSON：papers / schedule / workshops / topics / zh / papers-zh / papers-topics
-│                      + 地圖：places / places-zh / map-text / safety；台灣人頁：taiwan
+│                      + 地圖：places / places-zh / map-text / safety；台灣人頁：taiwan、venue（樓層圖座標）+ venue-floorplan.jpg
 ├── scripts/
 │   ├── build_data.py      data-src/*.json → data/*.js（合併中文與主題）
 │   ├── build_pages.py     12 個 HTML 外殼 + sitemap.xml + robots.txt + en/ 轉址殘頁
 │   ├── prerender.py       把 JS 渲染結果烤進靜態 HTML（SEO / 無 JS）
 │   ├── make_brand_assets.py  favicon.svg → 各尺寸 PNG + og-image.png
+│   ├── make_venue_images.py  樓層圖照片 → assets/venue/*.webp（--grid 輸出座標格線，方便定位指標）
 │   ├── zh_punct.py        中文字串半形標點 → 全形
 │   ├── shot.py            Playwright：12 頁截圖 + console 錯誤檢查
 │   └── fetch/             從 colm.cc、工作坊官網、官方地圖、DataSF 重抓資料（見 scripts/fetch/README.md）
@@ -105,10 +108,11 @@ uv run --with playwright python scripts/shot.py        # 截圖 + console 檢查
 uv run python scripts/zh_punct.py --check data/data.js data-src/zh.json data-src/taiwan.json data-src/places-zh.json data-src/map-text.json   # 中文標點檢查
 ```
 
-改動站徽或分享圖時才需要重產圖（`assets/*.png` 是產生檔，不要手改）：
+改動站徽或分享圖時才需要重產圖（`assets/*.png` 與 `assets/venue/*.webp` 是產生檔，不要手改）：
 
 ```bash
 uv run --with playwright python scripts/make_brand_assets.py
+uv run --with pillow python scripts/make_venue_images.py   # 樓層圖（改了 data-src/venue.json 的裁切框才需要）
 ```
 
 第一次跑 Playwright：`uv run --with playwright playwright install chromium`。

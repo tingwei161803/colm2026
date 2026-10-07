@@ -8,6 +8,7 @@ Sources (all JSON, public conference data + this site's Chinese text):
   papers-topics.json                            — topic per paper              {id: topic-id}
   places.json, places-zh.json, map-text.json    — map page: official SF local-info sheet + Chinese + guide/zones
   taiwan.json                                   — Taiwan page: names + paper ids (+ workshop papers not in papers.json)
+  venue.json                                    — Taiwan page floor plan: crop boxes + zone pins/polygons (photo pixels)
   safety.json                                   — SFPD incident counts per ~110 m grid cell (scripts/fetch/build_safety.py)
 
 Outputs:
@@ -18,6 +19,7 @@ Outputs:
   data/workshops.js              window.WORKSHOPS_DATA
   data/map.js                    window.MAP_DATA
   data/taiwan.js                 window.TAIWAN_DATA
+  data/venue.js                  window.VENUE_DATA
 
 Usage:  uv run python scripts/build_data.py [--src data-src] [--out .]
 """
@@ -312,6 +314,30 @@ def build_taiwan(src: Path, out: Path, papers: list[dict]) -> dict:
     return {"people": len(people), "slots": len(order), "missing": missing, "bytes": size}
 
 
+# ---------------------------------------------------------------- venue floor plan
+def build_venue(src: Path, out: Path) -> dict:
+    """venue.json (photo-pixel coordinates) → crop-relative values the page can overlay directly.
+
+    pin  → [x%, y%] of the level image (an HTML marker positioned in %, so it stays the same size)
+    poly → "x,y x,y …" in the crop's pixel space (an SVG overlay with viewBox = crop size)
+    """
+    raw = load(src, "venue.json", {"levels": []})
+    levels = []
+    for lv in raw["levels"]:
+        x0, y0, x1, y1 = lv["crop"]
+        w, h = x1 - x0, y1 - y0
+        zones = []
+        for z in lv["zones"]:
+            px, py = z["pin"]
+            assert x0 <= px <= x1 and y0 <= py <= y1, (lv["id"], z["id"], "pin outside crop")
+            zones.append({"id": z["id"], "pin": [round((px - x0) / w * 100, 2), round((py - y0) / h * 100, 2)],
+                          "poly": " ".join(f"{x - x0},{y - y0}" for x, y in z["poly"]) if z.get("poly") else None})
+        levels.append({"id": lv["id"], "title": lv["title"], "img": f"assets/venue/{lv['id']}.webp",
+                       "w": w, "h": h, "zones": zones})
+    size = dump_js("VENUE_DATA", {"levels": levels}, out / "data/venue.js")
+    return {"levels": len(levels), "zones": sum(len(l["zones"]) for l in levels), "bytes": size}
+
+
 # ---------------------------------------------------------------- map
 def _meters(lat1: float, lng1: float, lat2: float, lng2: float) -> float:
     """Equirectangular distance — plenty accurate across a few km of San Francisco."""
@@ -369,6 +395,7 @@ def main() -> None:
     s = build_schedule(src, out, zh, p["byColmId"], w["byColmUrl"])
     m = build_map(src, out)
     tw = build_taiwan(src, out, p["papers"])
+    v = build_venue(src, out)
     print(f"papers.js              {p['count']} papers, {p['bytes']/1024:.0f} KB  (topic {p['withTopic']}, zh title {p['withTitleZh']})")
     print(f"papers-abstracts.en.js {p['absEn'][0]} abstracts, {p['absEn'][1]/1024:.0f} KB")
     print(f"papers-abstracts.zh.js {p['absZh'][0]} abstracts, {p['absZh'][1]/1024:.0f} KB")
@@ -376,6 +403,7 @@ def main() -> None:
     print(f"schedule.js            {s['days']} days / {s['sessions']} sessions, {s['bytes']/1024:.0f} KB")
     print(f"map.js                 {m['places']} places (zh {m['zh']}), {m['cells']} safety cells, {m['zones']} zones, {m['bytes']/1024:.0f} KB")
     print(f"taiwan.js              {tw['people']} people, {tw['slots']} papers, {tw['bytes']/1024:.1f} KB")
+    print(f"venue.js               {v['levels']} levels, {v['zones']} zones, {v['bytes']/1024:.1f} KB")
     if tw["missing"]:
         raise SystemExit(f"taiwan.json: unknown paper ids {tw['missing']}")
 

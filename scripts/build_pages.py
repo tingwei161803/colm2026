@@ -114,7 +114,7 @@ PAGES = {
         "h1": {"en": "Taiwanese at COLM", "zh": "台灣人在 COLM"},
         "sub": {"en": "Taiwanese researchers presenting this week. The timeline starts at the current time — drag it to see who is at which room and board at any moment. Tap a name to see only their papers.",
                 "zh": "這週在 COLM 發表的台灣研究者。時間軸預設是現在，拖動就能看任一時刻誰在哪個廳、哪塊看板；點名字只看該位的論文。"},
-        "scripts": ["data/taiwan.js", "assets/venue-map.js", "assets/taiwan.js"],
+        "scripts": ["data/taiwan.js", "data/venue.js", "assets/venue-map.js", "assets/taiwan.js"],
         "ld": "WebPage",
     },
 }
