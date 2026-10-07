@@ -7,6 +7,7 @@ Sources (all JSON, public conference data + this site's Chinese text):
   papers-zh.json                                — Chinese titles + abstracts   {id: {title, abstract}}
   papers-topics.json                            — topic per paper              {id: topic-id}
   places.json, places-zh.json, map-text.json    — map page: official SF local-info sheet + Chinese + guide/zones
+  taiwan.json                                   — Taiwan page: names + paper ids (+ workshop papers not in papers.json)
   safety.json                                   — SFPD incident counts per ~110 m grid cell (scripts/fetch/build_safety.py)
 
 Outputs:
@@ -16,6 +17,7 @@ Outputs:
   data/schedule.js               window.SCHEDULE_DATA
   data/workshops.js              window.WORKSHOPS_DATA
   data/map.js                    window.MAP_DATA
+  data/taiwan.js                 window.TAIWAN_DATA
 
 Usage:  uv run python scripts/build_data.py [--src data-src] [--out .]
 """
@@ -157,7 +159,8 @@ def build_papers(src: Path, out: Path, zh: dict) -> dict:
     s_en = dump_js("PAPERS_ABSTRACTS", abs_en, out / "data/papers-abstracts.en.js")
     s_zh = dump_js("PAPERS_ABSTRACTS", abs_zh if abs_zh else abs_en, out / "data/papers-abstracts.zh.js")
     return {"count": len(papers), "bytes": size, "absEn": (len(abs_en), s_en), "absZh": (len(abs_zh), s_zh),
-            "withTopic": data["meta"]["withTopic"], "withTitleZh": data["meta"]["withTitleZh"], "byColmId": by_colm_id}
+            "withTopic": data["meta"]["withTopic"], "withTitleZh": data["meta"]["withTitleZh"], "byColmId": by_colm_id,
+            "papers": papers}
 
 
 # ---------------------------------------------------------------- workshops
@@ -243,6 +246,67 @@ def build_schedule(src: Path, out: Path, zh: dict, paper_ids: dict, workshops_by
     return {"days": len(days), "sessions": sum(len(d["sessions"]) for d in days), "bytes": size}
 
 
+# ---------------------------------------------------------------- taiwan
+def build_taiwan(src: Path, out: Path, papers: list[dict]) -> dict:
+    """taiwan.json (names + paper ids) → one list of slots, each a paper with its full time window.
+
+    Poster end times live on the schedule's poster sessions, not on the papers, so they are
+    joined in here. Workshop papers (Fri) are not in the accepted list and come from extraPapers;
+    they carry the workshop's poster windows instead (which of them is not announced).
+    """
+    raw = load(src, "taiwan.json", {"people": [], "extraPapers": []})
+    sched = load(src, "schedule.json", {"days": []})
+    ws = {w["id"]: w for w in load(src, "workshops.json", [])}
+    windows = {}                                            # poster session n → (start, end)
+    for d in sched["days"]:
+        for s in d["sessions"]:
+            m = re.match(r"^Poster Session\s+(\d+)$", s.get("title", ""))
+            if s["type"] == "poster" and m:
+                windows[int(m.group(1))] = (s["start"], s.get("end"))
+    by_id = {p["id"]: p for p in papers}
+    extra = {x["id"]: x for x in raw.get("extraPapers", [])}
+    names = {pp["name"] for pp in raw["people"]}
+    slots, people, missing = {}, [], []
+    for person in raw["people"]:
+        affil = None
+        for pid in person["papers"]:
+            if pid in by_id:
+                p = by_id[pid]
+                start, end = windows.get(p.get("posterSession"), (p.get("time"), None))
+                if p["oral"] and p.get("oralTime"):
+                    start, end = p["oralTime"], None
+                slot = {"id": pid, "kind": "oral" if p["oral"] else "poster", "title": p["title"], "titleZh": p["titleZh"],
+                        "authors": p["authors"], "day": p["day"], "windows": [[start, end]],
+                        "room": p["oralRoom"] if p["oral"] else p["room"], "posterSession": p.get("posterSession"),
+                        "posterNumber": p.get("posterNumber"), "workshop": None, "links": p["links"], "inList": True}
+                i = p["authors"].index(person["name"]) if person["name"] in p["authors"] else -1
+                if i >= 0 and p.get("affiliations") and not affil:
+                    affil = p["affiliations"][i]
+            elif pid in extra:
+                x = extra[pid]
+                w = ws.get(x.get("workshop")) or {}
+                slot = {"id": pid, "kind": "workshop", "title": x["title"], "titleZh": x.get("titleZh"),
+                        "authors": x["authors"], "day": x["day"], "windows": x.get("posterWindows") or [[None, None]],
+                        "room": x.get("room"), "posterSession": None, "posterNumber": None,
+                        "workshop": {"id": w["id"], "name": w["name"], "shortName": w.get("shortName")} if w else None,
+                        "links": {k: v for k, v in (x.get("links") or {}).items() if v}, "inList": False}
+            else:
+                missing.append(pid)
+                continue
+            slot = slots.setdefault(pid, slot)
+            slot.setdefault("taiwanese", [])
+            if person["name"] not in slot["taiwanese"]:
+                slot["taiwanese"].append(person["name"])
+        people.append({"name": person["name"], "affiliation": affil,
+                       "papers": [pid for pid in person["papers"] if pid in slots]})
+    # a paper listed under one person may also have another listed person as co-author
+    for s in slots.values():
+        s["taiwanese"] = [a for a in s["authors"] if a in names] or s["taiwanese"]
+    order = sorted(slots.values(), key=lambda s: (s["day"] or "9", s["windows"][0][0] or "99", s["posterNumber"] or 0))
+    size = dump_js("TAIWAN_DATA", {"people": people, "slots": order}, out / "data/taiwan.js")
+    return {"people": len(people), "slots": len(order), "missing": missing, "bytes": size}
+
+
 # ---------------------------------------------------------------- map
 def _meters(lat1: float, lng1: float, lat2: float, lng2: float) -> float:
     """Equirectangular distance — plenty accurate across a few km of San Francisco."""
@@ -299,12 +363,16 @@ def main() -> None:
     w = build_workshops(src, out, zh)
     s = build_schedule(src, out, zh, p["byColmId"], w["byColmUrl"])
     m = build_map(src, out)
+    tw = build_taiwan(src, out, p["papers"])
     print(f"papers.js              {p['count']} papers, {p['bytes']/1024:.0f} KB  (topic {p['withTopic']}, zh title {p['withTitleZh']})")
     print(f"papers-abstracts.en.js {p['absEn'][0]} abstracts, {p['absEn'][1]/1024:.0f} KB")
     print(f"papers-abstracts.zh.js {p['absZh'][0]} abstracts, {p['absZh'][1]/1024:.0f} KB")
     print(f"workshops.js           {w['count']} workshops, {w['bytes']/1024:.0f} KB")
     print(f"schedule.js            {s['days']} days / {s['sessions']} sessions, {s['bytes']/1024:.0f} KB")
     print(f"map.js                 {m['places']} places (zh {m['zh']}), {m['cells']} safety cells, {m['zones']} zones, {m['bytes']/1024:.0f} KB")
+    print(f"taiwan.js              {tw['people']} people, {tw['slots']} papers, {tw['bytes']/1024:.1f} KB")
+    if tw["missing"]:
+        raise SystemExit(f"taiwan.json: unknown paper ids {tw['missing']}")
 
 
 if __name__ == "__main__":
