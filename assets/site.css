@@ -828,7 +828,7 @@
 .vm__area--on { fill: rgba(255, 196, 0, .38); stroke: #ffb300; }
 .vm__area--next { fill: rgba(255, 196, 0, .16); stroke: #ffb300; stroke-dasharray: 7 5; }
 /* marker: numbered bubble whose tip sits exactly on the pin point */
-.vm__scroll { overflow-x: auto; border-radius: var(--radius-sm); -webkit-overflow-scrolling: touch; }
+.vm__scroll { border-radius: var(--radius-sm); }
 .vm__pin { position: absolute; transform: translate(calc(-50% + var(--fan, 0) * 30px), -100%); display: flex; flex-direction: column; align-items: center; pointer-events: none; }
 .vm__pin b {
   display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%;
@@ -860,8 +860,10 @@
   .now__days .chip { padding: 6px 9px; }
   .now__clock b { font-size: 1.45rem; }
   .vm__pin b { width: 26px; height: 26px; font-size: .82rem; }
-  /* the poster text is unreadable at phone width: show it ~1.7× and let it scroll sideways */
-  .vm__photo { width: 170%; }
+  /* whole floor at a glance: the photo runs edge to edge of the screen (out of the card and page
+     gutters, which are symmetric, so 50% − 50vw lands on the viewport edge) — no sideways scrolling */
+  .vm__scroll { margin: 0 calc(50% - 50vw); border-radius: 0; }
+  .vm__photo { border-radius: 0; border-left: 0; border-right: 0; }
 }
 @media (prefers-reduced-motion: reduce) { .now__dot, .vm__pin--on::before { animation: none !important; } }
 
