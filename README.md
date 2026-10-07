@@ -19,7 +19,7 @@ COLM 2026 是第三屆語言模型會議，2026 年 10 月 6–9 日於**美國�
 | **Accepted Papers** | `/papers/` | `/zh/papers/` | 856 篇論文：依日期 / 場次 / 房間 / 主題 / Oral 篩選，摘要、作者、單位、海報位置、連結 |
 | **Workshops** | `/workshops/` | `/zh/workshops/` | 18 場工作坊：簡介、主題、當日議程、講者、截止日、主辦人、官網 |
 | **Map** | `/map/` | `/zh/map/` | 官方推薦的 110 個周邊地點（7 類，可個別開關）、SFPD 治安熱區與注意區域、定位、一鍵開 Google 地圖 |
-| **Taiwanese** | `/taiwan/` | `/zh/taiwan/` | 在 COLM 發表的台灣研究者：名單、論文、依日期排的海報時段 / 房間 / 看板編號；點名字只看該位（`?who=<name>`） |
+| **Taiwanese** | `/taiwan/` | `/zh/taiwan/` | 在 COLM 發表的台灣研究者：「誰在哪裡」時間軸（預設現在、即時更新）+ 會場樓層示意圖、名單、依日期排的海報時段 / 房間 / 看板編號；點名字只看該位（`?who=<name>`，指定時間 `?t=2026-10-07T16:30`） |
 
 - 頂列 **About ▾ · Schedule · Accepted Papers · Workshops · Map · Taiwanese**，手機收成抽屜；About 下拉收納首頁各區段。
 - 語言切換是真正的連結，並保留篩選狀態與選中的項目（`?day=…&room=…&topic=…&p=<id>` 直接可分享）。
@@ -63,6 +63,7 @@ colm2026/
 │   ├── shell.js       共用 chrome：頂列、抽屜、主題、語言連結、footer、dialog
 │   ├── app.js         首頁區段渲染（typed section registry + scrollspy）
 │   ├── schedule.js · papers.js · workshops.js · map.js · taiwan.js
+│   ├── venue-map.js   會場樓層示意圖（SVG，依現場樓層圖重繪；房間 / 看板編號 → 區塊）
 │   ├── favicon.svg    站徽（唯一來源；字母畫成 path，SVG favicon 吃不到 webfont）
 │   ├── favicon-32.png · apple-touch-icon.png · icon-512.png   由 favicon.svg 產生
 │   └── og-image.png   1200×630 分享預覽圖
