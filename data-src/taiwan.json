@@ -1,5 +1,5 @@
 {
-  "_comment": "Taiwanese researchers presenting at COLM 2026. `papers` are ids from papers.json (main conference) or from extraPapers below (workshop papers, which are not in the accepted list). Titles, authors, rooms and poster numbers of main-conference papers are resolved by scripts/build_data.py — only names and ids live here. Workshop papers: title/authors from OpenReview (colmweb.org/COLM/2026/Workshop/*), room from the workshop's entry in workshops.json (colm.cc), posterWindows from the workshop's own website schedule (neither site says which of the two sessions a paper is in).",
+  "_comment": "Taiwanese researchers presenting at COLM 2026. `papers` are ids from papers.json (main conference) or from extraPapers below (workshop papers, which are not in the accepted list). Titles, authors, rooms and poster numbers of main-conference papers are resolved by scripts/build_data.py — only names and ids live here. Workshop papers: title/authors from OpenReview (colmweb.org/COLM/2026/Workshop/*), room from the workshop's entry in workshops.json (colm.cc), posterWindows from the workshop's own website schedule (neither site says which of the two sessions a paper is in). `name` must match the author string on colm.cc (it drives highlighting and affiliation); `aka` is an optional other name shown on the card (OpenReview lists her as Gabrielle Kaili-May Liu).",
   "people": [
     {
       "name": "Ting-Wei Chang",
@@ -13,6 +13,13 @@
         "91IMavSRkc",
         "QSKP3uvMm9",
         "x-when2tool"
+      ]
+    },
+    {
+      "name": "Gabrielle Liu",
+      "aka": "Kaili Liu",
+      "papers": [
+        "Bn4GCXUGHt"
       ]
     },
     {

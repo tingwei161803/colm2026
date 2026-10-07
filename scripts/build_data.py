@@ -302,7 +302,7 @@ def build_taiwan(src: Path, out: Path, papers: list[dict]) -> dict:
             slot.setdefault("taiwanese", [])
             if person["name"] not in slot["taiwanese"]:
                 slot["taiwanese"].append(person["name"])
-        people.append({"name": person["name"], "affiliation": affil,
+        people.append({"name": person["name"], "aka": person.get("aka"), "affiliation": affil,
                        "papers": [pid for pid in person["papers"] if pid in slots]})
     # a paper listed under one person may also have another listed person as co-author
     for s in slots.values():

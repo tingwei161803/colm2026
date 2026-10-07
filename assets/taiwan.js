@@ -2,7 +2,7 @@
    COLM 2026 · taiwan.js — Taiwanese researchers and when to find them
 
    Data: window.TAIWAN_DATA = { people: [...], slots: [...] }
-   person: { name, affiliation|null, papers: [slot id] }
+   person: { name, aka|null (another name they go by), affiliation|null, papers: [slot id] }
    slot:   { id, kind: poster|oral|workshop, title, titleZh, authors[],
              taiwanese[] (listed people among the authors), day, windows: [[start, end]], room,
              posterSession, posterNumber, workshop: {id, name}|null, links: {colm, openreview, pdf, arxiv}, inList }
@@ -57,7 +57,7 @@
       var n = p.papers.length, on = who === slug(p.name);
       var days = daysOf(p).map(function (d) { return '<span class="badge">' + esc(SH.fmtDay(d)) + '</span>'; }).join("");
       return '<button type="button" class="twp__card" data-who="' + esc(slug(p.name)) + '" aria-pressed="' + (on ? "true" : "false") + '">' +
-        '<span class="twp__name">' + esc(p.name) + '</span>' +
+        '<span class="twp__name">' + esc(p.name) + (p.aka ? ' <small class="twp__aka">(' + esc(p.aka) + ')</small>' : "") + '</span>' +
         (p.affiliation ? '<span class="twp__affil">' + esc(p.affiliation) + '</span>' : "") +
         '<span class="twp__meta">' + (n ? '<b>' + n + '</b> ' + (n > 1 ? UI.papers : UI.paper) + days : '<i>' + UI.noPaper + '</i>') + '</span>' +
       '</button>';
