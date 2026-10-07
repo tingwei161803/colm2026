@@ -1212,6 +1212,18 @@ W.append({
 })
 
 
+# ------------------------------------------------------------------ rooms from colm.cc
+# Rooms are not hand-transcribed: they come from the colm.cc workshop pages
+# (parse_colm_virtual.py → raw/workshops/colm_meta.json), so a refresh picks them up.
+_meta_f = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "raw", "workshops", "colm_meta.json")
+if os.path.exists(_meta_f):
+    _meta = json.load(open(_meta_f))
+    for w in W:
+        m = _meta.get(w["colmUrl"].rsplit("/", 1)[-1])
+        if m and m.get("room"):
+            w["room"] = m["room"]
+
+
 # ------------------------------------------------------------------ validate + write
 REQUIRED = ["id", "name", "shortName", "edition", "contact", "organizers", "date", "startTime",
             "endTime", "room", "website", "colmUrl", "description", "topics", "schedule",
