@@ -1,7 +1,7 @@
-"""Generate the 10 HTML shells (5 pages × en/zh) for the COLM 2026 site.
+"""Generate the 12 HTML shells (6 pages × en/zh) for the COLM 2026 site.
 
 Usage:
-    uv run python scripts/build_pages.py            # writes the 10 pages + sitemap.xml + robots.txt + en/ stub
+    uv run python scripts/build_pages.py            # writes the 12 pages + sitemap.xml + robots.txt + en/ stub
     uv run python scripts/build_pages.py --out tmp/preview
 
 Only the *shell* is generated here: <head> meta/SEO, app bar, drawer, page
@@ -106,6 +106,17 @@ PAGES = {
                    "https://cdnjs.cloudflare.com/ajax/libs/leaflet.heat/0.2.0/leaflet-heat.js"],
         "ld": "WebPage",
     },
+    "taiwan": {
+        "slug": "taiwan/",
+        "title": {"en": "Taiwanese at COLM 2026", "zh": "台灣人在 COLM 2026"},
+        "desc": {"en": "Taiwanese researchers presenting at COLM 2026 in San Francisco: who they are, which papers, and exactly when and where to find each poster, day by day.",
+                 "zh": "在 COLM 2026（舊金山）發表論文的台灣研究者：有誰、哪幾篇論文，以及每張海報的日期、時段、房間與看板編號。"},
+        "h1": {"en": "Taiwanese at COLM", "zh": "台灣人在 COLM"},
+        "sub": {"en": "Taiwanese researchers presenting this week, and when to find them. Tap a name to see only their papers; tap a title for the abstract.",
+                "zh": "這週在 COLM 發表的台灣研究者，以及去哪裡、什麼時候找得到他們。點名字只看該位的論文；點標題看摘要。"},
+        "scripts": ["data/taiwan.js", "assets/taiwan.js"],
+        "ld": "WebPage",
+    },
 }
 
 PAGE_BODY = {
@@ -184,6 +195,18 @@ PAGE_BODY = {
     <section class="mapguide" id="guide"></section>
   </main>
 """,
+    "taiwan": """
+  <main class="page">
+    <header class="page-head">
+      <h1>{h1}</h1>
+      <p class="page-head__sub">{sub}</p>
+    </header>
+    <h2 class="tw-section-title" id="peopleTitle">{people}</h2>
+    <section id="people" aria-labelledby="peopleTitle"></section>
+    <h2 class="tw-section-title" id="timelineTitle">{when}</h2>
+    <section id="timeline" aria-labelledby="timelineTitle"></section>
+  </main>
+""",
 }
 
 
@@ -227,7 +250,9 @@ def build(page_key: str, lang: str) -> tuple[str, str]:
   }}''',
     }[p["ld"]]
 
-    body = PAGE_BODY[page_key].format(h1=p.get("h1", {}).get(L, ""), sub=p.get("sub", {}).get(L, ""))
+    body = PAGE_BODY[page_key].format(h1=p.get("h1", {}).get(L, ""), sub=p.get("sub", {}).get(L, ""),
+                                      people="名單" if L == "zh" else "People",
+                                      when="論文與時間" if L == "zh" else "Papers & times")
     vendor = "".join(f'  <script src="{v}"></script>\n' for v in p.get("vendor", []))
     scripts = vendor + "\n".join(f'  <script src="{root}{s}"></script>' for s in ["assets/shell.js"] + p["scripts"])
     page_css = "".join(f'\n  <link rel="stylesheet" href="{c}" />' for c in p.get("css", []))

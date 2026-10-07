@@ -1,7 +1,7 @@
 /* =========================================================================
    COLM 2026 · shell.js — chrome shared by every page
 
-   Owns: top navigation (About ▾ · Schedule · Accepted Papers · Workshops · Map),
+   Owns: top navigation (About ▾ · Schedule · Accepted Papers · Workshops · Map · Taiwan),
    the mobile drawer, the theme toggle, the language link, the footer text,
    and a handful of helpers the page scripts reuse (t, esc, dialog, colours).
 
@@ -17,18 +17,18 @@ window.SHELL = (function () {
   var body = document.body;
   var lang = (html.getAttribute("lang") || "en").toLowerCase().indexOf("zh") === 0 ? "zh" : "en";
   var ROOT = body.getAttribute("data-root") || "./";          // e.g. "../" from /papers/
-  var PAGE = body.getAttribute("data-page") || "about";        // about | schedule | papers | workshops | map
+  var PAGE = body.getAttribute("data-page") || "about";        // about | schedule | papers | workshops | map | taiwan
   var LANG_ROOT  = ROOT + (lang === "zh" ? ZH_DIR : "");
   var OTHER_ROOT = ROOT + (lang === "zh" ? "" : ZH_DIR);
 
   /* ---------- i18n for the chrome ---------- */
   var I18N = {
-    en: { about: "About", schedule: "Schedule", papers: "Accepted Papers", workshops: "Workshops", map: "Map",
+    en: { about: "About", schedule: "Schedule", papers: "Accepted Papers", workshops: "Workshops", map: "Map", taiwan: "Taiwanese",
           menu: "Menu", close: "Close", footer: "Unofficial community page · content curated from colm.cc · static, no build step.",
           langLabel: "中文", langAria: "切換到中文版", themeAria: "Toggle theme",
           sections: { overview: "Overview", about: "About COLM", timeline: "Key dates", topics: "Topics",
                       workshops: "Workshops", people: "Organizers", faq: "FAQ", policies: "Guidelines & policies", submit: "Attend" } },
-    zh: { about: "關於", schedule: "議程", papers: "接受論文", workshops: "工作坊", map: "地圖",
+    zh: { about: "關於", schedule: "議程", papers: "接受論文", workshops: "工作坊", map: "地圖", taiwan: "台灣人",
           menu: "選單", close: "關閉", footer: "非官方社群整理頁 · 內容整理自 colm.cc · 純靜態，無建置流程。",
           langLabel: "EN", langAria: "Switch to English", themeAria: "切換主題",
           sections: { overview: "總覽", about: "關於 COLM", timeline: "重要日期", topics: "徵稿主題",
@@ -91,7 +91,8 @@ window.SHELL = (function () {
     { key: "schedule",  href: "schedule/",  icon: "calendar_month", label: S.schedule },
     { key: "papers",    href: "papers/",    icon: "article",        label: S.papers },
     { key: "workshops", href: "workshops/", icon: "groups",         label: S.workshops },
-    { key: "map",       href: "map/",       icon: "map",            label: S.map }
+    { key: "map",       href: "map/",       icon: "map",            label: S.map },
+    { key: "taiwan",    href: "taiwan/",    icon: "flag",           label: S.taiwan }
   ];
   var ABOUT_SECTIONS = ["overview", "about", "timeline", "topics", "workshops", "people", "faq", "policies", "submit"];
   var SEC_ICONS = { overview: "home", about: "info", timeline: "event", topics: "category", workshops: "groups",
@@ -163,7 +164,7 @@ window.SHELL = (function () {
   }
 
   /* ---------- language link (keeps query + hash so deep links survive) ---------- */
-  var PAGE_PATH = { about: "", schedule: "schedule/", papers: "papers/", workshops: "workshops/", map: "map/" };
+  var PAGE_PATH = { about: "", schedule: "schedule/", papers: "papers/", workshops: "workshops/", map: "map/", taiwan: "taiwan/" };
   function otherLangHref() {
     return OTHER_ROOT + (PAGE_PATH[PAGE] || "") + location.search + location.hash;
   }

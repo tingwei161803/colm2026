@@ -16,7 +16,7 @@ OUT = ROOT / "tmp/shots"   # gitignored
 OUT.mkdir(parents=True, exist_ok=True)
 
 base = sys.argv[1] if len(sys.argv) > 1 else "http://127.0.0.1:4173"
-paths = sys.argv[2:] or ["/", "/zh/", "/schedule/", "/zh/schedule/", "/papers/", "/zh/papers/", "/workshops/", "/zh/workshops/", "/map/", "/zh/map/"]
+paths = sys.argv[2:] or ["/", "/zh/", "/schedule/", "/zh/schedule/", "/papers/", "/zh/papers/", "/workshops/", "/zh/workshops/", "/map/", "/zh/map/", "/taiwan/", "/zh/taiwan/"]
 
 # per-page interaction before the screenshot (so the detail panel is populated)
 def interact(page, path: str) -> None:

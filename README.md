@@ -19,8 +19,9 @@ COLM 2026 是第三屆語言模型會議，2026 年 10 月 6–9 日於**美國�
 | **Accepted Papers** | `/papers/` | `/zh/papers/` | 856 篇論文：依日期 / 場次 / 房間 / 主題 / Oral 篩選，摘要、作者、單位、海報位置、連結 |
 | **Workshops** | `/workshops/` | `/zh/workshops/` | 18 場工作坊：簡介、主題、當日議程、講者、截止日、主辦人、官網 |
 | **Map** | `/map/` | `/zh/map/` | 官方推薦的 110 個周邊地點（7 類，可個別開關）、SFPD 治安熱區與注意區域、定位、一鍵開 Google 地圖 |
+| **Taiwanese** | `/taiwan/` | `/zh/taiwan/` | 在 COLM 發表的台灣研究者：名單、論文、依日期排的海報時段 / 房間 / 看板編號；點名字只看該位（`?who=<name>`） |
 
-- 頂列 **About ▾ · Schedule · Accepted Papers · Workshops · Map**，手機收成抽屜；About 下拉收納首頁各區段。
+- 頂列 **About ▾ · Schedule · Accepted Papers · Workshops · Map · Taiwanese**，手機收成抽屜；About 下拉收納首頁各區段。
 - 語言切換是真正的連結，並保留篩選狀態與選中的項目（`?day=…&room=…&topic=…&p=<id>` 直接可分享）。
 - 議程頁的 Oral 場次可展開論文並連到論文頁；海報場次連到篩選好的論文清單；週五連到工作坊頁。
 - 房間顏色在議程頁與論文頁一致；深 / 淺色主題記在 `localStorage`。
@@ -41,6 +42,7 @@ COLM 2026 是第三屆語言模型會議，2026 年 10 月 6–9 日於**美國�
 | 工作坊 | colm.cc 列表 + 各工作坊官網 | 房間 colm.cc 尚未公布 |
 | keynote 講者單位 | 講者公開個人頁（colm.cc 只有姓名） | 講題尚未公布 |
 | 地圖地點、分類、描述 | COLM 官方「SF local information」[試算表](https://docs.google.com/spreadsheets/d/1xy8HOYJOyWzFqnsmr06t-NcVoLKDuwqb1A1Es6iaY3I/edit) + [My Maps](https://www.google.com/maps/d/viewer?mid=1U_Po7vWtGCGrEnHJ3LWl_hbvMd0TWEo)（座標） | 中文描述為本站翻譯 |
+| 台灣人名單 | 手動整理（`data-src/taiwan.json`，只存姓名與 paper id） | 主會議論文的標題、作者、時段、房間、看板編號由 build 從官方論文資料帶入；10/9 工作坊論文不在官方接受清單，標題與作者取自 OpenReview 工作坊 venue、房間取自 colm.cc 工作坊頁、海報時段取自工作坊官網 |
 | 治安熱區 | [SFPD Incident Reports](https://data.sfgov.org/Public-Safety/Police-Department-Incident-Reports-2018-to-Present/wg3w-h783)（DataSF），最近 12 個月，約 110 m 格點 | 只算與行人相關的類型；注意區域的文字是本站整理，**非官方建議** |
 
 所有內容版權屬 **COLM 主辦單位與各論文作者**；**最新與權威資訊請以 [colm.cc](https://colm.cc/) 為準**。
@@ -52,28 +54,28 @@ COLM 2026 是第三屆語言模型會議，2026 年 10 月 6–9 日於**美國�
 
 ```
 colm2026/
-├── index.html · schedule/ · papers/ · workshops/ · map/   英文（root）
-├── zh/                                                      中文（同樣五頁）
+├── index.html · schedule/ · papers/ · workshops/ · map/ · taiwan/   英文（root）
+├── zh/                                                      中文（同樣六頁）
 ├── en/index.html                                      舊網址轉址殘頁（→ /）
 ├── assets/
 │   ├── styles.css     MD3 基底 + 學術簡潔皮膚（首頁原有）
 │   ├── site.css       多頁新增：頂列、下拉、抽屜、主從版面、篩選、議程
 │   ├── shell.js       共用 chrome：頂列、抽屜、主題、語言連結、footer、dialog
 │   ├── app.js         首頁區段渲染（typed section registry + scrollspy）
-│   ├── schedule.js · papers.js · workshops.js · map.js
+│   ├── schedule.js · papers.js · workshops.js · map.js · taiwan.js
 │   ├── favicon.svg    站徽（唯一來源；字母畫成 path，SVG favicon 吃不到 webfont）
 │   ├── favicon-32.png · apple-touch-icon.png · icon-512.png   由 favicon.svg 產生
 │   └── og-image.png   1200×630 分享預覽圖
-├── data/              產生檔（不要手改）：data.js、schedule.js、papers.js、papers-abstracts.*.js、workshops.js、map.js
+├── data/              產生檔（不要手改）：data.js、schedule.js、papers.js、papers-abstracts.*.js、workshops.js、map.js、taiwan.js
 ├── data-src/          來源 JSON：papers / schedule / workshops / topics / zh / papers-zh / papers-topics
-│                      + 地圖：places / places-zh / map-text / safety
+│                      + 地圖：places / places-zh / map-text / safety；台灣人頁：taiwan
 ├── scripts/
 │   ├── build_data.py      data-src/*.json → data/*.js（合併中文與主題）
-│   ├── build_pages.py     10 個 HTML 外殼 + sitemap.xml + robots.txt + en/ 轉址殘頁
+│   ├── build_pages.py     12 個 HTML 外殼 + sitemap.xml + robots.txt + en/ 轉址殘頁
 │   ├── prerender.py       把 JS 渲染結果烤進靜態 HTML（SEO / 無 JS）
 │   ├── make_brand_assets.py  favicon.svg → 各尺寸 PNG + og-image.png
 │   ├── zh_punct.py        中文字串半形標點 → 全形
-│   ├── shot.py            Playwright：10 頁截圖 + console 錯誤檢查
+│   ├── shot.py            Playwright：12 頁截圖 + console 錯誤檢查
 │   └── fetch/             從 colm.cc、工作坊官網、官方地圖、DataSF 重抓資料（見 scripts/fetch/README.md）
 ├── archive/           v1–v3 舊版設計（noindex，保留）
 ├── CNAME · sitemap.xml · robots.txt · .nojekyll
@@ -96,10 +98,10 @@ uv run python -m http.server 4173          # 開 http://localhost:4173/
 
 ```bash
 uv run python scripts/build_data.py        # data-src → data/*.js
-uv run python scripts/build_pages.py       # 10 頁外殼 + sitemap + robots
+uv run python scripts/build_pages.py       # 12 頁外殼 + sitemap + robots
 uv run --with playwright python scripts/prerender.py   # 烤進靜態內容（需 chromium）
 uv run --with playwright python scripts/shot.py        # 截圖 + console 檢查（輸出到 tmp/shots/）
-uv run python scripts/zh_punct.py --check data/data.js data-src/zh.json data-src/places-zh.json data-src/map-text.json   # 中文標點檢查
+uv run python scripts/zh_punct.py --check data/data.js data-src/zh.json data-src/taiwan.json data-src/places-zh.json data-src/map-text.json   # 中文標點檢查
 ```
 
 改動站徽或分享圖時才需要重產圖（`assets/*.png` 是產生檔，不要手改）：

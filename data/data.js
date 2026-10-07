@@ -38,7 +38,7 @@ window.SITE_SECTIONS = [
   },
 
   /* ===================================================================
-     1b · QUICK LINKS — the four sub-pages
+     1b · QUICK LINKS — the sub-pages
      =================================================================== */
   {
     type: "quick",
@@ -55,7 +55,9 @@ window.SITE_SECTIONS = [
       { href: "workshops/", icon: "groups",         title: { en: "Workshops", zh: "工作坊" },
         text: { en: "What each Friday workshop is about, its program and official site.", zh: "週五每場工作坊的主題、當日議程與官方網站。" } },
       { href: "map/",       icon: "map",            title: { en: "Local Map", zh: "在地地圖" },
-        text: { en: "The official picks for food, bars and sights near the Hilton, plus where to take extra care.", zh: "官方推薦的 Hilton 周邊美食、酒吧與景點，以及需要多注意的區域。" } }
+        text: { en: "The official picks for food, bars and sights near the Hilton, plus where to take extra care.", zh: "官方推薦的 Hilton 周邊美食、酒吧與景點，以及需要多注意的區域。" } },
+      { href: "taiwan/",    icon: "flag",           title: { en: "Taiwanese at COLM", zh: "台灣人在 COLM" },
+        text: { en: "Taiwanese researchers presenting this week — their papers, and when and where to find each poster.", zh: "這週發表的台灣研究者：論文，以及每張海報的時間與位置。" } }
     ]
   },
 
