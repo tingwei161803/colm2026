@@ -1,0 +1,51 @@
+{
+  "_comment": "Venue floor plan (Hilton Union Square, COLM 2026 on-site poster, photo in data-src/venue-floorplan.jpg). All coordinates are pixels in that photo. Each level is cropped to `crop` [x0, y0, x1, y1] by scripts/make_venue_images.py → assets/venue/<id>.webp; build_data.py turns pins/polygons into crop-relative values for data/venue.js. A zone has a `pin` (where the marker points) and optionally a `poly` (area outlined when someone is there). Franciscan rows are keyed by board range: colm.cc letters them A=#74–80 … C=#91–100, the poster the other way round. Continental rooms are not drawn on the poster, so they point at the ground-level 'To Continental Ballroom' sign.",
+  "source": "data-src/venue-floorplan.jpg",
+  "levels": [
+    {
+      "id": "level4",
+      "title": { "en": "Level 4 · Union Square rooms", "zh": "四樓 · Union Square 會議室" },
+      "crop": [470, 60, 1460, 380],
+      "zones": [
+        { "id": "us-1",  "pin": [1106, 161] }, { "id": "us-2",  "pin": [1106, 186] }, { "id": "us-3",  "pin": [1106, 210] },
+        { "id": "us-4",  "pin": [1106, 233] }, { "id": "us-5",  "pin": [1106, 257] }, { "id": "us-6",  "pin": [1106, 281] },
+        { "id": "us-7",  "pin": [1103, 305] }, { "id": "us-8",  "pin": [997, 327] },  { "id": "us-9",  "pin": [940, 327] },
+        { "id": "us-10", "pin": [878, 327] },  { "id": "us-11", "pin": [810, 327] },  { "id": "us-12", "pin": [747, 327] },
+        { "id": "us-13", "pin": [688, 327] },  { "id": "us-14", "pin": [708, 280] },  { "id": "us-15", "pin": [734, 233] },
+        { "id": "us-16", "pin": [746, 211] },  { "id": "us-17", "pin": [760, 188] },  { "id": "us-18", "pin": [770, 165] },
+        { "id": "us-19", "pin": [786, 143] },  { "id": "us-20", "pin": [798, 122] },  { "id": "us-21", "pin": [812, 100] },
+        { "id": "us-22", "pin": [885, 100] },  { "id": "us-23", "pin": [962, 100] },  { "id": "us-24", "pin": [1042, 100] },
+        { "id": "us-25", "pin": [1106, 102] }
+      ]
+    },
+    {
+      "id": "grand",
+      "title": { "en": "Grand Ballroom", "zh": "Grand Ballroom" },
+      "crop": [740, 450, 1420, 900],
+      "zones": [
+        { "id": "grand", "pin": [940, 650], "poly": [[775, 470], [1050, 470], [1115, 770], [775, 770]] },
+        { "id": "grand-posters", "pin": [955, 815], "poly": [[775, 780], [1120, 780], [1145, 855], [775, 860]] }
+      ]
+    },
+    {
+      "id": "ballroom",
+      "title": { "en": "Ballroom level", "zh": "Ballroom 樓層" },
+      "crop": [440, 1045, 1545, 1675],
+      "zones": [
+        { "id": "imperial", "pin": [900, 1205], "poly": [[765, 1148], [1010, 1142], [1035, 1260], [770, 1275]] },
+        { "id": "fr-d",  "pin": [1235, 1147], "poly": [[1155, 1130], [1300, 1130], [1316, 1165], [1166, 1165]] },
+        { "id": "fr-74", "pin": [1250, 1183], "poly": [[1167, 1167], [1317, 1167], [1332, 1199], [1177, 1199]] },
+        { "id": "fr-81", "pin": [1265, 1217], "poly": [[1178, 1201], [1333, 1201], [1348, 1234], [1188, 1234]] },
+        { "id": "fr-91", "pin": [1280, 1252], "poly": [[1189, 1236], [1349, 1236], [1364, 1270], [1200, 1270]] }
+      ]
+    },
+    {
+      "id": "ground",
+      "title": { "en": "Ground level · way to the Continental Ballroom", "zh": "一樓 · 往 Continental Ballroom" },
+      "crop": [482, 1790, 1545, 2370],
+      "zones": [
+        { "id": "continental", "pin": [665, 1915] }
+      ]
+    }
+  ]
+}
