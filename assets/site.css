@@ -860,9 +860,9 @@
   .now__days .chip { padding: 6px 9px; }
   .now__clock b { font-size: 1.45rem; }
   .vm__pin b { width: 26px; height: 26px; font-size: .82rem; }
-  /* whole floor at a glance: the photo runs edge to edge of the screen (out of the card and page
-     gutters, which are symmetric, so 50% − 50vw lands on the viewport edge) — no sideways scrolling */
-  .vm__scroll { margin: 0 calc(50% - 50vw); border-radius: 0; }
+  /* whole floor at a glance, as wide as the card: the photo reaches the card's border (its 12px
+     padding cancelled) but never past it — no sideways scrolling */
+  .vm__scroll { margin: 0 -12px; border-radius: 0; }
   .vm__photo { border-radius: 0; border-left: 0; border-right: 0; }
 }
 @media (prefers-reduced-motion: reduce) { .now__dot, .vm__pin--on::before { animation: none !important; } }
