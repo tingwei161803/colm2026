@@ -864,3 +864,14 @@
   .vm__photo { width: 170%; }
 }
 @media (prefers-reduced-motion: reduce) { .now__dot, .vm__pin--on::before { animation: none !important; } }
+
+/* ---- Workshops: accepted papers in the detail pane ---- */
+.detail .wp { margin: 0 0 14px; padding-left: 22px; display: grid; gap: 7px; line-height: 1.45; }
+.detail .wp li { font-size: .9rem; }
+.detail .wp a { color: var(--on-surface); }
+.detail .wp a:hover { color: var(--primary); }
+.detail .wp small { display: block; font-size: .78rem; color: var(--on-surface-variant); }
+.detail .wp small.wp__en { font-style: italic; }
+.wp__sess { margin: 12px 0 6px !important; font-size: .88rem; font-weight: 600; }
+.wp__sess b { font-family: var(--font-mono); font-weight: 500; color: var(--primary); }
+.wp__n { font-family: var(--font-mono); font-size: .72rem; font-weight: 400; color: var(--on-surface-variant); }
