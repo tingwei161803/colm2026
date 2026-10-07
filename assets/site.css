@@ -723,3 +723,40 @@
 .mapguide__links .material-symbols-rounded { font-size: 16px; color: var(--on-surface-variant); flex: 0 0 auto; }
 .mapguide__src { margin-top: 22px; }
 .mapguide__src a { color: var(--primary); }
+
+/* =========================================================================
+   Taiwan page: people cards (tap = filter) + day-grouped papers
+   ========================================================================= */
+.tw-section-title { font-family: var(--font-serif); font-weight: 600; font-size: 1.3rem; margin: 0 0 12px; }
+.tw-section-title:not(:first-child) { margin-top: 32px; }
+.twp { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; }
+.twp__card {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 4px; text-align: left;
+  padding: 12px 14px; min-height: 44px;
+  background: var(--surface); color: var(--on-surface);
+  border: 1px solid var(--outline-variant); border-radius: var(--radius-sm);
+  font: inherit; cursor: pointer; transition: border-color .15s, background .15s;
+}
+.twp__card:hover { border-color: var(--primary); }
+.twp__card:focus-visible { outline: 2px solid var(--primary); outline-offset: 1px; }
+.twp__card[aria-pressed="true"] { background: var(--primary-container); border-color: var(--primary); color: var(--on-primary-container); }
+.twp__name { font-weight: 600; font-size: 1rem; }
+.twp__affil { font-size: .82rem; color: var(--on-surface-variant); line-height: 1.35; }
+.twp__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; margin-top: 4px; font-size: .84rem; color: var(--on-surface-variant); }
+.twp__meta b { color: var(--on-surface); }
+.twp__card[aria-pressed="true"] .twp__affil, .twp__card[aria-pressed="true"] .twp__meta { color: inherit; }
+.tw-hl { color: var(--primary); font-weight: 600; }
+.tw-en { font-size: .84rem; font-style: italic; }
+.tw-filter { margin: 0 0 12px; font-size: .92rem; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.tw-today { color: var(--primary); }
+.prog__title a { color: var(--on-surface); }
+.prog__title a:hover { color: var(--primary); }
+@media (max-width: 600px) {
+  .twp { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .twp__card { padding: 10px 11px; }
+  .twp__name { font-size: .94rem; }
+  .twp__affil { font-size: .76rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+}
+.tw-or { display: block; margin: 2px 0; opacity: .5; }
+.tw-ic { font-size: 16px; vertical-align: -3px; margin-right: 4px; }
+@media (max-width: 600px) { .tw-or { display: inline; margin: 0 6px; } }
