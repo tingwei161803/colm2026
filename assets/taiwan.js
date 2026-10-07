@@ -9,7 +9,7 @@
            Workshop papers have two windows: the workshop's poster sessions (which one is not announced).
    URL: ?who=<name-slug> filters to one person (kept across the language switch);
         ?t=2026-10-07T16:30 pins the "who's where" scrubber (absent = live, follows the clock).
-   Floor plans come from venue-map.js (window.VENUE_MAP).
+   Floor plan: venue-map.js (window.VENUE_MAP) over the venue poster images (data/venue.js).
    ========================================================================= */
 (function () {
   "use strict";
@@ -30,7 +30,7 @@
           before: "The conference has not started yet — showing the first day.", after: "The conference is over — showing the last day.",
           sessions: "Sessions this day", people: "people", maybe: "one of two sessions",
           allLevels: "Show all floors", fewLevels: "Only floors with someone",
-          mapNote: "Simplified floor plans redrawn from the venue poster, not to scale. Franciscan rooms are shown by board number: colm.cc and the venue poster letter them differently." },
+          mapNote: "Floor plan: the venue's on-site poster. Franciscan rows are marked by board number — colm.cc and the poster letter them differently. The Continental rooms are not on the poster; follow the “To Continental Ballroom” sign on the ground level." },
     zh: { people: "名單", all: "全部", papers: "篇", paper: "篇", noPaper: "論文資訊待補",
           byDay: "依日期", poster: "海報", oral: "口頭報告", workshop: "工作坊", session: "海報場次",
           board: "看板", wsNote: "工作坊海報 —— 會在該工作坊兩個海報時段的其中一個展示（官方未標明哪一個）。",
@@ -43,7 +43,7 @@
           before: "會議還沒開始，先顯示第一天。", after: "會議已經結束，顯示最後一天。",
           sessions: "這天的場次", people: "人", maybe: "兩個時段之一",
           allLevels: "顯示所有樓層", fewLevels: "只看有人的樓層",
-          mapNote: "依現場樓層圖重繪的示意圖，未依比例。Franciscan 各廳以看板編號標示：colm.cc 與現場樓層圖的字母順序不同。" }
+          mapNote: "樓層圖取自會場現場海報。Franciscan 各排以看板編號標示：colm.cc 與現場樓層圖的字母順序不同。Continental 各廳不在樓層圖上，請依一樓「TO CONTINENTAL BALLROOM」指標前往。" }
   }[lang];
 
   function slug(name) { return String(name).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""); }
@@ -273,7 +273,12 @@
     var next = here.length ? null : nextAfter(slots, at.day, at.min);
     var groups = groupsOf(here.length ? here : (next ? next.items : []));
     var active = {};
-    groups.forEach(function (g) { g.zones.forEach(function (z) { active[z] = { mark: g.mark, state: here.length ? "on" : "next" }; }); });
+    groups.forEach(function (g) {
+      g.zones.forEach(function (z) {
+        // the Continental pin points at the way there (the rooms are not on the poster), so name the room
+        active[z] = { mark: g.mark, state: here.length ? "on" : "next", label: z === "continental" ? g.room : null };
+      });
+    });
 
     var r = $("nowRange"); if (r && document.activeElement !== r) r.value = Math.max(MIN0, Math.min(MIN1, at.min));
     $("nowTime").textContent = SH.fmtTime(hhmm(at.min)) + " PDT";
@@ -295,11 +300,12 @@
       list = status + '<p class="now__status">' + UI.nobody + ' ' + UI.noMore + '</p>';
     }
     $("nowList").innerHTML = list;
-    var map = VM ? VM.render(active, { lang: lang, showAll: allLevels }) : "";
+    var map = VM ? VM.render(active, { lang: lang, root: SH.root, showAll: allLevels }) : "";
     $("venue").innerHTML = (map || "") +
       '<div class="vm__foot"><button type="button" class="linkish" id="nowLevels">' + (allLevels ? UI.fewLevels : UI.allLevels) + '</button>' +
       '<p class="note">' + UI.mapNote + '</p></div>';
     $("nowLevels").addEventListener("click", function () { allLevels = !allLevels; paintAt(); });
+    if (VM) VM.centerPins($("venue"));
     wireJumps($("nowList"));
   }
   function jumpTo(day, min) { at = { day: day, min: min, live: false, note: null }; syncUrl(); paintNow(); }

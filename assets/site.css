@@ -819,17 +819,35 @@
 
 .vm__level { margin: 0 0 12px; }
 .vm__level figcaption { font-size: .8rem; font-weight: 600; color: var(--on-surface-variant); margin-bottom: 4px; letter-spacing: .02em; }
-.vm__level svg { display: block; width: 100%; height: auto; }
-.vm__decor { fill: var(--surface-container-high); stroke: none; }
-.vm__zone { fill: color-mix(in srgb, var(--on-surface) 8%, var(--surface)); stroke: var(--outline-variant); stroke-width: 1; }
-.vm__zone--on { fill: color-mix(in srgb, var(--primary) 28%, var(--surface)); stroke: var(--primary); stroke-width: 2.5; }
-.vm__zone--next { fill: color-mix(in srgb, var(--primary) 10%, var(--surface)); stroke: var(--primary); stroke-width: 1.5; stroke-dasharray: 5 3; }
-.vm__t { fill: var(--on-surface-variant); text-anchor: middle; font-family: var(--font-body); font-weight: 600; }
-.vm__t--s { font-weight: 500; }
-.vm__t--sub { font-weight: 400; }
-.vm__zone--on + .vm__t, .vm__zone--next + .vm__t { fill: var(--on-surface); }
-.vm__mk circle { fill: var(--primary); }
-.vm__mk text { fill: var(--on-primary); text-anchor: middle; font-family: var(--font-body); font-weight: 700; }
+/* the poster photo, an SVG of outlined areas on top (same pixel viewBox), and HTML markers in % */
+.vm__photo { position: relative; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--outline-variant); background: #e9e9e6; }
+.vm__photo img { display: block; width: 100%; height: auto; }
+.vm__photo svg { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+:root[data-theme="dark"] .vm__photo img { filter: brightness(.86); }
+.vm__area { vector-effect: non-scaling-stroke; stroke-width: 3; stroke-linejoin: round; }
+.vm__area--on { fill: rgba(255, 196, 0, .38); stroke: #ffb300; }
+.vm__area--next { fill: rgba(255, 196, 0, .16); stroke: #ffb300; stroke-dasharray: 7 5; }
+/* marker: numbered bubble whose tip sits exactly on the pin point */
+.vm__scroll { overflow-x: auto; border-radius: var(--radius-sm); -webkit-overflow-scrolling: touch; }
+.vm__pin { position: absolute; transform: translate(calc(-50% + var(--fan, 0) * 30px), -100%); display: flex; flex-direction: column; align-items: center; pointer-events: none; }
+.vm__pin b {
+  display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%;
+  background: #d93025; color: #fff; font-size: .9rem; font-weight: 700;
+  border: 2.5px solid #fff; box-shadow: 0 2px 6px rgba(0, 0, 0, .35);
+}
+.vm__pin::after { content: ""; width: 0; height: 0; margin-top: -2px; border: 6px solid transparent; border-top: 9px solid #d93025; border-bottom: 0; }
+.vm__pin--on::before {          /* pulse at the exact spot */
+  content: ""; position: absolute; bottom: -9px; left: calc(50% - var(--fan, 0) * 30px); width: 18px; height: 18px; margin-left: -9px;
+  border-radius: 50%; background: rgba(217, 48, 37, .45); animation: vmping 1.6s ease-out infinite;
+}
+@keyframes vmping { from { transform: scale(.4); opacity: 1; } to { transform: scale(2.2); opacity: 0; } }
+.vm__pin--next b { background: #fff; color: #d93025; border-color: #d93025; }
+.vm__pin--next::after { border-top-color: #d93025; }
+.vm__pin em {
+  position: absolute; left: calc(50% + 20px); top: 4px; white-space: nowrap; font-style: normal;
+  font-size: .78rem; font-weight: 600; padding: 2px 8px; border-radius: 10px;
+  background: #fff; color: #222; box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+}
 .vm__foot { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
 .vm__foot .note { margin: 0; }
 
@@ -841,9 +859,8 @@
   .now__top { align-items: flex-start; }
   .now__days .chip { padding: 6px 9px; }
   .now__clock b { font-size: 1.45rem; }
-  /* SVG text is in viewBox units; on a ~340px-wide map the 10-unit labels render ≈ 8px, so bump them */
-  .vm__t { font-size: 15px; }
-  .vm__t--s { font-size: 13px; }
-  .vm__t--sub { font-size: 12px; }
+  .vm__pin b { width: 26px; height: 26px; font-size: .82rem; }
+  /* the poster text is unreadable at phone width: show it ~1.7× and let it scroll sideways */
+  .vm__photo { width: 170%; }
 }
-@media (prefers-reduced-motion: reduce) { .now__dot { animation: none !important; } }
+@media (prefers-reduced-motion: reduce) { .now__dot, .vm__pin--on::before { animation: none !important; } }
