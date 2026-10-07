@@ -96,8 +96,16 @@
   <main class="page">
     <header class="page-head">
       <h1>Taiwanese at COLM</h1>
-      <p class="page-head__sub">Taiwanese researchers presenting this week, and when to find them. Tap a name to see only their papers; tap a title for the abstract.</p>
+      <p class="page-head__sub">Taiwanese researchers presenting this week. The timeline starts at the current time — drag it to see who is at which room and board at any moment. Tap a name to see only their papers.</p>
     </header>
+    <h2 class="tw-section-title" id="nowTitle">Who's where</h2>
+    <section class="now" id="now" aria-labelledby="nowTitle">
+      <div class="now__ctl" id="nowCtl"></div>
+      <div class="now__body">
+        <div class="now__map" id="venue"></div>
+        <div class="now__list" id="nowList" aria-live="polite"></div>
+      </div>
+    </section>
     <h2 class="tw-section-title" id="peopleTitle">People</h2>
     <section id="people" aria-labelledby="peopleTitle">
 <div class="twp"><button type="button" class="twp__card" data-who="ting-wei-chang" aria-pressed="false"><span class="twp__name">Ting-Wei Chang</span><span class="twp__affil">Academia Sinica</span><span class="twp__meta"><b>1</b> paper<span class="badge">Tue Oct 6</span></span></button><button type="button" class="twp__card" data-who="chung-en-sun" aria-pressed="false"><span class="twp__name">Chung-En Sun</span><span class="twp__affil">University of California, San Diego</span><span class="twp__meta"><b>3</b> papers<span class="badge">Tue Oct 6</span><span class="badge">Wed Oct 7</span><span class="badge">Fri Oct 9</span></span></button><button type="button" class="twp__card" data-who="gabrielle-liu" aria-pressed="false"><span class="twp__name">Gabrielle Liu <small class="twp__aka">(Kaili Liu)</small></span><span class="twp__affil">Yale University</span><span class="twp__meta"><b>1</b> paper<span class="badge">Thu Oct 8</span></span></button><button type="button" class="twp__card" data-who="hsin-ling-hsu" aria-pressed="false"><span class="twp__name">Hsin-Ling Hsu</span><span class="twp__affil">National Chengchi University</span><span class="twp__meta"><b>1</b> paper<span class="badge">Tue Oct 6</span></span></button><button type="button" class="twp__card" data-who="ting-wen-ko" aria-pressed="false"><span class="twp__name">Ting-Wen Ko</span><span class="twp__affil">ELLIS Institute Tübingen</span><span class="twp__meta"><b>1</b> paper<span class="badge">Thu Oct 8</span></span></button><button type="button" class="twp__card" data-who="wei-chieh-chou" aria-pressed="false"><span class="twp__name">Wei-Chieh Chou</span><span class="twp__affil">National Taiwan University</span><span class="twp__meta"><b>1</b> paper<span class="badge">Wed Oct 7</span></span></button><button type="button" class="twp__card" data-who="yen-shan-chen" aria-pressed="false"><span class="twp__name">Yen-Shan Chen</span><span class="twp__affil">Department of computer science and informational engineering, National Taiwan University</span><span class="twp__meta"><b>1</b> paper<span class="badge">Wed Oct 7</span></span></button><button type="button" class="twp__card" data-who="yu-jung-liang" aria-pressed="false"><span class="twp__name">Yu-Jung Liang</span><span class="twp__meta"><b>1</b> paper<span class="badge">Fri Oct 9</span></span></button><button type="button" class="twp__card" data-who="zhi-yi-chin" aria-pressed="false"><span class="twp__name">Zhi-Yi Chin</span><span class="twp__affil">CISPA Helmholtz Center for Information Security</span><span class="twp__meta"><b>1</b> paper<span class="badge">Wed Oct 7</span></span></button></div>
@@ -138,6 +146,7 @@
   <!-- ==== Scripts （order matters：vendor → shell → data → page）==== -->
   <script src="../assets/shell.js"></script>
   <script src="../data/taiwan.js"></script>
+  <script src="../assets/venue-map.js"></script>
   <script src="../assets/taiwan.js"></script>
 </body>
 </html>
