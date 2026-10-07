@@ -17,7 +17,7 @@ COLM 2026 是第三屆語言模型會議，2026 年 10 月 6–9 日於**美國�
 | **About** | `/` | `/zh/` | 總覽、關於 COLM、重要日期、徵稿主題、工作坊、組織成員、FAQ、指南與政策、註冊 |
 | **Schedule** | `/schedule/` | `/zh/schedule/` | 四天逐場次議程（keynote、oral、poster、座談、休息、社交、工作坊）+ 官方全部日期 |
 | **Accepted Papers** | `/papers/` | `/zh/papers/` | 856 篇論文：依日期 / 場次 / 房間 / 主題 / Oral 篩選，摘要、作者、單位、海報位置、連結 |
-| **Workshops** | `/workshops/` | `/zh/workshops/` | 18 場工作坊：簡介、主題、當日議程、講者、截止日、主辦人、官網 |
+| **Workshops** | `/workshops/` | `/zh/workshops/` | 18 場工作坊：簡介、主題、當日議程、**接受論文（1,007 篇，依海報時段分組、中英對照）**、講者、截止日、主辦人、官網；搜尋可找論文標題與作者 |
 | **Map** | `/map/` | `/zh/map/` | 官方推薦的 110 個周邊地點（7 類，可個別開關）、SFPD 治安熱區與注意區域、定位、一鍵開 Google 地圖 |
 | **Taiwanese** | `/taiwan/` | `/zh/taiwan/` | 在 COLM 發表的台灣研究者：「誰在哪裡」時間軸（預設現在、即時更新）+ 會場樓層示意圖、名單、依日期排的海報時段 / 房間 / 看板編號；點名字只看該位（`?who=<name>`，指定時間 `?t=2026-10-07T16:30`） |
 
@@ -39,6 +39,7 @@ COLM 2026 是第三屆語言模型會議，2026 年 10 月 6–9 日於**美國�
 | 論文標題、作者、單位、摘要 | colm.cc 公開 JSON（`/static/virtual/data/…`） | 作者單位覆蓋 99.7% 作者 |
 | 論文主題（17 類） | OpenReview 作者關鍵字 + 標題，由 LLM 歸入徵稿主題 | **非官方**分類，UI 有標示 |
 | 論文中文標題與摘要 | LLM 翻譯（繁體中文、台灣用語） | 人名、單位、模型與資料集名稱維持英文 |
+| 工作坊接受論文 | colm.cc 各工作坊頁（登入後才列出，用瀏覽器抓，見 `scripts/fetch/README.md`） | 依標題合併重複、濾掉混在清單裡的議程項目；中文標題為 LLM 翻譯（`data-src/workshop-papers-zh.json`） |
 | 工作坊 | colm.cc 列表 + 各工作坊官網 | 房間取自 colm.cc 各工作坊頁（`parse_colm_virtual.py`），議程頁與台灣人頁共用 |
 | keynote 講者單位 | 講者公開個人頁（colm.cc 只有姓名） | 講題尚未公布 |
 | 地圖地點、分類、描述 | COLM 官方「SF local information」[試算表](https://docs.google.com/spreadsheets/d/1xy8HOYJOyWzFqnsmr06t-NcVoLKDuwqb1A1Es6iaY3I/edit) + [My Maps](https://www.google.com/maps/d/viewer?mid=1U_Po7vWtGCGrEnHJ3LWl_hbvMd0TWEo)（座標） | 中文描述為本站翻譯 |
