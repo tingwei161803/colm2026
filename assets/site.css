@@ -760,3 +760,5 @@
 .tw-or { display: block; margin: 2px 0; opacity: .5; }
 .tw-ic { font-size: 16px; vertical-align: -3px; margin-right: 4px; }
 @media (max-width: 600px) { .tw-or { display: inline; margin: 0 6px; } }
+.twp__aka { font-weight: 400; font-size: .82rem; color: var(--on-surface-variant); }
+.twp__card[aria-pressed="true"] .twp__aka { color: inherit; }
