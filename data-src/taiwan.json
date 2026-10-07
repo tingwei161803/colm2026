@@ -1,5 +1,5 @@
 {
-  "_comment": "Taiwanese researchers presenting at COLM 2026. `papers` are ids from papers.json (main conference) or from extraPapers below (workshop papers, which are not in the accepted list). Titles, authors, rooms and poster numbers of main-conference papers are resolved by scripts/build_data.py — only names and ids live here. Workshop papers: title/authors from OpenReview (colmweb.org/COLM/2026/Workshop/*), room from the workshop's entry in workshops.json (colm.cc), posterWindows from the workshop's own website schedule (neither site says which of the two sessions a paper is in). `name` must match the author string on colm.cc (it drives highlighting and affiliation); `aka` is an optional other name shown on the card (OpenReview lists her as Gabrielle Kaili-May Liu).",
+  "_comment": "Taiwanese researchers presenting at COLM 2026. `papers` are ids from papers.json (main conference) or from extraPapers below (workshop papers, which are not in the accepted list). Titles, authors, rooms and poster numbers of main-conference papers are resolved by scripts/build_data.py — only names and ids live here. Workshop papers: title/authors from OpenReview (colmweb.org/COLM/2026/Workshop/*), room from the workshop's entry in workshops.json (colm.cc), posterWindows: the poster session colm.cc lists the paper under (logged-in workshop page, see workshop-papers.json); when colm.cc does not say, both of the workshop's poster sessions from its website. `name` must match the author string on colm.cc (it drives highlighting and affiliation); `aka` is an optional other name shown on the card (OpenReview lists her as Gabrielle Kaili-May Liu).",
   "people": [
     {
       "name": "Ting-Wei Chang",
@@ -101,10 +101,6 @@
       "day": "2026-10-09",
       "workshop": "lifelong-agent",
       "posterWindows": [
-        [
-          "10:00",
-          "11:00"
-        ],
         [
           "14:30",
           "15:30"

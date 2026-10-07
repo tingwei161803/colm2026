@@ -26,6 +26,20 @@ cp papers.json schedule.json workshops.json ../../data-src/
 cd ../.. && uv run python scripts/build_data.py && uv run python scripts/build_pages.py && uv run python scripts/prerender.py
 ```
 
+## 工作坊接受論文（要登入 colm.cc，在瀏覽器裡跑）
+
+colm.cc 的工作坊頁只有登入後才會列出各海報時段的論文，所以用瀏覽器抓：
+登入 colm.cc → 打開任一工作坊頁 → 把 `scripts/fetch/colm_workshop_papers.js` 貼進 DevTools console
+（會把 JSON 複製到剪貼簿）→ 存成 `tmp/workshop-papers-raw.json`，再：
+
+```bash
+uv run python scripts/fetch/build_workshop_papers.py tmp/workshop-papers-raw.json   # → data-src/workshop-papers.json
+uv run python scripts/build_data.py
+```
+
+標題的中文翻譯在 `data-src/workshop-papers-zh.json`（`{colmId: 中文標題}`），新增論文時要補；
+`build_data.py` 印出的 `zh title` 數字會少。
+
 ## 地圖頁（在 repo 根目錄直接跑，不用複製到 tmp/）
 
 ```bash

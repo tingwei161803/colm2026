@@ -2,6 +2,7 @@
 
 Sources (all JSON, public conference data + this site's Chinese text):
   papers.json, schedule.json, workshops.json   — collected from colm.cc / workshop sites
+  workshop-papers.json, workshop-papers-zh.json — accepted papers per workshop (colm.cc, logged-in view) + Chinese titles
   topics.json                                   — the 17 call-for-papers areas
   zh.json                                       — hand-written Chinese for workshops / schedule / labels
   papers-zh.json                                — Chinese titles + abstracts   {id: {title, abstract}}
@@ -166,10 +167,36 @@ def build_papers(src: Path, out: Path, zh: dict) -> dict:
 
 
 # ---------------------------------------------------------------- workshops
+def workshop_papers(src: Path) -> dict:
+    """workshop-papers.json (colm.cc logged-in workshop pages) → {workshop id: {"sessions": [...], "papers": [...]}}.
+
+    A paper's `session` ("10:00 AM Poster Session I") is set only when colm.cc nests it under that
+    session; workshops that list papers without a schedule slot get None (shown as one list).
+    """
+    raw = load(src, "workshop-papers.json", {"workshops": {}})
+    zh_titles = load(src, "workshop-papers-zh.json", {})
+    out = {}
+    for wid, w in raw["workshops"].items():
+        sessions, papers = [], []
+        for p in w["papers"]:
+            sess = None
+            if p.get("session"):
+                m = re.match(r"^(\d{1,2}:\d{2}\s*[AP]M)\s+(.+)$", p["session"])
+                sess = {"time": hhmm(m.group(1)), "title": m.group(2)} if m else {"time": None, "title": p["session"]}
+                if sess not in sessions:
+                    sessions.append(sess)
+            papers.append({"id": p["colmId"], "title": clean_tex(p["title"]),
+                           "titleZh": clean_tex(zh_titles.get(str(p["colmId"]))),
+                           "authors": p["authors"], "session": sessions.index(sess) if sess else None})
+        out[wid] = {"paperSessions": sessions, "papers": papers}
+    return out
+
+
 def build_workshops(src: Path, out: Path, zh: dict) -> dict:
     raw = load(src, "workshops.json", [])
     desc_zh = zh.get("workshopDescriptions", {})
     dl_zh = zh.get("deadlineLabels", {})
+    wpapers = workshop_papers(src)
     items = []
     for w in raw:
         items.append({
@@ -183,9 +210,14 @@ def build_workshops(src: Path, out: Path, zh: dict) -> dict:
             "speakers": w.get("speakers"),
             "deadlines": [{"label": bi(d.get("label"), dl_zh.get(d.get("label"))), "date": d.get("date"), "note": d.get("note")} for d in (w.get("deadlines") or [])] or None,
             "links": {k: v for k, v in (w.get("links") or {}).items() if v},
+            "paperSessions": (wpapers.get(w["id"]) or {}).get("paperSessions") or [],
+            "papers": (wpapers.get(w["id"]) or {}).get("papers") or [],
         })
     size = dump_js("WORKSHOPS_DATA", {"workshops": items}, out / "data/workshops.js")
-    return {"count": len(items), "bytes": size, "byColmUrl": {w["colmUrl"]: w for w in items if w.get("colmUrl")}}
+    n_papers = sum(len(w["papers"]) for w in items)
+    n_zh = sum(1 for w in items for p in w["papers"] if p["titleZh"])
+    return {"count": len(items), "bytes": size, "papers": n_papers, "papersZh": n_zh,
+            "byColmUrl": {w["colmUrl"]: w for w in items if w.get("colmUrl")}}
 
 
 # ---------------------------------------------------------------- schedule
@@ -399,7 +431,7 @@ def main() -> None:
     print(f"papers.js              {p['count']} papers, {p['bytes']/1024:.0f} KB  (topic {p['withTopic']}, zh title {p['withTitleZh']})")
     print(f"papers-abstracts.en.js {p['absEn'][0]} abstracts, {p['absEn'][1]/1024:.0f} KB")
     print(f"papers-abstracts.zh.js {p['absZh'][0]} abstracts, {p['absZh'][1]/1024:.0f} KB")
-    print(f"workshops.js           {w['count']} workshops, {w['bytes']/1024:.0f} KB")
+    print(f"workshops.js           {w['count']} workshops, {w['papers']} papers (zh title {w['papersZh']}), {w['bytes']/1024:.0f} KB")
     print(f"schedule.js            {s['days']} days / {s['sessions']} sessions, {s['bytes']/1024:.0f} KB")
     print(f"map.js                 {m['places']} places (zh {m['zh']}), {m['cells']} safety cells, {m['zones']} zones, {m['bytes']/1024:.0f} KB")
     print(f"taiwan.js              {tw['people']} people, {tw['slots']} papers, {tw['bytes']/1024:.1f} KB")

@@ -84,14 +84,5 @@ window.VENUE_MAP = (function () {
     }).join("");
   }
 
-  /* On narrow screens the photo is wider than its scroller; bring the first marker of each level into view. */
-  function centerPins(root) {
-    [].forEach.call(root.querySelectorAll(".vm__scroll"), function (sc) {
-      var pin = sc.querySelector(".vm__pin");
-      if (!pin || sc.scrollWidth <= sc.clientWidth) return;
-      sc.scrollLeft = pin.offsetLeft - sc.clientWidth / 2;
-    });
-  }
-
-  return { render: render, zoneFor: zoneFor, centerPins: centerPins };
+  return { render: render, zoneFor: zoneFor };
 })();

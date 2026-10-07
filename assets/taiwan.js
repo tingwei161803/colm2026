@@ -305,7 +305,6 @@
       '<div class="vm__foot"><button type="button" class="linkish" id="nowLevels">' + (allLevels ? UI.fewLevels : UI.allLevels) + '</button>' +
       '<p class="note">' + UI.mapNote + '</p></div>';
     $("nowLevels").addEventListener("click", function () { allLevels = !allLevels; paintAt(); });
-    if (VM) VM.centerPins($("venue"));
     wireJumps($("nowList"));
   }
   function jumpTo(day, min) { at = { day: day, min: min, live: false, note: null }; syncUrl(); paintNow(); }
