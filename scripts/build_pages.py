@@ -112,9 +112,9 @@ PAGES = {
         "desc": {"en": "Taiwanese researchers presenting at COLM 2026 in San Francisco: who they are, which papers, and exactly when and where to find each poster, day by day.",
                  "zh": "在 COLM 2026（舊金山）發表論文的台灣研究者：有誰、哪幾篇論文，以及每張海報的日期、時段、房間與看板編號。"},
         "h1": {"en": "Taiwanese at COLM", "zh": "台灣人在 COLM"},
-        "sub": {"en": "Taiwanese researchers presenting this week, and when to find them. Tap a name to see only their papers; tap a title for the abstract.",
-                "zh": "這週在 COLM 發表的台灣研究者，以及去哪裡、什麼時候找得到他們。點名字只看該位的論文；點標題看摘要。"},
-        "scripts": ["data/taiwan.js", "assets/taiwan.js"],
+        "sub": {"en": "Taiwanese researchers presenting this week. The timeline starts at the current time — drag it to see who is at which room and board at any moment. Tap a name to see only their papers.",
+                "zh": "這週在 COLM 發表的台灣研究者。時間軸預設是現在，拖動就能看任一時刻誰在哪個廳、哪塊看板；點名字只看該位的論文。"},
+        "scripts": ["data/taiwan.js", "assets/venue-map.js", "assets/taiwan.js"],
         "ld": "WebPage",
     },
 }
@@ -201,6 +201,14 @@ PAGE_BODY = {
       <h1>{h1}</h1>
       <p class="page-head__sub">{sub}</p>
     </header>
+    <h2 class="tw-section-title" id="nowTitle">{now}</h2>
+    <section class="now" id="now" aria-labelledby="nowTitle">
+      <div class="now__ctl" id="nowCtl"></div>
+      <div class="now__body">
+        <div class="now__map" id="venue"></div>
+        <div class="now__list" id="nowList" aria-live="polite"></div>
+      </div>
+    </section>
     <h2 class="tw-section-title" id="peopleTitle">{people}</h2>
     <section id="people" aria-labelledby="peopleTitle"></section>
     <h2 class="tw-section-title" id="timelineTitle">{when}</h2>
@@ -252,7 +260,8 @@ def build(page_key: str, lang: str) -> tuple[str, str]:
 
     body = PAGE_BODY[page_key].format(h1=p.get("h1", {}).get(L, ""), sub=p.get("sub", {}).get(L, ""),
                                       people="名單" if L == "zh" else "People",
-                                      when="論文與時間" if L == "zh" else "Papers & times")
+                                      when="論文與時間" if L == "zh" else "Papers & times",
+                                      now="誰在哪裡" if L == "zh" else "Who's where")
     vendor = "".join(f'  <script src="{v}"></script>\n' for v in p.get("vendor", []))
     scripts = vendor + "\n".join(f'  <script src="{root}{s}"></script>' for s in ["assets/shell.js"] + p["scripts"])
     page_css = "".join(f'\n  <link rel="stylesheet" href="{c}" />' for c in p.get("css", []))

@@ -762,3 +762,88 @@
 @media (max-width: 600px) { .tw-or { display: inline; margin: 0 6px; } }
 .twp__aka { font-weight: 400; font-size: .82rem; color: var(--on-surface-variant); }
 .twp__card[aria-pressed="true"] .twp__aka { color: inherit; }
+
+/* ---- Taiwan page: who's where (time scrubber + floor plan) ---- */
+.now { background: var(--surface); border: 1px solid var(--outline-variant); border-radius: var(--radius); padding: 16px 18px; }
+.now__top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 12px; }
+.now__days { display: flex; flex-wrap: wrap; gap: 6px; }
+.now__livebtn[aria-pressed="true"] { border-color: var(--primary); color: var(--primary); }
+.now__dot { width: 8px; height: 8px; border-radius: 50%; background: var(--outline); display: inline-block; }
+.now__livebtn[aria-pressed="true"] .now__dot, .now__dot--on { background: #d93025; animation: nowpulse 1.6s ease-in-out infinite; }
+@keyframes nowpulse { 50% { opacity: .35; } }
+.now__clock { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin: 14px 0 6px; }
+.now__clock b { font-family: var(--font-mono); font-size: 1.7rem; font-weight: 500; letter-spacing: -.02em; }
+.now__clock span { font-size: .95rem; }
+.now__clock small { font-size: .82rem; color: var(--on-surface-variant); }
+/* one bar: session segments are drawn on the track, the native range input sits on top with a
+   transparent track so only its thumb shows. The 11px inset = half the thumb, so % positions line up. */
+.now__scrub { position: relative; height: 36px; margin-bottom: 18px; }
+.now__track { position: absolute; left: 11px; right: 11px; top: 14px; height: 8px; border-radius: 4px; background: var(--surface-container-high); }
+.now__seg { position: absolute; top: 0; height: 100%; border-radius: 4px; background: color-mix(in srgb, var(--primary) 55%, transparent); }
+.now__scrub input[type="range"] {
+  position: absolute; inset: 0; width: 100%; height: 36px; margin: 0;
+  -webkit-appearance: none; appearance: none; background: transparent; cursor: pointer;
+}
+.now__scrub input[type="range"]::-webkit-slider-runnable-track { height: 36px; background: transparent; }
+.now__scrub input[type="range"]::-moz-range-track { height: 36px; background: transparent; }
+.now__scrub input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none; width: 22px; height: 22px; margin-top: 7px; border-radius: 50%;
+  background: var(--primary); border: 3px solid var(--surface); box-shadow: var(--elev-1);
+}
+.now__scrub input[type="range"]::-moz-range-thumb {
+  width: 16px; height: 16px; border-radius: 50%; background: var(--primary); border: 3px solid var(--surface); box-shadow: var(--elev-1);
+}
+.now__scrub input[type="range"]:focus-visible { outline: none; }
+.now__scrub input[type="range"]:focus-visible::-webkit-slider-thumb { outline: 2px solid var(--primary); outline-offset: 2px; }
+.now__ticks { position: absolute; top: 34px; left: 11px; right: 11px; height: 16px; font-family: var(--font-mono); font-size: .7rem; color: var(--on-surface-variant); }
+.now__ticks span { position: absolute; transform: translateX(-50%); white-space: nowrap; }
+.now__chips { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 10px; }
+.now__body { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 18px; margin-top: 16px; }
+.now__status { display: flex; align-items: center; gap: 8px; margin: 0 0 10px; font-weight: 600; }
+.now__next { margin: 0 0 10px; font-size: .92rem; }
+
+.nowl { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.nowl__g { display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: 10px; }
+.nowl__mk { width: 24px; height: 24px; border-radius: 50%; background: var(--primary); color: var(--on-primary); display: grid; place-items: center; font-size: .8rem; font-weight: 600; }
+.nowl__room { margin: 2px 0 6px; font-weight: 600; font-size: .95rem; display: flex; align-items: center; gap: 4px; }
+.nowl__room .material-symbols-rounded { font-size: 17px; color: var(--on-surface-variant); }
+.nowl ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.nowl ul li { padding: 8px 10px; border-radius: var(--radius-sm); background: var(--surface-container-high); }
+.nowl p { margin: 0; }
+.nowl__who { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; }
+.nowl__who b { color: var(--primary); }
+.nowl__title { font-size: .88rem; line-height: 1.4; margin-top: 3px !important; }
+.nowl__title a { color: var(--on-surface); }
+.nowl__title a:hover { color: var(--primary); }
+.nowl__when { font-family: var(--font-mono); font-size: .74rem; color: var(--on-surface-variant); margin-top: 3px !important; }
+
+.vm__level { margin: 0 0 12px; }
+.vm__level figcaption { font-size: .8rem; font-weight: 600; color: var(--on-surface-variant); margin-bottom: 4px; letter-spacing: .02em; }
+.vm__level svg { display: block; width: 100%; height: auto; }
+.vm__decor { fill: var(--surface-container-high); stroke: none; }
+.vm__zone { fill: color-mix(in srgb, var(--on-surface) 8%, var(--surface)); stroke: var(--outline-variant); stroke-width: 1; }
+.vm__zone--on { fill: color-mix(in srgb, var(--primary) 28%, var(--surface)); stroke: var(--primary); stroke-width: 2.5; }
+.vm__zone--next { fill: color-mix(in srgb, var(--primary) 10%, var(--surface)); stroke: var(--primary); stroke-width: 1.5; stroke-dasharray: 5 3; }
+.vm__t { fill: var(--on-surface-variant); text-anchor: middle; font-family: var(--font-body); font-weight: 600; }
+.vm__t--s { font-weight: 500; }
+.vm__t--sub { font-weight: 400; }
+.vm__zone--on + .vm__t, .vm__zone--next + .vm__t { fill: var(--on-surface); }
+.vm__mk circle { fill: var(--primary); }
+.vm__mk text { fill: var(--on-primary); text-anchor: middle; font-family: var(--font-body); font-weight: 700; }
+.vm__foot { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+.vm__foot .note { margin: 0; }
+
+@media (max-width: 900px) {
+  .now__body { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .now { padding: 12px; margin: 0 -4px; }
+  .now__top { align-items: flex-start; }
+  .now__days .chip { padding: 6px 9px; }
+  .now__clock b { font-size: 1.45rem; }
+  /* SVG text is in viewBox units; on a ~340px-wide map the 10-unit labels render ≈ 8px, so bump them */
+  .vm__t { font-size: 15px; }
+  .vm__t--s { font-size: 13px; }
+  .vm__t--sub { font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) { .now__dot { animation: none !important; } }

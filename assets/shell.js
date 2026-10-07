@@ -73,7 +73,7 @@ window.SHELL = (function () {
     if (!iso) return "";
     var d = new Date(iso + "T12:00:00");
     var wd = WD[lang][d.getUTCDay()];
-    if (lang === "zh") return long ? (d.getMonth() + 1) + " 月 " + d.getDate() + " 日（" + wd + ")" : (d.getMonth() + 1) + "/" + d.getDate() + "(" + wd + ")";
+    if (lang === "zh") return long ? (d.getMonth() + 1) + " 月 " + d.getDate() + " 日（" + wd + "）" : (d.getMonth() + 1) + "/" + d.getDate() + "(" + wd + ")";
     var mon = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][d.getMonth()];
     return long ? wd + ", " + mon + " " + d.getDate() : wd + " " + mon + " " + d.getDate();
   }
